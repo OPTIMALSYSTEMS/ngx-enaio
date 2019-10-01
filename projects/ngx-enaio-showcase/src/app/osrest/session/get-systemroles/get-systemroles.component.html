@@ -1,0 +1,27 @@
+<div class="card w-100">
+        <div class="card-header">
+            <form class="form-inline">
+                <button (click) = "loadSystemRoles()" type="button" class="btn btn-primary">Get System Roles</button>
+                  <div class="spinner-grow" *ngIf="loading">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+            </form>
+        </div>
+        <div class="card-body">
+            <pre *ngIf = "systemroles && !loading">
+                <table class="table">
+                    <tbody>
+                        <tr *ngFor="let role of systemroles">
+                               <td>{{role}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{systemroles | json}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </pre>
+            <pre class="text-danger" *ngIf = "error && !loading">
+                {{error | json}}
+            </pre>
+        </div>
+      </div>

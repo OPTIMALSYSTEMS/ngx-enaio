@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-enaio": [
+        "dist/ngx-enaio"
+      ],
+      "ngx-enaio/*": [
+        "dist/ngx-enaio/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

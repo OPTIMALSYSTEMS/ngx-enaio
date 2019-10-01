@@ -1,0 +1,22 @@
+<nav class="navbar navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">ngx-enaio - Showcase</a>
+</nav>
+<div class="wrapper">
+  <!-- Sidebar -->
+  <nav id="sidebar" class="p-2">
+    <div class="list-group list-group-root well">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="list-group-item">Home</a>
+      <a routerLink="/osrest" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="list-group-item">AppConnector</a>
+      <div class="list-group">
+        <a routerLink="/osrest/session" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="list-group-item">SessionService</a>
+      </div>     
+    </div>   
+  </nav>
+
+  <!-- Page Content -->
+  <div id="content" class="p-2">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>   
+

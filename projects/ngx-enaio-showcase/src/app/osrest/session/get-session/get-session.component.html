@@ -1,0 +1,37 @@
+<div class="card w-100">
+    <div class="card-header">
+        <form class="form-inline">
+            <button (click) = "loadSession()" type="button" class="btn btn-primary">Get Session Info</button>
+            <div class="form-check ml-4">
+                <input class="form-check-input" type="checkbox" value="" id="refresh" [(ngModel)]="refresh" name="refresh">
+                <label class="form-check-label" for="refresh">
+                  Refresh (Disable Cache)
+                </label>
+              </div>
+              <div class="spinner-grow" *ngIf="loading">
+                    <span class="sr-only">Loading...</span>
+                </div>
+        </form>
+       
+    </div>
+    <div class="card-body">
+        <pre *ngIf = "session && !loading">
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let element of session | keyvalue">
+                           <th>{{element.key}}</th>
+                           <td>{{element.value}}</td>
+                    </tr>
+                    <tr>
+                        <th>JSON</th>
+                        <td>{{session | json}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </pre>
+        <pre class="text-danger" *ngIf = "error && !loading">
+            {{error | json}}
+        </pre>
+    </div>
+  </div>
