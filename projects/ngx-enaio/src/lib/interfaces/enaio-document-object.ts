@@ -5,94 +5,72 @@ export interface EnaioDocumentObject {
   internalName: string;
   displayName: string;
   objectFlagsValue?: number;
-  ecmSimpleFields: [
-    {
-      value: string;
-      displayName: string;
-      internalName: string;
-      dbName: string;
-      visible: boolean;
-      type: string;
-    }
-  ];
-  ecmTableFields: [
-    {
-      displayName: string;
-      internalName: string;
-      dbName: string;
-      visible: boolean;
-      columns: [
-        {
-          internalName: string;
-          type: string;
-          displayName: string;
-          dbName: string;
-        }
-      ];
-      value: [
-        {
-          ecmSimpleFields: [{ value: string; displayName: string; internalName: string; dbName: string; type: string }];
-        }
-      ];
-    }
-  ];
-  baseParameters: [
-    {
-      value: string;
-      type: string;
-    }
-  ];
-  rights: {
-    objExport: boolean;
-    objModify: boolean;
-    objDelete: boolean;
-    indexModify: boolean;
-  };
+  ecmSimpleFields: EnaioDocumentObjectField[];
+  ecmTableFields: EnaioDocumentObjectTable[];
+  baseParameters: EnaioDocumentObjectTypeValue[];
+  rights: EnaioDocumentObjectRights;
   parentCabinetKeyType: string;
   parentCabinetKey: string;
   childrenCount: number;
   children: EnaioDocumentObject[];
   objectInserts: {};
   folderRegisterTree: [];
-  systemFields: [
-    {
-      value: string;
-      type: string;
-    }
-  ];
-  fileProperties?: [
-    {
-      value: string;
-      type: string;
-    }
-  ];
-  variantInformation: [
-    {
-      type: string;
-      value: string;
-    }
-  ];
+  systemFields: EnaioDocumentObjectTypeValue[];
+  fileProperties?: EnaioDocumentObjectTypeValue[];
+  variantInformation: EnaioDocumentObjectTypeValue[];
   variantTree: EnaioDocumentObjectVariant;
+}
+
+export interface EnaioDocumentObjectField {
+  value: string;
+  displayName: string;
+  internalName: string;
+  dbName: string;
+  visible: boolean;
+  type: string;
+}
+
+export interface EnaioDocumentObjectRights {
+  objExport: boolean;
+  objModify: boolean;
+  objDelete: boolean;
+  indexModify: boolean;
+}
+
+export interface EnaioDocumentObjectTable {
+  displayName: string;
+  internalName: string;
+  dbName: string;
+  visible: boolean;
+  columns: EnaioDocumentObjectTableColumn[];
+  value: EnaioDocumentObjectTableRow[];
+}
+
+export interface EnaioDocumentObjectTableColumn {
+  internalName: string;
+  type: string;
+  displayName: string;
+  dbName: string;
+}
+
+export interface EnaioDocumentObjectTableRow {
+  ecmSimpleFields: EnaioDocumentObjectField[];
+}
+
+export interface EnaioDocumentObjectTypeValue {
+  type: string;
+  value: string;
 }
 
 export interface EnaioDocumentObjectVariant {
   children: EnaioDocumentObjectVariant[];
-  variantInformation: {
-    DOCUMENT_ID: {
-      type: string;
-      value: string;
-    };
-    DOCUMENT_PARENT_ID: {
-      type: string;
-      value: string;
-    };
-    DOCUMENT_VERSION: {
-      type: string;
-      value: string;
-    };
-    IS_ACTIVE: {
-      type: string;
-      value: string;
-    };
-  };
+  variantInformation: EnaioDocumentObjectVariantInformation;
 }
+
+export interface EnaioDocumentObjectVariantInformation {
+  DOCUMENT_ID: EnaioDocumentObjectTypeValue;
+  DOCUMENT_PARENT_ID: EnaioDocumentObjectTypeValue;
+  DOCUMENT_VERSION: EnaioDocumentObjectTypeValue;
+  IS_ACTIVE: EnaioDocumentObjectTypeValue;
+}
+

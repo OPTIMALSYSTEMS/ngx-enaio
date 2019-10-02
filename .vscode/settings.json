@@ -5,6 +5,7 @@
         "Systemroles",
         "autostar",
         "fullname",
+        "osid",
         "systemrole",
         "userid"
     ]

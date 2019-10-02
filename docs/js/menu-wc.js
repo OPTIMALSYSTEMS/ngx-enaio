@@ -104,6 +104,30 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/EnaioDocumentObject.html" data-type="entity-link">EnaioDocumentObject</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/EnaioDocumentObjectField.html" data-type="entity-link">EnaioDocumentObjectField</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioDocumentObjectRights.html" data-type="entity-link">EnaioDocumentObjectRights</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioDocumentObjectTable.html" data-type="entity-link">EnaioDocumentObjectTable</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioDocumentObjectTableColumn.html" data-type="entity-link">EnaioDocumentObjectTableColumn</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioDocumentObjectTableRow.html" data-type="entity-link">EnaioDocumentObjectTableRow</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioDocumentObjectTypeValue.html" data-type="entity-link">EnaioDocumentObjectTypeValue</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioDocumentObjectVariant.html" data-type="entity-link">EnaioDocumentObjectVariant</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioDocumentObjectVariantInformation.html" data-type="entity-link">EnaioDocumentObjectVariantInformation</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/EnaioDocumentSearchOptions.html" data-type="entity-link">EnaioDocumentSearchOptions</a>
                             </li>
                             <li class="link">
