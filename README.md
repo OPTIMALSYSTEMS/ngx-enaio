@@ -1,6 +1,7 @@
 # ngx-enaio
-*An Angular  layer for the enaio rest services*
+
+_An Angular layer for the enaio rest services_
 
 **Alpha Version**
 
-This version is incomplete and currently not suitable for productive use. 
+This version is incomplete and currently not suitable for productive use.

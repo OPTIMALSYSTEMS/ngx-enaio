@@ -1,7 +1,7 @@
 # TODOs
 
 ## AppConnector
-    
+
 - CoreService
 - DocumentFileService
 - DocumentService
@@ -15,7 +15,7 @@
 
 ## DMS Service
 
-- schema 
+- schema
 - objects
 
 ...
