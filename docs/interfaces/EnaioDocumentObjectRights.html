@@ -65,6 +65,13 @@
             <code>projects/ngx-enaio/src/lib/interfaces/enaio-document-object.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Object Rights</p>
+
+            </p>
 
 
         <section>
@@ -129,6 +136,12 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Modify Indexdata (W)</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -158,6 +171,12 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Delete Object (D)</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -187,6 +206,12 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Output Object (X)</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -216,6 +241,12 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Write Object (U)</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
             </section>
@@ -242,7 +273,7 @@
 
   internalName: string;
   /**
-   * Display name of the current locale
+   * Localized Object Type Name
    */
   displayName: string;
   /**
@@ -323,56 +354,117 @@
   variantTree?: EnaioDocumentObjectVariant;
 }
 
+/**
+ * Enaio Metadata Field
+ */
 export interface EnaioDocumentObjectField {
+  /**
+   * field value
+   */
   value: string;
+  /**
+   * Localized Field name
+   */
   displayName: string;
+  /**
+   * Unique internal field name
+   */
   internalName: string;
+  /**
+   * DB field name
+   */
   dbName: string;
+  /**
+   * Metadata field visibility in object definition
+   */
   visible: boolean;
+  /**
+   * Field Type
+   */
   type: string;
 }
-
+/**
+ * Object Rights
+ */
 export interface EnaioDocumentObjectRights {
+  /**
+   * Output Object (X)
+   */
   objExport: boolean;
+  /**
+   * Write Object (U)
+   */
   objModify: boolean;
+  /**
+   * Delete Object (D)
+   */
   objDelete: boolean;
+  /**
+   * Modify Indexdata (W)
+   */
   indexModify: boolean;
 }
-
+/**
+ * Table Field
+ */
 export interface EnaioDocumentObjectTable {
+  /** Localized Table Field Name */
   displayName: string;
+  /** Unique Internal Name */
   internalName: string;
+  /** DB Table suffix like list1. Full table name is &lt;Object.DBName&gt;&lt;TableField.DBName&gt; */
   dbName: string;
+  /** Visibility of table field in object definition */
   visible: boolean;
+  /** Table columns */
   columns: EnaioDocumentObjectTableColumn[];
+  /** Table values */
   value: EnaioDocumentObjectTableRow[];
 }
 
+/** Table column definition */
 export interface EnaioDocumentObjectTableColumn {
+  /** Unique Internal Name */
   internalName: string;
+  /** Column data type */
   type: string;
+  /** Localized column name */
   displayName: string;
+  /** Technical db field name */
   dbName: string;
 }
 
+/** Table Row */
 export interface EnaioDocumentObjectTableRow {
+  /** List for row cells */
   ecmSimpleFields: EnaioDocumentObjectField[];
 }
 
+/** Generic type (key) / value object  */
 export interface EnaioDocumentObjectTypeValue {
+  /** Unique Key */
   type: string;
+  /** Value */
   value: string;
 }
 
+/** Variant tree element */
 export interface EnaioDocumentObjectVariant {
+  /** Child variants */
   children: EnaioDocumentObjectVariant[];
+  /** Variant information&#x27;s */
   variantInformation: EnaioDocumentObjectVariantInformation;
 }
 
+/** Variant information&#x27;s */
 export interface EnaioDocumentObjectVariantInformation {
+  /** Unique ID of variant */
   DOCUMENT_ID: EnaioDocumentObjectTypeValue;
+  /** Unique id of the parent variant  */
   DOCUMENT_PARENT_ID: EnaioDocumentObjectTypeValue;
+  /** Version name. For example 1.1.0 */
   DOCUMENT_VERSION: EnaioDocumentObjectTypeValue;
+  /** Is Active Flag of the variant */
   IS_ACTIVE: EnaioDocumentObjectTypeValue;
 }
 </code></pre>

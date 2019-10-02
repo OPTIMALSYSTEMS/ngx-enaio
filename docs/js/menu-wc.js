@@ -131,6 +131,30 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/EnaioDocumentSearchOptions.html" data-type="entity-link">EnaioDocumentSearchOptions</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/EnaioDocumentSearchQuery.html" data-type="entity-link">EnaioDocumentSearchQuery</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioDocumentSearchRequest.html" data-type="entity-link">EnaioDocumentSearchRequest</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioDocumentSearchRequestBaseparams.html" data-type="entity-link">EnaioDocumentSearchRequestBaseparams</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioDocumentSearchRequestColumn.html" data-type="entity-link">EnaioDocumentSearchRequestColumn</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioDocumentSearchRequestField.html" data-type="entity-link">EnaioDocumentSearchRequestField</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioDocumentSearchRequestFields.html" data-type="entity-link">EnaioDocumentSearchRequestFields</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioDocumentSearchRequestResult.html" data-type="entity-link">EnaioDocumentSearchRequestResult</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioDocumentSearchRequestSchema.html" data-type="entity-link">EnaioDocumentSearchRequestSchema</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/EnaioSession.html" data-type="entity-link">EnaioSession</a>
                             </li>
                         </ul>

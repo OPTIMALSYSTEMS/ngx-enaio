@@ -4,7 +4,13 @@
         "Osrest",
         "Systemroles",
         "autostar",
+        "baseparams",
+        "childschema",
+        "fieldsschema",
         "fullname",
+        "lockinfo",
+        "maxhits",
+        "objecttypeid",
         "osid",
         "systemrole",
         "userid"

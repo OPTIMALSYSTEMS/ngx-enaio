@@ -78,6 +78,10 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#search">search</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#searchByID">searchByID</a>
                             </li>
                         </ul>
@@ -103,7 +107,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:13</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -152,6 +156,101 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="search"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            search
+                        </b>
+                        <a href="#search"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>search(query: <a href="../interfaces/EnaioDocumentSearchRequest.html">EnaioDocumentSearchRequest</a>, options: <a href="../interfaces/EnaioDocumentSearchOptions.html">EnaioDocumentSearchOptions</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:42</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method return list ob enaio objects
+<a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867855#DocumentService(/documents)-/osrest/api/documents/search/[id]">Official Documentation</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>query</td>
+                                    <td>
+                                                <code><a href="../interfaces/EnaioDocumentSearchRequest.html" target="_self" >EnaioDocumentSearchRequest</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>options</td>
+                                    <td>
+                                                <code><a href="../interfaces/EnaioDocumentSearchOptions.html" target="_self" >EnaioDocumentSearchOptions</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>search options</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/EnaioDocumentObject.html" target="_self" >Observable&lt;EnaioDocumentObject[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>enaio object</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="searchByID"></a>
                     <span class="name">
                         <b>
@@ -172,16 +271,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="28"
-                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:28</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:29</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Method return the enaio object for the given id
-<a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867855#DocumentService(/documents)-/osrest/api/documents/search/[id]">Official Documentation</a></p>
+                    <div class="io-description"><p>Method return the enaio object for the given query
+<a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867855#DocumentService(/documents)-/osrest/api/documents/search">Official Documentation</a></p>
 </div>
 
                     <div class="io-description">
@@ -222,7 +321,7 @@
 
 
                                     <td>
-                                        <p>Search Options</p>
+                                        <p>search options</p>
 
                                     </td>
                                 </tr>
@@ -236,7 +335,7 @@
 
                     </div>
                     <div class="io-description">
-                        <p>enaio object</p>
+                        <p>enaio object list</p>
 
                     </div>
                 </td>
@@ -249,7 +348,8 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { EnaioDocumentObject } from &#x27;./interfaces/enaio-document-object&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { EnaioDocumentSearchRequest } from &#x27;./interfaces/enaio-document-search-request&#x27;;
+import { EnaioDocumentObject } from &#x27;./interfaces/enaio-document-object&#x27;;
 import { EnaioDocumentSearchOptions } from &#x27;./interfaces/enaio-document-search-options&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
 import { HttpClient, HttpParams } from &#x27;@angular/common/http&#x27;;
@@ -268,16 +368,29 @@ export class EnaioDocumentService {
   constructor(private http: HttpClient) {}
 
   /**
-   * Method return the enaio object for the given id
-   * [Official Documentation]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId&#x3D;1867855#DocumentService(/documents)-/osrest/api/documents/search/[id]}
+   * Method return the enaio object for the given query
+   * [Official Documentation]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId&#x3D;1867855#DocumentService(/documents)-/osrest/api/documents/search}
    *
    *
    * @param number id unique enaio id
-   * @param options Search Options
-   * @returns enaio object
+   * @param options search options
+   * @returns enaio object list
    */
   public searchByID(id: number, options: EnaioDocumentSearchOptions): Observable&lt;EnaioDocumentObject&gt; {
-    return this.http.get&lt;any&gt;(&#x27;/osrest/api/documents/search/&#x27; + id, { params: options as HttpParams });
+    return this.http.get&lt;EnaioDocumentObject&gt;(&#x27;/osrest/api/documents/search/&#x27; + id, { params: options as any as HttpParams });
+  }
+
+
+  /**
+   * Method return list ob enaio objects
+   * [Official Documentation]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId&#x3D;1867855#DocumentService(/documents)-/osrest/api/documents/search/[id]}
+   *
+   * @param query
+   * @param options search options
+   * @returns enaio object
+   */
+  public search(query: EnaioDocumentSearchRequest, options: EnaioDocumentSearchOptions): Observable&lt;EnaioDocumentObject[]&gt; {
+    return this.http.post&lt;EnaioDocumentObject[]&gt;(&#x27;/osrest/api/documents/search&#x27;, query, { params: options as any as HttpParams });
   }
 }
 </code></pre>

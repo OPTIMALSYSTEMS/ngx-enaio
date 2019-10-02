@@ -1,3 +1,4 @@
+import { EnaioFieldSchema } from './../enums/enaio-field-schema.enum';
 import { EnaioLocale } from './../enums/enaio-locale.enum';
 
 /**
@@ -30,4 +31,28 @@ export interface EnaioDocumentSearchOptions {
      * Leading zeros are output according to the enaio editor settings for values.
      */
     fillLeadingZeros?: boolean;
+    /**
+     * Size of the result set. Paging can be performed with this.
+     */
+    pagesize?: number;
+    /**
+     * Detailed offset independent of the pagesize
+     */
+    offset?: number;
+    /**
+     * For paging, the page to display. Overwrites the offset parameter. Offset is calculated from page * pagesize.
+     */
+    page?: number;
+    /**
+     * Maximum number of hits to load. This can be more hits than specified in pagesize. This can be used to regulate the caching so that subsequent pages are delivered faster.
+     */
+    maxhits?: number;
+    /**
+     * The object rights for each object should also be displayed in the hit list.
+     */
+    rights?: boolean;
+    /**
+     * Determines in which mode the fields of the object are returned. Possible values: MIN, ALL and DEF
+     */
+    fieldsschema?: EnaioFieldSchema;
 }

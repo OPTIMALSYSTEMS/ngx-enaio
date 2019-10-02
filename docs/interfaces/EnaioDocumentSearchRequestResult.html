@@ -44,7 +44,7 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>EnaioDocumentSearchOptions</li>
+  <li>EnaioDocumentSearchRequestResult</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -62,16 +62,9 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/ngx-enaio/src/lib/interfaces/enaio-document-search-options.ts</code>
+            <code>projects/ngx-enaio/src/lib/interfaces/enaio-document-search-request.ts</code>
         </p>
 
-            <p class="comment">
-                <h3>Description</h3>
-            </p>
-            <p class="comment">
-                <p>Search Options</p>
-
-            </p>
 
 
         <section>
@@ -88,19 +81,47 @@
                             <ul class="index-list">
                                 <li>
                                             <span class="modifier">Optional</span>
+                                        <a href="#childfieldsschema_mode">childfieldsschema_mode</a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#childschema_mode">childschema_mode</a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#deny_empty">deny_empty</a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#disableSearchGroups">disableSearchGroups</a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#distinct">distinct</a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#export_depth">export_depth</a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
                                         <a href="#fieldsschema">fieldsschema</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#fillLeadingZeros">fillLeadingZeros</a>
+                                        <a href="#fieldsschema_mode">fieldsschema_mode</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#locale">locale</a>
+                                        <a href="#fileProperties">fileProperties</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#lockinfo">lockinfo</a>
+                                        <a href="#followDocLink">followDocLink</a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#garbageMode">garbageMode</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
@@ -108,7 +129,7 @@
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#objecttypeid">objecttypeid</a>
+                                        <a href="#normalize_values">normalize_values</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
@@ -116,15 +137,11 @@
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#page">page</a>
-                                </li>
-                                <li>
-                                            <span class="modifier">Optional</span>
                                         <a href="#pagesize">pagesize</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#refresh">refresh</a>
+                                        <a href="#registerContext">registerContext</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
@@ -132,7 +149,7 @@
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#timestamps">timestamps</a>
+                                        <a href="#systemFields">systemFields</a>
                                 </li>
                             </ul>
                         </td>
@@ -149,13 +166,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="fieldsschema"></a>
-                                        <span class="name"><b>fieldsschema</b><a href="#fieldsschema"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="childfieldsschema_mode"></a>
+                                        <span class="name"><b>childfieldsschema_mode</b><a href="#childfieldsschema_mode"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>fieldsschema:         <code><a href="../miscellaneous/enumerations.html#EnaioFieldSchema" target="_self" >EnaioFieldSchema</a></code>
+                                        <code>childfieldsschema_mode:         <code><a href="../miscellaneous/enumerations.html#EnaioFieldSchema" target="_self" >EnaioFieldSchema</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -177,25 +194,53 @@
 
 
 
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Determines in which mode the fields of the object are returned. Possible values: MIN, ALL and DEF</p>
-</div>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="fillLeadingZeros"></a>
-                                        <span class="name"><b>fillLeadingZeros</b><a href="#fillLeadingZeros"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="childschema_mode"></a>
+                                        <span class="name"><b>childschema_mode</b><a href="#childschema_mode"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>fillLeadingZeros:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>childschema_mode:         <code><a href="../miscellaneous/enumerations.html#EnaioChildSchema" target="_self" >EnaioChildSchema</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#EnaioChildSchema" target="_self" >EnaioChildSchema</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="deny_empty"></a>
+                                        <span class="name"><b>deny_empty</b><a href="#deny_empty"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>deny_empty:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -217,25 +262,19 @@
 
 
 
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Leading zeros are output according to the enaio editor settings for values.</p>
-</div>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="locale"></a>
-                                        <span class="name"><b>locale</b><a href="#locale"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="disableSearchGroups"></a>
+                                        <span class="name"><b>disableSearchGroups</b><a href="#disableSearchGroups"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>locale:         <code><a href="../miscellaneous/enumerations.html#EnaioLocale" target="_self" >EnaioLocale</a></code>
+                                        <code>disableSearchGroups:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -243,7 +282,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#EnaioLocale" target="_self" >EnaioLocale</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
                                         </td>
                                     </tr>
@@ -257,25 +296,19 @@
 
 
 
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Output language.</p>
-</div>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="lockinfo"></a>
-                                        <span class="name"><b>lockinfo</b><a href="#lockinfo"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="distinct"></a>
+                                        <span class="name"><b>distinct</b><a href="#distinct"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>lockinfo:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>distinct:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -297,13 +330,210 @@
 
 
 
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Information about the user and the date and time when the object was locked. 
-Alternative values are UNLOCKED, SELF, or EXTERNAL.</p>
-</div>
-                                </td>
-                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="export_depth"></a>
+                                        <span class="name"><b>export_depth</b><a href="#export_depth"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>export_depth:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="fieldsschema"></a>
+                                        <span class="name"><b>fieldsschema</b><a href="#fieldsschema"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>fieldsschema:     <code>EnaioDocumentSearchRequestSchema[]</code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code>EnaioDocumentSearchRequestSchema[]</code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="fieldsschema_mode"></a>
+                                        <span class="name"><b>fieldsschema_mode</b><a href="#fieldsschema_mode"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>fieldsschema_mode:         <code><a href="../miscellaneous/enumerations.html#EnaioFieldSchema" target="_self" >EnaioFieldSchema</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#EnaioFieldSchema" target="_self" >EnaioFieldSchema</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="fileProperties"></a>
+                                        <span class="name"><b>fileProperties</b><a href="#fileProperties"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>fileProperties:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="followDocLink"></a>
+                                        <span class="name"><b>followDocLink</b><a href="#followDocLink"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>followDocLink:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="garbageMode"></a>
+                                        <span class="name"><b>garbageMode</b><a href="#garbageMode"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>garbageMode:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -338,25 +568,19 @@ Alternative values are UNLOCKED, SELF, or EXTERNAL.</p>
 
 
 
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Maximum number of hits to load. This can be more hits than specified in pagesize. This can be used to regulate the caching so that subsequent pages are delivered faster.</p>
-</div>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="objecttypeid"></a>
-                                        <span class="name"><b>objecttypeid</b><a href="#objecttypeid"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="normalize_values"></a>
+                                        <span class="name"><b>normalize_values</b><a href="#normalize_values"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>objecttypeid:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>normalize_values:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -364,7 +588,7 @@ Alternative values are UNLOCKED, SELF, or EXTERNAL.</p>
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -378,13 +602,6 @@ Alternative values are UNLOCKED, SELF, or EXTERNAL.</p>
 
 
 
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Object Type ID of the object being searched for. 
-The parameter is optional, but for performance reasons it is recommended to set the parameter if it is known.</p>
-</div>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -419,52 +636,6 @@ The parameter is optional, but for performance reasons it is recommended to set 
 
 
 
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Detailed offset independent of the pagesize</p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="page"></a>
-                                        <span class="name"><b>page</b><a href="#page"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>page:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
-
-
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>For paging, the page to display. Overwrites the offset parameter. Offset is calculated from page * pagesize.</p>
-</div>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -499,25 +670,19 @@ The parameter is optional, but for performance reasons it is recommended to set 
 
 
 
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Size of the result set. Paging can be performed with this.</p>
-</div>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="refresh"></a>
-                                        <span class="name"><b>refresh</b><a href="#refresh"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="registerContext"></a>
+                                        <span class="name"><b>registerContext</b><a href="#registerContext"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>refresh:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>registerContext:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -525,7 +690,7 @@ The parameter is optional, but for performance reasons it is recommended to set 
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
                                         </td>
                                     </tr>
@@ -539,12 +704,6 @@ The parameter is optional, but for performance reasons it is recommended to set 
 
 
 
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>The cache is cleared and the result is requested again by the server.</p>
-</div>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -557,7 +716,7 @@ The parameter is optional, but for performance reasons it is recommended to set 
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>rights:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>rights:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -565,7 +724,7 @@ The parameter is optional, but for performance reasons it is recommended to set 
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
                                         </td>
                                     </tr>
@@ -579,25 +738,19 @@ The parameter is optional, but for performance reasons it is recommended to set 
 
 
 
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>The object rights for each object should also be displayed in the hit list.</p>
-</div>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="timestamps"></a>
-                                        <span class="name"><b>timestamps</b><a href="#timestamps"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="systemFields"></a>
+                                        <span class="name"><b>systemFields</b><a href="#systemFields"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>timestamps:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>systemFields:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -605,7 +758,7 @@ The parameter is optional, but for performance reasons it is recommended to set 
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
                                         </td>
                                     </tr>
@@ -619,12 +772,6 @@ The parameter is optional, but for performance reasons it is recommended to set 
 
 
 
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>If true, the date, time, and date/time basic parameters are returned in the form of a Java timestamp (Milliseconds).</p>
-</div>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
             </section>
@@ -633,62 +780,98 @@ The parameter is optional, but for performance reasons it is recommended to set 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { EnaioFieldSchema } from &#x27;./../enums/enaio-field-schema.enum&#x27;;
-import { EnaioLocale } from &#x27;./../enums/enaio-locale.enum&#x27;;
+import { EnaioChildSchema } from &#x27;./../enums/enaio-client-schema.enum&#x27;;
+import { EnaioSortOrder } from &#x27;./../enums/enaio-sort-order.enum&#x27;;
+export interface EnaioDocumentSearchRequest {
+  cabinet?: string;
+  name?: string;
+  objectTypeId?: string;
+  osid?: string;
 
-/**
- * Search Options
- */
-export interface EnaioDocumentSearchOptions {
-    /**
-     * Object Type ID of the object being searched for. 
-     * The parameter is optional, but for performance reasons it is recommended to set the parameter if it is known.
-     */
-    objecttypeid?: number;
-    /**
-     * The cache is cleared and the result is requested again by the server.
-     */
-    refresh?: boolean;
-    /**
-     * Output language.
-     */
-    locale?: EnaioLocale;
-    /**
-     * Information about the user and the date and time when the object was locked. 
-     * Alternative values are UNLOCKED, SELF, or EXTERNAL.
-     */
-    lockinfo?: boolean;
-    /**
-     * If true, the date, time, and date/time basic parameters are returned in the form of a Java timestamp (Milliseconds).
-     */
-    timestamps?: boolean;
-    /**
-     * Leading zeros are output according to the enaio editor settings for values.
-     */
-    fillLeadingZeros?: boolean;
-    /**
-     * Size of the result set. Paging can be performed with this.
-     */
-    pagesize?: number;
-    /**
-     * Detailed offset independent of the pagesize
-     */
-    offset?: number;
-    /**
-     * For paging, the page to display. Overwrites the offset parameter. Offset is calculated from page * pagesize.
-     */
-    page?: number;
-    /**
-     * Maximum number of hits to load. This can be more hits than specified in pagesize. This can be used to regulate the caching so that subsequent pages are delivered faster.
-     */
-    maxhits?: number;
-    /**
-     * The object rights for each object should also be displayed in the hit list.
-     */
-    rights?: boolean;
-    /**
-     * Determines in which mode the fields of the object are returned. Possible values: MIN, ALL and DEF
-     */
-    fieldsschema?: EnaioFieldSchema;
+  query?: EnaioDocumentSearchQuery;
+  conditionGroups?: EnaioDocumentSearchQuery[];
+  additionalQueries?: EnaioDocumentSearchQuery[];
+
+  result_config?: EnaioDocumentSearchRequestResult;
+}
+
+export interface EnaioDocumentSearchQuery {
+  objectTypeId: string;
+  fields?: EnaioDocumentSearchRequestFields;
+  baseparams?: EnaioDocumentSearchRequestBaseparams;
+}
+
+export interface EnaioDocumentSearchRequestFields {
+  [key: string]: EnaioDocumentSearchRequestField;
+}
+
+export interface EnaioDocumentSearchRequestField {
+  value?: string;
+  null?: boolean;
+  internalName?: string;
+  type?: string;
+  columns?: EnaioDocumentSearchRequestColumn[];
+  rows?: [string[]];
+}
+
+export interface EnaioDocumentSearchRequestResult {
+  fieldsschema?: EnaioDocumentSearchRequestSchema[];
+  pagesize?: number;
+  offset?: number;
+  maxhits?: number;
+  deny_empty?: boolean;
+  normalize_values?: boolean;
+  distinct?: boolean;
+  fieldsschema_mode?: EnaioFieldSchema;
+  childschema_mode?: EnaioChildSchema;
+  childfieldsschema_mode?: EnaioFieldSchema;
+  export_depth?: number;
+  systemFields?: number;
+  registerContext?: number;
+  disableSearchGroups?: number;
+  followDocLink?: number;
+  garbageMode?: number;
+  fileProperties?: number;
+  rights?: number;
+}
+
+export interface EnaioDocumentSearchRequestSchema {
+  internalName?: string;
+  displayName?: string;
+  objectTypeId?: string;
+  dbName?: string;
+  sort_order?: EnaioSortOrder;
+  sort_pos?: number;
+}
+
+export interface EnaioDocumentSearchRequestBaseparams {
+  Creator?: EnaioDocumentSearchRequestField;
+  Created?: EnaioDocumentSearchRequestField;
+  Modifier?: EnaioDocumentSearchRequestField;
+  Modified?: EnaioDocumentSearchRequestField;
+  Owner?: EnaioDocumentSearchRequestField;
+  ArchiveState?: EnaioDocumentSearchRequestField;
+  Archivist?: EnaioDocumentSearchRequestField;
+  ArchiveDate?: EnaioDocumentSearchRequestField;
+  Locked?: EnaioDocumentSearchRequestField;
+  HasVariants?: EnaioDocumentSearchRequestField;
+  Version?: EnaioDocumentSearchRequestField;
+  RetentionDate?: EnaioDocumentSearchRequestField;
+  RetentionPlannedDate?: EnaioDocumentSearchRequestField;
+  Links?: EnaioDocumentSearchRequestField;
+  Medium?: EnaioDocumentSearchRequestField;
+  SystemID?: EnaioDocumentSearchRequestField;
+  ForeignID?: EnaioDocumentSearchRequestField;
+  DocumentPageCount?: EnaioDocumentSearchRequestField;
+  Register?: EnaioDocumentSearchRequestField;
+  MultiLocation?: EnaioDocumentSearchRequestField;
+  Signed?: EnaioDocumentSearchRequestField;
+  LoanedOut?: EnaioDocumentSearchRequestField;
+}
+
+export interface EnaioDocumentSearchRequestColumn {
+  internalName: string;
+  type: string;
 }
 </code></pre>
     </div>
@@ -717,7 +900,7 @@ export interface EnaioDocumentSearchOptions {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'EnaioDocumentSearchOptions.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'EnaioDocumentSearchRequestResult.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

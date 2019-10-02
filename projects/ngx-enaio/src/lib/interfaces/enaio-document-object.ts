@@ -21,7 +21,7 @@ export interface EnaioDocumentObject {
 
   internalName: string;
   /**
-   * Display name of the current locale
+   * Localized Object Type Name
    */
   displayName: string;
   /**
@@ -102,55 +102,116 @@ export interface EnaioDocumentObject {
   variantTree?: EnaioDocumentObjectVariant;
 }
 
+/**
+ * Enaio Metadata Field
+ */
 export interface EnaioDocumentObjectField {
+  /**
+   * field value
+   */
   value: string;
+  /**
+   * Localized Field name
+   */
   displayName: string;
+  /**
+   * Unique internal field name
+   */
   internalName: string;
+  /**
+   * DB field name
+   */
   dbName: string;
+  /**
+   * Metadata field visibility in object definition
+   */
   visible: boolean;
+  /**
+   * Field Type
+   */
   type: string;
 }
-
+/**
+ * Object Rights
+ */
 export interface EnaioDocumentObjectRights {
+  /**
+   * Output Object (X)
+   */
   objExport: boolean;
+  /**
+   * Write Object (U)
+   */
   objModify: boolean;
+  /**
+   * Delete Object (D)
+   */
   objDelete: boolean;
+  /**
+   * Modify Indexdata (W)
+   */
   indexModify: boolean;
 }
-
+/**
+ * Table Field
+ */
 export interface EnaioDocumentObjectTable {
+  /** Localized Table Field Name */
   displayName: string;
+  /** Unique Internal Name */
   internalName: string;
+  /** DB Table suffix like list1. Full table name is <Object.DBName><TableField.DBName> */
   dbName: string;
+  /** Visibility of table field in object definition */
   visible: boolean;
+  /** Table columns */
   columns: EnaioDocumentObjectTableColumn[];
+  /** Table values */
   value: EnaioDocumentObjectTableRow[];
 }
 
+/** Table column definition */
 export interface EnaioDocumentObjectTableColumn {
+  /** Unique Internal Name */
   internalName: string;
+  /** Column data type */
   type: string;
+  /** Localized column name */
   displayName: string;
+  /** Technical db field name */
   dbName: string;
 }
 
+/** Table Row */
 export interface EnaioDocumentObjectTableRow {
+  /** List for row cells */
   ecmSimpleFields: EnaioDocumentObjectField[];
 }
 
+/** Generic type (key) / value object  */
 export interface EnaioDocumentObjectTypeValue {
+  /** Unique Key */
   type: string;
+  /** Value */
   value: string;
 }
 
+/** Variant tree element */
 export interface EnaioDocumentObjectVariant {
+  /** Child variants */
   children: EnaioDocumentObjectVariant[];
+  /** Variant information's */
   variantInformation: EnaioDocumentObjectVariantInformation;
 }
 
+/** Variant information's */
 export interface EnaioDocumentObjectVariantInformation {
+  /** Unique ID of variant */
   DOCUMENT_ID: EnaioDocumentObjectTypeValue;
+  /** Unique id of the parent variant  */
   DOCUMENT_PARENT_ID: EnaioDocumentObjectTypeValue;
+  /** Version name. For example 1.1.0 */
   DOCUMENT_VERSION: EnaioDocumentObjectTypeValue;
+  /** Is Active Flag of the variant */
   IS_ACTIVE: EnaioDocumentObjectTypeValue;
 }
