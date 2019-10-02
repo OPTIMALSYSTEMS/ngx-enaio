@@ -65,6 +65,13 @@
             <code>projects/ngx-enaio/src/lib/interfaces/enaio-document-search-options.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Search Options</p>
+
+            </p>
 
 
         <section>
@@ -146,6 +153,12 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Leading zeros are output according to the enaio editor settings for values.</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -180,6 +193,12 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Output language.</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -214,6 +233,13 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Information about the user and the date and time when the object was locked. 
+Alternative values are UNLOCKED, SELF, or EXTERNAL.</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -248,6 +274,13 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Object Type ID of the object being searched for. 
+The parameter is optional, but for performance reasons it is recommended to set the parameter if it is known.</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -282,6 +315,12 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>The cache is cleared and the result is requested again by the server.</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -316,6 +355,12 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>If true, the date, time, and date/time basic parameters are returned in the form of a Java timestamp (Milliseconds).</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
             </section>
@@ -324,12 +369,36 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { EnaioLocale } from &#x27;./../enums/enaio-locale.enum&#x27;;
+
+/**
+ * Search Options
+ */
 export interface EnaioDocumentSearchOptions {
+    /**
+     * Object Type ID of the object being searched for. 
+     * The parameter is optional, but for performance reasons it is recommended to set the parameter if it is known.
+     */
     objecttypeid?: number;
+    /**
+     * The cache is cleared and the result is requested again by the server.
+     */
     refresh?: boolean;
+    /**
+     * Output language.
+     */
     locale?: EnaioLocale;
+    /**
+     * Information about the user and the date and time when the object was locked. 
+     * Alternative values are UNLOCKED, SELF, or EXTERNAL.
+     */
     lockinfo?: boolean;
+    /**
+     * If true, the date, time, and date/time basic parameters are returned in the form of a Java timestamp (Milliseconds).
+     */
     timestamps?: boolean;
+    /**
+     * Leading zeros are output according to the enaio editor settings for values.
+     */
     fillLeadingZeros?: boolean;
 }
 </code></pre>

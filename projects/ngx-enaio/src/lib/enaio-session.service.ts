@@ -18,7 +18,8 @@ export class EnaioSessionService {
   constructor(private http: HttpClient) {}
 
   /**
-   * Method return the current session infomation as defined [here]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action??pageId=1867869#SessionService(/session)-/osrest/api/session}
+   * Method return the current session infomation as defined 
+   * [Official Doculentation]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action??pageId=1867869#SessionService(/session)-/osrest/api/session}
    *
    *
    * @param boolean refresh Ignores the cached data and retrieves the requested data again

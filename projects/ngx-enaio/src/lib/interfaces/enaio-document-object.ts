@@ -1,24 +1,105 @@
+/**
+ * Enaio Object
+ * Represents a enaio Folder, Register or Document
+ */
 export interface EnaioDocumentObject {
+  /**
+   * Unique enaio Object ID
+   */
   osid: number;
+  /**
+   * Unique enaio Object Type ID
+   */
   objectTypeId: number;
+  /**
+   * Object Type: FOLDER, REGISTER, DOCUMENT
+   */
   objectType: string;
+  /**
+   * Unique Object Type Internal Name
+   */
+
   internalName: string;
+  /**
+   * Display name of the current locale
+   */
   displayName: string;
+  /**
+   * Object Flag
+   * Only available for objectType DOCUMENT
+   */
   objectFlagsValue?: number;
+  /**
+   * Metadata fields
+   */
+
   ecmSimpleFields: EnaioDocumentObjectField[];
+  /**
+   * table fields
+   */
+
   ecmTableFields: EnaioDocumentObjectTable[];
+  /**
+   * Base Parameter
+   *
+   */
   baseParameters: EnaioDocumentObjectTypeValue[];
+  /**
+   * Access Rights for object
+   */
   rights: EnaioDocumentObjectRights;
+  /**
+   * Object Type of the parent object.
+   * Possible values: Folder, Register
+   */
   parentCabinetKeyType: string;
+  /**
+   * Object Type internal name of the parent object.
+   */
+
   parentCabinetKey: string;
-  childrenCount: number;
-  children: EnaioDocumentObject[];
+  /**
+   * Child count
+   */
+
+  childrenCount?: number;
+  /**
+   * Object Children (Registers and Documents)
+   */
+
+  children?: EnaioDocumentObject[];
+  /**
+   * Object Relation Information's
+   */
+
   objectInserts: {};
+  /**
+   * Full hierarchical tree
+   */
+
   folderRegisterTree: [];
+  /**
+   * System fields
+   */
+
   systemFields: EnaioDocumentObjectTypeValue[];
+  /**
+   * File Properties
+   */
+
   fileProperties?: EnaioDocumentObjectTypeValue[];
-  variantInformation: EnaioDocumentObjectTypeValue[];
-  variantTree: EnaioDocumentObjectVariant;
+  /**
+   * Variant Information of the current object.
+   * Only available for Object Type DOCUMENT
+   */
+
+  variantInformation?: EnaioDocumentObjectTypeValue[];
+  /**
+   * Full variant tree
+   * Only available for Object Type DOCUMENT
+   */
+
+  variantTree?: EnaioDocumentObjectVariant;
 }
 
 export interface EnaioDocumentObjectField {
@@ -73,4 +154,3 @@ export interface EnaioDocumentObjectVariantInformation {
   DOCUMENT_VERSION: EnaioDocumentObjectTypeValue;
   IS_ACTIVE: EnaioDocumentObjectTypeValue;
 }
-

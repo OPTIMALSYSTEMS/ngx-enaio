@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EnaioDocumentService, EnaioDocumentObject, EnaioDocumentSearchOptions } from 'ngx-enaio';
+import { EnaioDocumentService, EnaioDocumentObject, EnaioDocumentSearchOptions, EnaioLocale } from 'ngx-enaio';
 
 @Component({
   selector: 'app-search-by-id',
@@ -9,11 +9,20 @@ import { EnaioDocumentService, EnaioDocumentObject, EnaioDocumentSearchOptions }
 export class SearchByIdComponent implements OnInit {
   loading = false;
   error: any;
- 
+
   id = 0;
-  options = {} as EnaioDocumentSearchOptions;
+
+  options = {
+    objecttypeid: -1,
+    refresh: false,
+    locale: EnaioLocale.DE,
+    lockinfo: false,
+    timestamps: false,
+    fillLeadingZeros: false
+  } as EnaioDocumentSearchOptions;
+
   result: EnaioDocumentObject;
-  
+
   constructor(private documentService: EnaioDocumentService) {}
 
   ngOnInit() {}
@@ -22,12 +31,15 @@ export class SearchByIdComponent implements OnInit {
     this.error = null;
     this.result = null;
     this.loading = true;
-    this.documentService.searchByID(this.id, this.options).subscribe((result) => {
-      this.loading = false;
-      this.result = result;
-    }, (error) => {
-      this.loading = false;
-      this.error = error;
-    });
+    this.documentService.searchByID(this.id, this.options).subscribe(
+      result => {
+        this.loading = false;
+        this.result = result;
+      },
+      error => {
+        this.loading = false;
+        this.error = error;
+      }
+    );
   }
 }

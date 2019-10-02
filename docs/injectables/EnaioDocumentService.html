@@ -103,12 +103,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:13</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Constructor</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -170,14 +172,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:14</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:28</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Method return the enaio object for the given id
+<a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867855#DocumentService(/documents)-/osrest/api/documents/search/[id]">Official Documentation</a></p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -187,6 +192,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -201,6 +207,8 @@
                                     </td>
 
 
+                                    <td>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>options</td>
@@ -213,6 +221,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Search Options</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -224,7 +236,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>enaio object</p>
+
                     </div>
                 </td>
             </tr>
@@ -245,12 +258,26 @@ import { Injectable } from &#x27;@angular/core&#x27;;
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
+/**
+ * Document Service covers the [enaio AppConnector /osrest/api/document interface]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId&#x3D;1867855}
+ */
 export class EnaioDocumentService {
+  /**
+   * Constructor
+   */
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  public searchByID(id: number, options: EnaioDocumentSearchOptions): Observable&lt;EnaioDocumentObject&gt;  {
-    return this.http.get&lt;any&gt;(&#x27;/osrest/api/documents/search/&#x27; + id, {params: options as HttpParams});
+  /**
+   * Method return the enaio object for the given id
+   * [Official Documentation]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId&#x3D;1867855#DocumentService(/documents)-/osrest/api/documents/search/[id]}
+   *
+   *
+   * @param number id unique enaio id
+   * @param options Search Options
+   * @returns enaio object
+   */
+  public searchByID(id: number, options: EnaioDocumentSearchOptions): Observable&lt;EnaioDocumentObject&gt; {
+    return this.http.get&lt;any&gt;(&#x27;/osrest/api/documents/search/&#x27; + id, { params: options as HttpParams });
   }
 }
 </code></pre>
