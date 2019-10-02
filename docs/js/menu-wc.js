@@ -85,6 +85,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </div>
                             <ul class="links collapse " ${ isNormalMode ? 'id="injectables-links"' : 'id="xs-injectables-links"' }>
                                 <li class="link">
+                                    <a href="injectables/EnaioDocumentService.html" data-type="entity-link">EnaioDocumentService</a>
+                                </li>
+                                <li class="link">
                                     <a href="injectables/EnaioSessionService.html" data-type="entity-link">EnaioSessionService</a>
                                 </li>
                             </ul>
@@ -97,6 +100,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             <span class="icon ion-ios-arrow-down"></span>
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
+                            <li class="link">
+                                <a href="interfaces/EnaioDocumentObject.html" data-type="entity-link">EnaioDocumentObject</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioDocumentSearchOptions.html" data-type="entity-link">EnaioDocumentSearchOptions</a>
+                            </li>
                             <li class="link">
                                 <a href="interfaces/EnaioSession.html" data-type="entity-link">EnaioSession</a>
                             </li>

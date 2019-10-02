@@ -324,7 +324,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>language:         <code><a href="../miscellaneous/enumerations.html#Locale" target="_self" >Locale</a></code>
+                                        <code>language:         <code><a href="../miscellaneous/enumerations.html#EnaioLocale" target="_self" >EnaioLocale</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -332,7 +332,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#Locale" target="_self" >Locale</a></code>
+                                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#EnaioLocale" target="_self" >EnaioLocale</a></code>
 
                                         </td>
                                     </tr>
@@ -413,7 +413,7 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>Temporary session guid. Not the system internal sessioGuid</p>
+                                    <div class="io-description"><p>Temporary session guid. Not the system internal sessionGuid</p>
 </div>
                                 </td>
                             </tr>
@@ -553,7 +553,7 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>Unique workflow organisation identifier (32 characters long)</p>
+                                    <div class="io-description"><p>Unique workflow organization identifier (32 characters long)</p>
 </div>
                                 </td>
                             </tr>
@@ -564,62 +564,63 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Locale } from &#x27;../enums/locale.enum&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { EnaioLocale } from &#x27;../enums/enaio-locale.enum&#x27;;
 
 /**
  * enaio Session informations
  */
 
 export interface EnaioSession {
-    /**
-    * Numeric User ID
-    */
-    userid:number;
-    /**
-    * Username / Login
-    */
-    username: string;
-    /**
-    * Unique user identifier (32 characters long)
-    */
-    osGuid: string;
-    /**
-    * Unique user identifier in the workflow engine (32 characters long)
-    */
-    wfGuid: string;
-    /**
-    * Unique workflow organisation identifier (32 characters long)
-    */
-    wfOrg: string;
-    /**
-    * Temporary session guid. Not the system internal sessioGuid
-    */
-    sessionGuid: string;
-    /**
-    * User language. *Not the selected language of the windows/electron/webclient*
-    */
-    language: Locale;
-    /**
-    * Autostar settings of the user
-    */
-    autostar: number;
-    /**
-    * Workflow absent status
-    */
-    isWorkflowAbsent: false;
-    /**
-    * Readable username of the user
-    */
-    fullname?: string;
-    /**
-    * email address of the user
-    */
-    email?: string;
-    /**
-    * Group memberships of the user
-    */
-    groups: string[]
-}</code></pre>
+  /**
+   * Numeric User ID
+   */
+  userid: number;
+  /**
+   * Username / Login
+   */
+  username: string;
+  /**
+   * Unique user identifier (32 characters long)
+   */
+  osGuid: string;
+  /**
+   * Unique user identifier in the workflow engine (32 characters long)
+   */
+  wfGuid: string;
+  /**
+   * Unique workflow organization identifier (32 characters long)
+   */
+  wfOrg: string;
+  /**
+   * Temporary session guid. Not the system internal sessionGuid
+   */
+  sessionGuid: string;
+  /**
+   * User language. *Not the selected language of the windows/electron/webclient*
+   */
+  language: EnaioLocale;
+  /**
+   * Autostar settings of the user
+   */
+  autostar: number;
+  /**
+   * Workflow absent status
+   */
+  isWorkflowAbsent: false;
+  /**
+   * Readable username of the user
+   */
+  fullname?: string;
+  /**
+   * email address of the user
+   */
+  email?: string;
+  /**
+   * Group memberships of the user
+   */
+  groups: string[];
+}
+</code></pre>
     </div>
 </div>
 

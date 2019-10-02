@@ -11,9 +11,7 @@ export class SessionComponent implements OnInit {
   session: Observable<EnaioSession>;
   loading = false;
 
-  constructor(private sessionService: EnaioSessionService) { }
+  constructor(private sessionService: EnaioSessionService) {}
 
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }

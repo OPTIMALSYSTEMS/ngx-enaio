@@ -5,12 +5,19 @@
   <!-- Sidebar -->
   <nav id="sidebar" class="p-2">
     <div class="list-group list-group-root well">
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="list-group-item">Home</a>
-      <a routerLink="/osrest" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="list-group-item">AppConnector</a>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+        class="list-group-item">Home</a>
+      <a routerLink="/osrest" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+        class="list-group-item">AppConnector</a>
       <div class="list-group">
-        <a routerLink="/osrest/session" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="list-group-item">SessionService</a>
-      </div>     
-    </div>   
+        <a routerLink="/osrest/session" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+          class="list-group-item">SessionService</a>
+      </div>
+      <div class="list-group">
+        <a routerLink="/osrest/document" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+          class="list-group-item">DocumentService</a>
+      </div>      
+    </div>
   </nav>
 
   <!-- Page Content -->
@@ -18,5 +25,4 @@
     <router-outlet></router-outlet>
   </div>
 
-</div>   
-
+</div>

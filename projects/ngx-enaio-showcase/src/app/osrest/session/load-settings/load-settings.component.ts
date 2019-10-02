@@ -11,21 +11,21 @@ export class LoadSettingsComponent implements OnInit {
   settings: any;
   error: any;
 
-  constructor(private sessionService: EnaioSessionService) { }
+  constructor(private sessionService: EnaioSessionService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  loadSettings(){
+  loadSettings() {
     this.loading = true;
     this.sessionService.loadSettings().subscribe(
-      (settings) => {
+      settings => {
         this.settings = settings;
         this.loading = false;
-    }, 
-      (error) => {
+      },
+      error => {
         this.error = error;
         this.loading = false;
-    });
+      }
+    );
   }
 }

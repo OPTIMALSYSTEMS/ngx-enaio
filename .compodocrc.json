@@ -1,7 +1,7 @@
 {
-    "name": "ngx-enaio - An Angular layer for the enaio rest services ",
-    "output": "./docs/",
-    "tsconfig": "./projects/ngx-enaio/tsconfig.lib.json",
-    "disableRoutesGraph": true,
-    "theme": "vagrant"
-  }
+  "name": "ngx-enaio - An Angular layer for the enaio rest services ",
+  "output": "./docs/",
+  "tsconfig": "./projects/ngx-enaio/tsconfig.lib.json",
+  "disableRoutesGraph": true,
+  "theme": "vagrant"
+}

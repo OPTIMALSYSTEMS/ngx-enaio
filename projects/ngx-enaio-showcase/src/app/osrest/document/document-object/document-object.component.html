@@ -1,0 +1,153 @@
+<ngb-tabset>
+    <ngb-tab title="Preview">
+        <ng-template ngbTabContent>
+            <div class="container-fluid mt-2">
+                <h2>Common Fields</h2>
+                <table class="table border">
+                    <tr>
+                        <th>ID / Type ID / Type</th>
+                        <td>{{obj.osid}} / {{obj.objectTypeId}} / {{obj.objectType}}</td>
+                    </tr>
+                    <tr>
+                        <th>Display Name</th>
+                        <td>{{obj.displayName}}</td>
+                    </tr>
+                    <tr>
+                        <th>Internal Name Name</th>
+                        <td>{{obj.internalName}}</td>
+                    </tr>
+                    <tr>
+                        <th>Object Flags Value</th>
+                        <td>{{obj.objectFlagsValue}}</td>
+                    </tr>
+                    <tr>
+                        <th>Parent Cabinet Key Type</th>
+                        <td>{{obj.parentCabinetKeyType}}</td>
+                    </tr>
+                    <tr>
+                        <th>Parent Cabinet Key</th>
+                        <td>{{obj.parentCabinetKey}}</td>
+                    </tr>
+                </table>
+                <h2>Fields</h2>
+                <table class="table border">
+                    <tr>
+                        <th>Display Name</th>
+                        <th>Internal Name</th>
+                        <th>DB Name</th>
+                        <th>Type</th>
+                        <th>Visible</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr *ngFor="let field of obj.ecmSimpleFields">
+                        <th>{{field.displayName}}</th>
+                        <td>{{field.internalName}}</td>
+                        <td>{{field.dbName}}</td>
+                        <td>{{field.type}}</td>
+                        <td>{{field.visible}}</td>
+                        <td>{{field.value}}</td>
+                    </tr>
+                </table>
+                <h2>Tables</h2>
+                <div class="border" *ngFor="let table of obj.ecmTableFields">
+                    <table class="table">
+                        <tr>
+                            <th>Display Name</th>
+                            <td>{{table.displayName}}</td>
+                        </tr>
+                        <tr>
+                            <th>Internal Name</th>
+                            <td>{{table.internalName}}</td>
+                        </tr>
+                        <tr>
+                            <th>DB Name</th>
+                            <td>{{table.dbName}}</td>
+                        </tr>
+                        <tr>
+                            <th>Type</th>
+                            <td>{{table.type}}</td>
+                        </tr>
+                    </table>
+                    <h4>Columns</h4>
+                    <table class="table">
+                        <tr>
+                            <th>Display Name</th>
+                            <th>Internal Name</th>
+                            <th>DB Name</th>
+                            <th>Type</th>
+                        </tr>
+                        <tr *ngFor="let column of table.columns">
+                            <td>{{column.displayName}}</td>
+                            <td>{{column.internalName}}</td>
+                            <td>{{column.dbName}}</td>
+                            <td>{{column.type}}</td>
+                        </tr>
+                    </table>
+                    <h4>Values</h4>
+                    <table class="table">
+                        <tr>
+                            <th *ngFor="let column of table.columns">{{column.displayName}}</th>
+                        </tr>
+                        <tr *ngFor="let row of table.value">
+                            <td *ngFor="let cell of row.ecmSimpleFields">{{cell.value}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <h2>Base Parameter</h2>
+                <table class="table border">
+                    <tr *ngFor="let baseParam of obj.baseParameters">
+                        <th>{{baseParam.type}}</th>
+                        <td>{{baseParam.value}}</td>
+                    </tr>
+                </table>
+                <h2>System Fields</h2>
+                <table class="table border">
+                    <tr *ngFor="let systemField of obj.systemFields">
+                        <th>{{systemField.type}}</th>
+                        <td>{{systemField.value}}</td>
+                    </tr>
+                </table>
+                <h2>File Properties</h2>
+                <table class="table border">
+                    <tr *ngFor="let fileProperty of obj.fileProperties">
+                        <th>{{fileProperty.type}}</th>
+                        <td>{{fileProperty.value}}</td>
+                    </tr>
+                </table>
+                <h2>Rights</h2>
+                <table class="table border">
+                    <tr>
+                        <th>Object Export</th>
+                        <td>{{obj.rights?.objExport}}</td>
+                    </tr>
+                    <tr>
+                        <th>Object Modify</th>
+                        <td>{{obj.rights?.objModify}}</td>
+                    </tr>
+                    <tr>
+                        <th>Object Delete</th>
+                        <td>{{obj.rights?.objDelete}}</td>
+                    </tr>
+                    <tr>
+                        <th>Index Modify</th>
+                        <td>{{obj.rights?.indexModify}}</td>
+                    </tr>
+                </table>
+                <h2>Variant Information</h2>
+                <table class="table border">
+                    <tr *ngFor="let info of obj.variantInformation">
+                        <th>{{info.type}}</th>
+                        <td>{{info.value}}</td>
+                    </tr>
+                </table>
+                <h2>Variant Tree</h2>
+                <pre>{{obj.variantTree | json}}</pre>
+            </div>
+        </ng-template>
+    </ngb-tab>
+    <ngb-tab title="JSON">
+        <ng-template ngbTabContent>
+            <pre>{{obj | json}}</pre>
+        </ng-template>
+    </ngb-tab>
+</ngb-tabset>

@@ -39,7 +39,7 @@
 
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li>EnaioSessionService</li>
+  <li>EnaioDocumentService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -57,7 +57,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/ngx-enaio/src/lib/enaio-session.service.ts</code>
+            <code>projects/ngx-enaio/src/lib/enaio-document.service.ts</code>
         </p>
 
 
@@ -78,15 +78,7 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#loadSettings">loadSettings</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#session">session</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#systemroles">systemroles</a>
+                                <a href="#searchByID">searchByID</a>
                             </li>
                         </ul>
                     </td>
@@ -111,14 +103,12 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">projects/ngx-enaio/src/lib/enaio-session.service.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:10</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Constructor</p>
-</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -160,85 +150,34 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="loadSettings"></a>
+                    <a name="searchByID"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Public</span>
-                            loadSettings
+                            searchByID
                         </b>
-                        <a href="#loadSettings"><span class="icon ion-ios-link"></span></a>
+                        <a href="#searchByID"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>loadSettings()</code>
+                    <code>searchByID(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, options: <a href="../interfaces/EnaioDocumentSearchOptions.html">EnaioDocumentSearchOptions</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="47"
-                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-session.service.ts:47</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:14</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Load Client Settings (as.ini format)</p>
-</div>
-
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
-
-                    </div>
-                    <div class="io-description">
-                        <p>Returns client settings as json</p>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="session"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            session
-                        </b>
-                        <a href="#session"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>session(refresh)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="27"
-                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-session.service.ts:27</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Method return the current session infomation as defined <a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action??pageId=1867869#SessionService(/session)-/osrest/api/session">here</a></p>
-</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -246,21 +185,33 @@
                             <thead>
                                 <tr>
                                     <td>Name</td>
+                                    <td>Type</td>
                                     <td>Optional</td>
-                                    <td>Default value</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>refresh</td>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
 
                                     <td>
                                         No
                                     </td>
 
+
+                                </tr>
+                                <tr>
+                                    <td>options</td>
                                     <td>
-                                        <code>false</code>
+                                                <code><a href="../interfaces/EnaioDocumentSearchOptions.html" target="_self" >EnaioDocumentSearchOptions</a></code>
                                     </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
 
                                 </tr>
                             </tbody>
@@ -269,61 +220,11 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/EnaioSession.html" target="_self" >Observable&lt;EnaioSession&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/EnaioDocumentObject.html" target="_self" >Observable&lt;EnaioDocumentObject&gt;</a></code>
 
                     </div>
                     <div class="io-description">
-                        <p>Returns session informations</p>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="systemroles"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            systemroles
-                        </b>
-                        <a href="#systemroles"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>systemroles()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="38"
-                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-session.service.ts:38</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Return all system roles of the user</p>
-</div>
-
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../miscellaneous/enumerations.html#EnaioSystemRole" target="_self" >Observable&lt;EnaioSystemRole[]&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        <p>Returns system roles as string[]</p>
-
+                        
                     </div>
                 </td>
             </tr>
@@ -335,54 +236,21 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import { HttpClient } from &#x27;@angular/common/http&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { EnaioDocumentObject } from &#x27;./interfaces/enaio-document-object&#x27;;
+import { EnaioDocumentSearchOptions } from &#x27;./interfaces/enaio-document-search-options&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
-import { EnaioSession } from &#x27;./interfaces/enaio-session&#x27;;
-import { EnaioSystemRole } from &#x27;./enums/enaio-systemrole.enum&#x27;;
+import { HttpClient, HttpParams } from &#x27;@angular/common/http&#x27;;
+import { Injectable } from &#x27;@angular/core&#x27;;
 
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
+export class EnaioDocumentService {
 
-/**
- * Session Service covers the [enaio AppConnector /osrest/api/session interface]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action??pageId&#x3D;1867869}
- */
-export class EnaioSessionService {
-  /**
-   * Constructor
-   */
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  /**
-   * Method return the current session infomation as defined [here]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action??pageId&#x3D;1867869#SessionService(/session)-/osrest/api/session}
-   *
-   *
-   * @param boolean refresh Ignores the cached data and retrieves the requested data again
-   * @returns Returns session informations
-   */
-  public session(refresh &#x3D; false): Observable&lt;EnaioSession&gt; {
-    return this.http.get&lt;EnaioSession&gt;(&#x27;/osrest/api/session&#x27;, {
-      params: { refresh: refresh ? &#x27;true&#x27; : &#x27;false&#x27; }
-    });
-  }
-
-  /**
-   * Return all system roles of the user
-   *
-   * @returns Returns system roles as string[]
-   */
-  public systemroles(): Observable&lt;EnaioSystemRole[]&gt; {
-    return this.http.get&lt;EnaioSystemRole[]&gt;(&#x27;/osrest/api/session/systemroles&#x27;);
-  }
-
-  /**
-   * Load Client Settings (as.ini format)
-   *
-   * @returns Returns client settings as json
-   */
-  public loadSettings(): Observable&lt;any&gt; {
-    return this.http.get&lt;string[]&gt;(&#x27;/osrest/api/session/settings/load&#x27;);
+  public searchByID(id: number, options: EnaioDocumentSearchOptions): Observable&lt;EnaioDocumentObject&gt;  {
+    return this.http.get&lt;any&gt;(&#x27;/osrest/api/documents/search/&#x27; + id, {params: options as HttpParams});
   }
 }
 </code></pre>
@@ -418,7 +286,7 @@ export class EnaioSessionService {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
-            var COMPODOC_CURRENT_PAGE_URL = 'EnaioSessionService.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'EnaioDocumentService.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

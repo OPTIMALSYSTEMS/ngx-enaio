@@ -12,21 +12,21 @@ export class GetSessionComponent implements OnInit {
   error: any;
   refresh: false;
 
-  constructor(private sessionService: EnaioSessionService) { }
+  constructor(private sessionService: EnaioSessionService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  loadSession(){
+  loadSession() {
     this.loading = true;
     this.sessionService.session(this.refresh).subscribe(
-      (session) => {
+      session => {
         this.session = session;
         this.loading = false;
-    }, 
-      (error) => {
+      },
+      error => {
         this.error = error;
         this.loading = false;
-    });
+      }
+    );
   }
 }

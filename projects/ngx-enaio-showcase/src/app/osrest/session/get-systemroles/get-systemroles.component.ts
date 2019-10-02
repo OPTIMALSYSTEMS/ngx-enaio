@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EnaioSessionService, SystemRole } from 'ngx-enaio';
+import { EnaioSessionService, EnaioSystemRole } from 'ngx-enaio';
 
 @Component({
   selector: 'app-get-systemroles',
@@ -8,24 +8,24 @@ import { EnaioSessionService, SystemRole } from 'ngx-enaio';
 })
 export class GetSystemrolesComponent implements OnInit {
   loading = false;
-  systemroles: SystemRole[];
+  systemroles: EnaioSystemRole[];
   error: any;
-  
-  constructor(private sessionService: EnaioSessionService) { }
 
-  ngOnInit() {
-  }
+  constructor(private sessionService: EnaioSessionService) {}
 
-  loadSystemRoles(){
+  ngOnInit() {}
+
+  loadSystemRoles() {
     this.loading = true;
     this.sessionService.systemroles().subscribe(
-      (systemroles) => {
+      systemroles => {
         this.systemroles = systemroles;
         this.loading = false;
-    }, 
-      (error) => {
+      },
+      error => {
         this.error = error;
         this.loading = false;
-    });
+      }
+    );
   }
 }

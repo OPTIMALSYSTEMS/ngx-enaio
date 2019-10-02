@@ -1,16 +1,16 @@
 <div class="card w-100">
-        <div class="card-header">
-            <form class="form-inline">
-                <button (click) = "loadSettings()" type="button" class="btn btn-primary">Load Client Settings</button>
-                  <div class="spinner-grow" *ngIf="loading">
-                        <span class="sr-only">Loading...</span>
-                    </div>
-            </form>
-        </div>
-        <div class="card-body">
-            <pre *ngIf = "settings && !loading">{{settings | json}}</pre>
-            <pre class="text-danger" *ngIf = "error && !loading">
+    <div class="card-header">
+        <form class="form-inline">
+            <button (click)="loadSettings()" type="button" class="btn btn-primary">Load Client Settings</button>
+            <div class="spinner-grow" *ngIf="loading">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </form>
+    </div>
+    <div class="card-body">
+        <pre *ngIf="settings && !loading">{{settings | json}}</pre>
+        <pre class="text-danger" *ngIf="error && !loading">
                 {{error | json}}
             </pre>
-        </div>
-      </div>
+    </div>
+</div>

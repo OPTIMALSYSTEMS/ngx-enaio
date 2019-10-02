@@ -1,0 +1,65 @@
+<div class="card w-100">
+    <div class="card-header">
+        <form (ngSubmit)="onSubmit()" #form="ngForm">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Object ID</label>
+                    <input type="number" class="form-control" id="id" placeholder="Object ID" [(ngModel)]="id"
+                        name="id">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Password</label>
+                    <input type="number" class="form-control" id="typeId" placeholder="ObjectTypeId"
+                        [(ngModel)]="options.objecttypeid" name="objecttypeid">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="locale">Locale</label>
+                    <select class="form-control" id="locale" name="locale">
+                        <option>1</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check col-md-6">
+                    <input class="form-check-input" type="checkbox" id="refresh" [(ngModel)]="options.refresh"
+                        name="refresh">
+                    <label class="form-check-label" for="refresh">
+                        Refresh
+                    </label>
+                </div>
+                <div class="form-check col-md-6">
+                    <input class="form-check-input" type="checkbox" id="lockinfo" [(ngModel)]="options.lockinfo"
+                        name="lockinfo col-md-6">
+                    <label class="form-check-label" for="lockinfo">
+                        Lock Info
+                    </label>
+                </div>
+                <div class="form-check col-md-6">
+                    <input class="form-check-input" type="checkbox" id="timestamps" [(ngModel)]="options.timestamps"
+                        name="timestamps">
+                    <label class="form-check-label" for="timestamps">
+                        Timestamps
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="fillLeadingZeros"
+                        [(ngModel)]="options.fillLeadingZeros" name="fillLeadingZeros">
+                    <label class="form-check-label" for="fillLeadingZeros">
+                        Fill Leading Zeros
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!form.form.valid || loading">Execute</button>
+        </form>
+    </div>
+    <div class="card-body">
+        <div *ngIf="result && !loading">
+            <app-document-object [obj]="result"></app-document-object>
+        </div>
+        <pre class="text-danger" *ngIf="error && !loading">
+            {{error | json}}
+        </pre>
+    </div>
+</div>
