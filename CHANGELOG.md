@@ -1,6 +1,12 @@
 # Changelog
 
-## [0.0.3] - 2019-10-03
+## [0.0.5] - 2019-10-03
+
+### Added
+
+- Add Parents function to DocumentService Implementation
+
+## [0.0.4] - 2019-10-03
 
 ### Added
 
