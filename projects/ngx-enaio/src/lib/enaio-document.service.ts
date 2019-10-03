@@ -33,7 +33,6 @@ export class EnaioDocumentService {
    *
    * @param verbose An extended generic metadata model is output. Equals to search methods (EnaioDocumentObject)
    *
-   *
    * @param objecttypeid ObjectTypeID of the required object.
    * The parameter is optional, but for performance reasons it is recommended to set the parameter if it is known.
    *
@@ -48,9 +47,21 @@ export class EnaioDocumentService {
     objecttypeid?: number,
     metadata?: string
   ): Observable<EnaioDocumentObject | any> {
-    return this.http.get<EnaioDocumentObject | any>('/osrest/api/documents/parents/' + id, {
-      params: ({ objecttypeid, metadata, verbose, tree } as any) as HttpParams
-    });
+    const params = {} as HttpParams;
+    if (tree) {
+      params.append('tree', String(tree));
+    }
+    if (verbose) {
+      params.append('verbose', String(verbose));
+    }
+    if (objecttypeid) {
+      params.append('objecttypeid', String(objecttypeid));
+    }
+    if (metadata) {
+      params.append('metadata', String(metadata));
+    }
+
+    return this.http.get<EnaioDocumentObject | any>('/osrest/api/documents/parents/' + id, { params });
   }
 
   /**
