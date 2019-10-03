@@ -1,8 +1,23 @@
 {
   "name": "ngx-enaio",
-  "version": "0.0.3",
+  "version": "0.0.4",
+  "description": "An Angular layer for the enaio rest services ",
+  "keywords": ["enaio", "Optimal Systems", "ECMind", "angular"],
+  "homepage": "https://github.com/OPTIMALSYSTEMS/ngx-enaio",
+  "bugs": {
+    "url": "https://github.com/OPTIMALSYSTEMS/ngx-enaio/issues",
+    "email" : "ulrich.wohlfeil@ecmind.ch"
+  },
+  "license": "Apache-2.0",
+  "contributors": ["https://github.com/OPTIMALSYSTEMS/ngx-enaio/graphs/contributors"],
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OPTIMALSYSTEMS/ngx-enaio.git",
+    "directory": "packages/ngx-enaio"
+  },
   "peerDependencies": {
-    "@angular/common": "^8.2.8",
-    "@angular/core": "^8.2.8"
+    "@angular/common": ">=8.0.0",
+    "@angular/core": ">=8.0.0"
   }
 }

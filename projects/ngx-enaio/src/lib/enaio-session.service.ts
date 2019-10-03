@@ -9,7 +9,7 @@ import { EnaioSystemRole } from './enums/enaio-systemrole.enum';
 })
 
 /**
- * Session Service covers the [enaio AppConnector /osrest/api/session interface]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action??pageId=1867869}
+ * Session Service covers the [enaio AppConnector /osrest/api/session interface]{@link https://bit.ly/2oOpBlu}
  */
 export class EnaioSessionService {
   /**
@@ -18,12 +18,12 @@ export class EnaioSessionService {
   constructor(private http: HttpClient) {}
 
   /**
-   * Method return the current session infomation as defined 
-   * [Official Doculentation]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action??pageId=1867869#SessionService(/session)-/osrest/api/session}
+   * Method return the current session information as defined
+   * [Official Documentation]{@link https://bit.ly/2obOCai}
    *
    *
    * @param boolean refresh Ignores the cached data and retrieves the requested data again
-   * @returns Returns session informations
+   * @returns Returns session information's
    */
   public session(refresh = false): Observable<EnaioSession> {
     return this.http.get<EnaioSession>('/osrest/api/session', {

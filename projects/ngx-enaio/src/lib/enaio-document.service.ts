@@ -9,7 +9,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 /**
- * Document Service covers the [enaio AppConnector /osrest/api/document interface]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867855}
+ * Document Service covers the [enaio AppConnector /osrest/api/document interface]{@link https://bit.ly/2obPMmn}
  */
 export class EnaioDocumentService {
   /**
@@ -19,7 +19,7 @@ export class EnaioDocumentService {
 
   /**
    * Method return the enaio object for the given query
-   * [Official Documentation]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867855#DocumentService(/documents)-/osrest/api/documents/search}
+   * [Official Documentation]{@link https://bit.ly/2oHcdjb}
    *
    *
    * @param number id unique enaio id
@@ -33,13 +33,13 @@ export class EnaioDocumentService {
 
   /**
    * Method return list ob enaio objects
-   * [Official Documentation]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867855#DocumentService(/documents)-/osrest/api/documents/search/[id]}
+   * [Official Documentation]{@link https://bit.ly/2oKpMys}
    *
-   * @param query
+   * @param request search request object
    * @param options search options
    * @returns enaio object
    */
-  public search(query: EnaioDocumentSearchRequest, options: EnaioDocumentSearchOptions): Observable<EnaioDocumentObject[]> {
-    return this.http.post<EnaioDocumentObject[]>('/osrest/api/documents/search', query, { params: options as any as HttpParams });
+  public search(request: EnaioDocumentSearchRequest, options: EnaioDocumentSearchOptions): Observable<EnaioDocumentObject[]> {
+    return this.http.post<EnaioDocumentObject[]>('/osrest/api/documents/search', request, { params: options as any as HttpParams });
   }
 }

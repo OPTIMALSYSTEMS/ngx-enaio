@@ -17,7 +17,7 @@
     "type": "git",
     "url": "https://github.com/OPTIMALSYSTEMS/ngx-enaio.git"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/OPTIMALSYSTEMS/ngx-enaio/issues"
   },

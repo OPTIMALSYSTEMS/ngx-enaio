@@ -11,7 +11,7 @@ import { EnaioServiceInfo } from './interfaces/enaio-service-info';
 
 /**
  * ServiceInfo Service covers the
- * [enaio AppConnector /osrest/api/serviceinfo interface]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867867}
+ * [enaio AppConnector /osrest/api/serviceinfo interface]{@link https://bit.ly/2oM7oVM}
  */
 export class EnaioServiceInfoService {
   /** Constructor */
@@ -22,7 +22,7 @@ export class EnaioServiceInfoService {
    *
    * @returns Return full service information's
    *
-   * [/osrest/api/serviceinfo]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867867#ServiceInfoService(/serviceinfo)-/osrest/api/serviceinfo}
+   * [/osrest/api/serviceinfo]{@link https://bit.ly/2o7CGGI}
    */
   public serviceinfo(): Observable<EnaioServiceInfo> {
     return this.http.get<EnaioServiceInfo>('/osrest/api/serviceinfo');
@@ -40,7 +40,7 @@ export class EnaioServiceInfoService {
    *
    * @returns counter value
    *
-   * [/osrest/api/serviceinfo/counter/{guid}]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867867#ServiceInfoService(/serviceinfo)-/osrest/api/serviceinfo/counter/{guid}}
+   * [/osrest/api/serviceinfo/counter/{guid}]{@link https://bit.ly/2oLyXPb}
    */
   public counter(type?: EnaioCounterType, reset?: boolean, initial?: number): Observable<number> {
     return this.http.get<number>('/osrest/api/serviceinfo', {
@@ -54,7 +54,7 @@ export class EnaioServiceInfoService {
    *
    * @returns Server Time as Unix Timestamp with milliseconds
    *
-   * [/osrest/api/serviceinfo/ping]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867867#ServiceInfoService(/serviceinfo)-/osrest/api/serviceinfo/ping}
+   * [/osrest/api/serviceinfo/ping]{@link https://bit.ly/2oOrFKg}
    */
   public ping(): Observable<number> {
     return this.http.get<number>('/osrest/api/serviceinfo/ping');
@@ -65,7 +65,7 @@ export class EnaioServiceInfoService {
    *
    * @returns Returns all error descriptions
    *
-   * [/osrest/api/serviceinfo/errorTypes]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867867#ServiceInfoService(/serviceinfo)-/osrest/api/serviceinfo/errorTypes/}
+   * [/osrest/api/serviceinfo/errorTypes]{@link https://bit.ly/2oHe07T}
    */
   public errorTypes(): Observable<EnaioErrorType[]> {
     return this.http.get<EnaioErrorType[]>('/osrest/api/serviceinfo/errorTypes');
@@ -77,7 +77,7 @@ export class EnaioServiceInfoService {
    * @param errorCode ErrorCode number
    * @returns Returns the error description for the specified ErrorCode
    *
-   * [/osrest/api/serviceinfo/errorTypes/{errorCode}]{https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867867#ServiceInfoService(/serviceinfo)-/osrest/api/serviceinfo/errorTypes/{errorCode}}
+   * [/osrest/api/serviceinfo/errorTypes/{errorCode}]{https://bit.ly/2pxK3HJ}
    */
   public errorType(errorCode: number): Observable<EnaioErrorType> {
     return this.http.get<EnaioErrorType>('/osrest/api/serviceinfo/errorTypes/' + errorCode);

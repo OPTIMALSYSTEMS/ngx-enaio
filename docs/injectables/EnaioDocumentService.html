@@ -169,7 +169,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>search(query: <a href="../interfaces/EnaioDocumentSearchRequest.html">EnaioDocumentSearchRequest</a>, options: <a href="../interfaces/EnaioDocumentSearchOptions.html">EnaioDocumentSearchOptions</a>)</code>
+                    <code>search(request: <a href="../interfaces/EnaioDocumentSearchRequest.html">EnaioDocumentSearchRequest</a>, options: <a href="../interfaces/EnaioDocumentSearchOptions.html">EnaioDocumentSearchOptions</a>)</code>
                 </td>
             </tr>
 
@@ -201,7 +201,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>query</td>
+                                    <td>request</td>
                                     <td>
                                                 <code><a href="../interfaces/EnaioDocumentSearchRequest.html" target="_self" >EnaioDocumentSearchRequest</a></code>
                                     </td>
@@ -212,6 +212,8 @@
 
 
                                     <td>
+                                        <p>search request object</p>
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -385,12 +387,12 @@ export class EnaioDocumentService {
    * Method return list ob enaio objects
    * [Official Documentation]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId&#x3D;1867855#DocumentService(/documents)-/osrest/api/documents/search/[id]}
    *
-   * @param query
+   * @param request search request object
    * @param options search options
    * @returns enaio object
    */
-  public search(query: EnaioDocumentSearchRequest, options: EnaioDocumentSearchOptions): Observable&lt;EnaioDocumentObject[]&gt; {
-    return this.http.post&lt;EnaioDocumentObject[]&gt;(&#x27;/osrest/api/documents/search&#x27;, query, { params: options as any as HttpParams });
+  public search(request: EnaioDocumentSearchRequest, options: EnaioDocumentSearchOptions): Observable&lt;EnaioDocumentObject[]&gt; {
+    return this.http.post&lt;EnaioDocumentObject[]&gt;(&#x27;/osrest/api/documents/search&#x27;, request, { params: options as any as HttpParams });
   }
 }
 </code></pre>
