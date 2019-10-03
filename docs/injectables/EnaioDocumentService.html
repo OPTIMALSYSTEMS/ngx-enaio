@@ -78,6 +78,10 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#parents">parents</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#search">search</a>
                             </li>
                             <li>
@@ -156,6 +160,157 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="parents"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            parents
+                        </b>
+                        <a href="#parents"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>parents(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, tree?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, verbose?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, objecttypeid?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, metadata?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:44</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The method returns a sorted, linear list of parent objects for an object with the given ID.
+In addition to the linear, sorted list, the tree structure of a location can also be displayed,
+which is particularly important for displaying several locations.
+<a href="https://bit.ly/2oNf1LE">Official Documentation</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>unique enaio id</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>tree</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>If true, the location hierarchy of all locations of an object is displayed as a tree.
+This parameter should always be specified and &quot;true&quot; set,
+otherwise there may be problems with objects with several locations.
+The &quot;simple&quot; linear output is still used for compatibility reasons.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>verbose</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>An extended generic metadata model is output. Equals to search methods (EnaioDocumentObject)</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>objecttypeid</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>ObjectTypeID of the required object.
+The parameter is optional, but for performance reasons it is recommended to set the parameter if it is known.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>metadata</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>File name of an alternative metadata mapping</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/EnaioDocumentObject.html" target="_self" >Observable&lt;EnaioDocumentObject | any&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>enaio object list</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="search"></a>
                     <span class="name">
                         <b>
@@ -176,8 +331,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="42"
-                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:42</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="79"
+                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:79</a></div>
                 </td>
             </tr>
 
@@ -185,7 +340,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Method return list ob enaio objects
-<a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867855#DocumentService(/documents)-/osrest/api/documents/search/[id]">Official Documentation</a></p>
+<a href="https://bit.ly/2oKpMys">Official Documentation</a></p>
 </div>
 
                     <div class="io-description">
@@ -273,8 +428,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:29</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:65</a></div>
                 </td>
             </tr>
 
@@ -282,7 +437,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Method return the enaio object for the given query
-<a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867855#DocumentService(/documents)-/osrest/api/documents/search">Official Documentation</a></p>
+<a href="https://bit.ly/2oHcdjb">Official Documentation</a></p>
 </div>
 
                     <div class="io-description">
@@ -361,7 +516,7 @@ import { Injectable } from &#x27;@angular/core&#x27;;
   providedIn: &#x27;root&#x27;
 })
 /**
- * Document Service covers the [enaio AppConnector /osrest/api/document interface]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId&#x3D;1867855}
+ * Document Service covers the [enaio AppConnector /osrest/api/document interface]{@link https://bit.ly/2obPMmn}
  */
 export class EnaioDocumentService {
   /**
@@ -370,8 +525,44 @@ export class EnaioDocumentService {
   constructor(private http: HttpClient) {}
 
   /**
+   * The method returns a sorted, linear list of parent objects for an object with the given ID.
+   * In addition to the linear, sorted list, the tree structure of a location can also be displayed,
+   * which is particularly important for displaying several locations.
+   * [Official Documentation]{@link https://bit.ly/2oNf1LE}
+   *
+   *
+   * @param id unique enaio id
+   *
+   * @param tree If true, the location hierarchy of all locations of an object is displayed as a tree.
+   * This parameter should always be specified and &quot;true&quot; set,
+   * otherwise there may be problems with objects with several locations.
+   * The &quot;simple&quot; linear output is still used for compatibility reasons.
+   *
+   * @param verbose An extended generic metadata model is output. Equals to search methods (EnaioDocumentObject)
+   *
+   *
+   * @param objecttypeid ObjectTypeID of the required object.
+   * The parameter is optional, but for performance reasons it is recommended to set the parameter if it is known.
+   *
+   * @param metadata File name of an alternative metadata mapping
+   *
+   * @returns enaio object list
+   */
+  public parents(
+    id: number,
+    tree?: boolean,
+    verbose?: boolean,
+    objecttypeid?: number,
+    metadata?: string
+  ): Observable&lt;EnaioDocumentObject | any&gt; {
+    return this.http.get&lt;EnaioDocumentObject | any&gt;(&#x27;/osrest/api/documents/parents/&#x27; + id, {
+      params: ({ objecttypeid, metadata, verbose, tree } as any) as HttpParams
+    });
+  }
+
+  /**
    * Method return the enaio object for the given query
-   * [Official Documentation]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId&#x3D;1867855#DocumentService(/documents)-/osrest/api/documents/search}
+   * [Official Documentation]{@link https://bit.ly/2oHcdjb}
    *
    *
    * @param number id unique enaio id
@@ -379,20 +570,26 @@ export class EnaioDocumentService {
    * @returns enaio object list
    */
   public searchByID(id: number, options: EnaioDocumentSearchOptions): Observable&lt;EnaioDocumentObject&gt; {
-    return this.http.get&lt;EnaioDocumentObject&gt;(&#x27;/osrest/api/documents/search/&#x27; + id, { params: options as any as HttpParams });
+    return this.http.get&lt;EnaioDocumentObject&gt;(&#x27;/osrest/api/documents/search/&#x27; + id, {
+      params: (options as any) as HttpParams
+    });
   }
-
 
   /**
    * Method return list ob enaio objects
-   * [Official Documentation]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId&#x3D;1867855#DocumentService(/documents)-/osrest/api/documents/search/[id]}
+   * [Official Documentation]{@link https://bit.ly/2oKpMys}
    *
    * @param request search request object
    * @param options search options
    * @returns enaio object
    */
-  public search(request: EnaioDocumentSearchRequest, options: EnaioDocumentSearchOptions): Observable&lt;EnaioDocumentObject[]&gt; {
-    return this.http.post&lt;EnaioDocumentObject[]&gt;(&#x27;/osrest/api/documents/search&#x27;, request, { params: options as any as HttpParams });
+  public search(
+    request: EnaioDocumentSearchRequest,
+    options: EnaioDocumentSearchOptions
+  ): Observable&lt;EnaioDocumentObject[]&gt; {
+    return this.http.post&lt;EnaioDocumentObject[]&gt;(&#x27;/osrest/api/documents/search&#x27;, request, {
+      params: (options as any) as HttpParams
+    });
   }
 }
 </code></pre>

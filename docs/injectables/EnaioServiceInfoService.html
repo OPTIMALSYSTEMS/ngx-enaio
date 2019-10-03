@@ -354,7 +354,7 @@ if the counter already existed and is not reset with the call, the counter is in
                     </div>
                     <div class="io-description">
                         <p>Returns the error description for the specified ErrorCode</p>
-<p>[/osrest/api/serviceinfo/errorTypes/{errorCode}]{<a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867867#ServiceInfoService(/serviceinfo)-/osrest/api/serviceinfo/errorTypes/%7BerrorCode%7D%7D">https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867867#ServiceInfoService(/serviceinfo)-/osrest/api/serviceinfo/errorTypes/{errorCode}}</a></p>
+<p>[/osrest/api/serviceinfo/errorTypes/{errorCode}]{<a href="https://bit.ly/2pxK3HJ%7D">https://bit.ly/2pxK3HJ}</a></p>
 
                     </div>
                 </td>
@@ -532,7 +532,7 @@ import { EnaioServiceInfo } from &#x27;./interfaces/enaio-service-info&#x27;;
 
 /**
  * ServiceInfo Service covers the
- * [enaio AppConnector /osrest/api/serviceinfo interface]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId&#x3D;1867867}
+ * [enaio AppConnector /osrest/api/serviceinfo interface]{@link https://bit.ly/2oM7oVM}
  */
 export class EnaioServiceInfoService {
   /** Constructor */
@@ -543,7 +543,7 @@ export class EnaioServiceInfoService {
    *
    * @returns Return full service information&#x27;s
    *
-   * [/osrest/api/serviceinfo]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId&#x3D;1867867#ServiceInfoService(/serviceinfo)-/osrest/api/serviceinfo}
+   * [/osrest/api/serviceinfo]{@link https://bit.ly/2o7CGGI}
    */
   public serviceinfo(): Observable&lt;EnaioServiceInfo&gt; {
     return this.http.get&lt;EnaioServiceInfo&gt;(&#x27;/osrest/api/serviceinfo&#x27;);
@@ -561,7 +561,7 @@ export class EnaioServiceInfoService {
    *
    * @returns counter value
    *
-   * [/osrest/api/serviceinfo/counter/{guid}]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId&#x3D;1867867#ServiceInfoService(/serviceinfo)-/osrest/api/serviceinfo/counter/{guid}}
+   * [/osrest/api/serviceinfo/counter/{guid}]{@link https://bit.ly/2oLyXPb}
    */
   public counter(type?: EnaioCounterType, reset?: boolean, initial?: number): Observable&lt;number&gt; {
     return this.http.get&lt;number&gt;(&#x27;/osrest/api/serviceinfo&#x27;, {
@@ -575,7 +575,7 @@ export class EnaioServiceInfoService {
    *
    * @returns Server Time as Unix Timestamp with milliseconds
    *
-   * [/osrest/api/serviceinfo/ping]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId&#x3D;1867867#ServiceInfoService(/serviceinfo)-/osrest/api/serviceinfo/ping}
+   * [/osrest/api/serviceinfo/ping]{@link https://bit.ly/2oOrFKg}
    */
   public ping(): Observable&lt;number&gt; {
     return this.http.get&lt;number&gt;(&#x27;/osrest/api/serviceinfo/ping&#x27;);
@@ -586,7 +586,7 @@ export class EnaioServiceInfoService {
    *
    * @returns Returns all error descriptions
    *
-   * [/osrest/api/serviceinfo/errorTypes]{@link https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId&#x3D;1867867#ServiceInfoService(/serviceinfo)-/osrest/api/serviceinfo/errorTypes/}
+   * [/osrest/api/serviceinfo/errorTypes]{@link https://bit.ly/2oHe07T}
    */
   public errorTypes(): Observable&lt;EnaioErrorType[]&gt; {
     return this.http.get&lt;EnaioErrorType[]&gt;(&#x27;/osrest/api/serviceinfo/errorTypes&#x27;);
@@ -598,7 +598,7 @@ export class EnaioServiceInfoService {
    * @param errorCode ErrorCode number
    * @returns Returns the error description for the specified ErrorCode
    *
-   * [/osrest/api/serviceinfo/errorTypes/{errorCode}]{https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId&#x3D;1867867#ServiceInfoService(/serviceinfo)-/osrest/api/serviceinfo/errorTypes/{errorCode}}
+   * [/osrest/api/serviceinfo/errorTypes/{errorCode}]{https://bit.ly/2pxK3HJ}
    */
   public errorType(errorCode: number): Observable&lt;EnaioErrorType&gt; {
     return this.http.get&lt;EnaioErrorType&gt;(&#x27;/osrest/api/serviceinfo/errorTypes/&#x27; + errorCode);

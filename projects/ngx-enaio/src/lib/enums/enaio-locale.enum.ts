@@ -3,40 +3,40 @@
  */
 export enum EnaioLocale {
   /**
-   * German
+   * German (7)
    */
   DE = 'DE',
   /**
-   * English
+   * English (9)
    */
 
   EN = 'EN',
   /**
-   * Spanish
+   * Spanish (10)
    */
   SP = 'SP',
   /**
-   * French
+   * French (12)
    */
   FR = 'FR',
   /**
-   * Italian
-   */
-  IT = 'IT',
-  /**
-   * Dutch
-   */
-  NL = 'NL',
-  /**
-   * ? Must be SK?
-   */
-  SV = 'SV',
-  /**
-   * Hungarian
+   * Hungarian (14)
    */
   HU = 'HU',
   /**
-   * Polish
+   * Italian (16)
    */
-  PL = 'PL'
+  IT = 'IT',
+  /**
+   * Dutch (19)
+   */
+  NL = 'NL',
+  /**
+   * Polish (21)
+   */
+  PL = 'PL',
+  /**
+   * Swedish (29)
+   */
+  SE = 'SE'
 }
