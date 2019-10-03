@@ -44,7 +44,7 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>EnaioDocumentSearchRequestSchema</li>
+  <li>EnaioServiceInfoServices</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -62,9 +62,16 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/ngx-enaio/src/lib/interfaces/enaio-document-search-request.ts</code>
+            <code>projects/ngx-enaio/src/lib/interfaces/enaio-service-info.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>List of common services </p>
+
+            </p>
 
 
         <section>
@@ -80,28 +87,22 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#dbName">dbName</a>
+                                        <a href="#appconnector">appconnector</a>
                                 </li>
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#displayName">displayName</a>
+                                        <a href="#contentviewer">contentviewer</a>
                                 </li>
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#internalName">internalName</a>
+                                        <a href="#documentpreview">documentpreview</a>
                                 </li>
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#objectTypeId">objectTypeId</a>
+                                        <a href="#documentviewer">documentviewer</a>
                                 </li>
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#sort_order">sort_order</a>
+                                        <a href="#fulltext">fulltext</a>
                                 </li>
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#sort_pos">sort_pos</a>
+                                        <a href="#renditioncache">renditioncache</a>
                                 </li>
                             </ul>
                         </td>
@@ -118,13 +119,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="dbName"></a>
-                                        <span class="name"><b>dbName</b><a href="#dbName"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="appconnector"></a>
+                                        <span class="name"><b>appconnector</b><a href="#appconnector"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>dbName:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>appconnector:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -137,28 +138,29 @@
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>AppConnector url </p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="displayName"></a>
-                                        <span class="name"><b>displayName</b><a href="#displayName"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="contentviewer"></a>
+                                        <span class="name"><b>contentviewer</b><a href="#contentviewer"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>displayName:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>contentviewer:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -171,28 +173,29 @@
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Contentviewer url </p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="internalName"></a>
-                                        <span class="name"><b>internalName</b><a href="#internalName"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="documentpreview"></a>
+                                        <span class="name"><b>documentpreview</b><a href="#documentpreview"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>internalName:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>documentpreview:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -205,28 +208,29 @@
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Document preview url </p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="objectTypeId"></a>
-                                        <span class="name"><b>objectTypeId</b><a href="#objectTypeId"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="documentviewer"></a>
+                                        <span class="name"><b>documentviewer</b><a href="#documentviewer"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>objectTypeId:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>documentviewer:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -239,28 +243,29 @@
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Documentviewer url </p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="sort_order"></a>
-                                        <span class="name"><b>sort_order</b><a href="#sort_order"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="fulltext"></a>
+                                        <span class="name"><b>fulltext</b><a href="#fulltext"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>sort_order:         <code><a href="../miscellaneous/enumerations.html#EnaioSortOrder" target="_self" >EnaioSortOrder</a></code>
+                                        <code>fulltext:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -268,33 +273,34 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#EnaioSortOrder" target="_self" >EnaioSortOrder</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Fulltext URL </p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="sort_pos"></a>
-                                        <span class="name"><b>sort_pos</b><a href="#sort_pos"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="renditioncache"></a>
+                                        <span class="name"><b>renditioncache</b><a href="#renditioncache"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>sort_pos:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>renditioncache:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -302,20 +308,21 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>RenditionCache url </p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
             </section>
@@ -323,99 +330,62 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { EnaioFieldSchema } from &#x27;./../enums/enaio-field-schema.enum&#x27;;
-import { EnaioChildSchema } from &#x27;./../enums/enaio-client-schema.enum&#x27;;
-import { EnaioSortOrder } from &#x27;./../enums/enaio-sort-order.enum&#x27;;
-export interface EnaioDocumentSearchRequest {
-  cabinet?: string;
-  name?: string;
-  objectTypeId?: string;
-  osid?: string;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { EnaioSystemRole } from &#x27;../enums/enaio-systemrole.enum&#x27;;
 
-  query: EnaioDocumentSearchQuery;
-  conditionGroups?: EnaioDocumentSearchQuery[];
-  additionalQueries?: EnaioDocumentSearchQuery[];
-
-  result_config?: EnaioDocumentSearchRequestResult;
+/** Service Info response */
+export interface EnaioServiceInfo {
+  /** AppConnector API Version. For example 1.5.89 */
+  apiVersion: string;
+  /** AppConnector Build Revision. For example 0d43015 */
+  buildRevision: string;
+  /** enaio server version. For example 9.00 SP1 */
+  serverVersion: string;
+  /** enaio server address. For example 10.0.2.15 (server-dns-name) */
+  serverAddress: string;
+  /** Admin Contact. ToDo Admin mail address ? */
+  adminContact: string;
+  /** Admin Contact. For example http://www.ecm.mobi */
+  welcomePage: string;
+  /** List of common services */
+  services: EnaioServiceInfoServices;
+  /** List of capabilities as defined in &lt;AppConnector&gt;/configuration/osrest.caps.xml */
+  capabilities: EnaioServiceInfoCapabilities;
+  /** System roles */
+  systemRoles: EnaioSystemRole[];
 }
 
-export interface EnaioDocumentSearchQuery {
-  objectTypeId?: string;
-  fields?: EnaioDocumentSearchRequestFields;
-  baseparams?: EnaioDocumentSearchRequestBaseparams;
+/** List of common services */
+export interface EnaioServiceInfoServices {
+  /** Document preview url */
+  documentpreview: string;
+  /** AppConnector url */
+  appconnector: string;
+  /** RenditionCache url */
+  renditioncache: string;
+  /** Fulltext URL */
+  fulltext: string;
+  /** Documentviewer url */
+  documentviewer: string;
+  /** Contentviewer url */
+  contentviewer: string;
 }
 
-export interface EnaioDocumentSearchRequestFields {
-  [key: string]: EnaioDocumentSearchRequestField;
+/** capabilities as defined in &lt;AppConnector&gt;/configuration/osrest.caps.xml */
+export interface EnaioServiceInfoCapabilities {
+  /** version number */
+  version: number;
+  /** List of capabilities as defined in &lt;AppConnector&gt;/configuration/osrest.caps.xml */
+  capabilities: EnaioServiceInfoCapability[];
 }
 
-export interface EnaioDocumentSearchRequestField {
-  value?: string;
-  null?: boolean;
-  internalName?: string;
-  type?: string;
-  columns?: EnaioDocumentSearchRequestColumn[];
-  rows?: [string[]];
-}
-
-export interface EnaioDocumentSearchRequestResult {
-  fieldsschema?: EnaioDocumentSearchRequestSchema[];
-  pagesize?: number;
-  offset?: number;
-  maxhits?: number;
-  deny_empty?: boolean;
-  normalize_values?: boolean;
-  distinct?: boolean;
-  fieldsschema_mode?: EnaioFieldSchema;
-  childschema_mode?: EnaioChildSchema;
-  childfieldsschema_mode?: EnaioFieldSchema;
-  export_depth?: number;
-  systemFields?: number;
-  registerContext?: number;
-  disableSearchGroups?: number;
-  followDocLink?: number;
-  garbageMode?: number;
-  fileProperties?: number;
-  rights?: number;
-}
-
-export interface EnaioDocumentSearchRequestSchema {
-  internalName?: string;
-  displayName?: string;
-  objectTypeId?: string;
-  dbName?: string;
-  sort_order?: EnaioSortOrder;
-  sort_pos?: number;
-}
-
-export interface EnaioDocumentSearchRequestBaseparams {
-  Creator?: EnaioDocumentSearchRequestField;
-  Created?: EnaioDocumentSearchRequestField;
-  Modifier?: EnaioDocumentSearchRequestField;
-  Modified?: EnaioDocumentSearchRequestField;
-  Owner?: EnaioDocumentSearchRequestField;
-  ArchiveState?: EnaioDocumentSearchRequestField;
-  Archivist?: EnaioDocumentSearchRequestField;
-  ArchiveDate?: EnaioDocumentSearchRequestField;
-  Locked?: EnaioDocumentSearchRequestField;
-  HasVariants?: EnaioDocumentSearchRequestField;
-  Version?: EnaioDocumentSearchRequestField;
-  RetentionDate?: EnaioDocumentSearchRequestField;
-  RetentionPlannedDate?: EnaioDocumentSearchRequestField;
-  Links?: EnaioDocumentSearchRequestField;
-  Medium?: EnaioDocumentSearchRequestField;
-  SystemID?: EnaioDocumentSearchRequestField;
-  ForeignID?: EnaioDocumentSearchRequestField;
-  DocumentPageCount?: EnaioDocumentSearchRequestField;
-  Register?: EnaioDocumentSearchRequestField;
-  MultiLocation?: EnaioDocumentSearchRequestField;
-  Signed?: EnaioDocumentSearchRequestField;
-  LoanedOut?: EnaioDocumentSearchRequestField;
-}
-
-export interface EnaioDocumentSearchRequestColumn {
-  internalName: string;
-  type: string;
+/** capability */
+export interface EnaioServiceInfoCapability {
+  /** name */
+  name: string;
+  /** source */
+  source: string;
+  /** defaults */
+  defaults: [{ ua: any; value: string }];
 }
 </code></pre>
     </div>
@@ -444,7 +414,7 @@ export interface EnaioDocumentSearchRequestColumn {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'EnaioDocumentSearchRequestSchema.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'EnaioServiceInfoServices.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

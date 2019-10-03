@@ -88,6 +88,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     <a href="injectables/EnaioDocumentService.html" data-type="entity-link">EnaioDocumentService</a>
                                 </li>
                                 <li class="link">
+                                    <a href="injectables/EnaioServiceInfoService.html" data-type="entity-link">EnaioServiceInfoService</a>
+                                </li>
+                                <li class="link">
                                     <a href="injectables/EnaioSessionService.html" data-type="entity-link">EnaioSessionService</a>
                                 </li>
                             </ul>
@@ -153,6 +156,21 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/EnaioDocumentSearchRequestSchema.html" data-type="entity-link">EnaioDocumentSearchRequestSchema</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioErrorType.html" data-type="entity-link">EnaioErrorType</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioServiceInfo.html" data-type="entity-link">EnaioServiceInfo</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioServiceInfoCapabilities.html" data-type="entity-link">EnaioServiceInfoCapabilities</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioServiceInfoCapability.html" data-type="entity-link">EnaioServiceInfoCapability</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioServiceInfoServices.html" data-type="entity-link">EnaioServiceInfoServices</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/EnaioSession.html" data-type="entity-link">EnaioSession</a>

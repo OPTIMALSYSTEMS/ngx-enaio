@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.0.3] - 2019-10-03
+
+### Added
+
+- Add ServerInfoService Implementation
+
+### Changes
+
+- Extending documentation
+
 ## [0.0.3] - 2019-10-02
 
 ### Added

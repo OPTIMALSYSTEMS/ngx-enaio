@@ -44,7 +44,7 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>EnaioDocumentSearchRequest</li>
+  <li>EnaioServiceInfo</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -62,9 +62,16 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/ngx-enaio/src/lib/interfaces/enaio-document-search-request.ts</code>
+            <code>projects/ngx-enaio/src/lib/interfaces/enaio-service-info.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Service Info response </p>
+
+            </p>
 
 
         <section>
@@ -80,35 +87,31 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#additionalQueries">additionalQueries</a>
+                                        <a href="#adminContact">adminContact</a>
                                 </li>
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#cabinet">cabinet</a>
+                                        <a href="#apiVersion">apiVersion</a>
                                 </li>
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#conditionGroups">conditionGroups</a>
+                                        <a href="#buildRevision">buildRevision</a>
                                 </li>
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#name">name</a>
+                                        <a href="#capabilities">capabilities</a>
                                 </li>
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#objectTypeId">objectTypeId</a>
+                                        <a href="#serverAddress">serverAddress</a>
                                 </li>
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#osid">osid</a>
+                                        <a href="#serverVersion">serverVersion</a>
                                 </li>
                                 <li>
-                                        <a href="#query">query</a>
+                                        <a href="#services">services</a>
                                 </li>
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#result_config">result_config</a>
+                                        <a href="#systemRoles">systemRoles</a>
+                                </li>
+                                <li>
+                                        <a href="#welcomePage">welcomePage</a>
                                 </li>
                             </ul>
                         </td>
@@ -125,47 +128,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="additionalQueries"></a>
-                                        <span class="name"><b>additionalQueries</b><a href="#additionalQueries"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="adminContact"></a>
+                                        <span class="name"><b>adminContact</b><a href="#adminContact"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>additionalQueries:         <code><a href="../interfaces/EnaioDocumentSearchQuery.html" target="_self" >EnaioDocumentSearchQuery[]</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/EnaioDocumentSearchQuery.html" target="_self" >EnaioDocumentSearchQuery[]</a></code>
-
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="cabinet"></a>
-                                        <span class="name"><b>cabinet</b><a href="#cabinet"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>cabinet:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>adminContact:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -178,62 +147,29 @@
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Admin Contact. ToDo Admin mail address ? </p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="conditionGroups"></a>
-                                        <span class="name"><b>conditionGroups</b><a href="#conditionGroups"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="apiVersion"></a>
+                                        <span class="name"><b>apiVersion</b><a href="#apiVersion"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>conditionGroups:         <code><a href="../interfaces/EnaioDocumentSearchQuery.html" target="_self" >EnaioDocumentSearchQuery[]</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/EnaioDocumentSearchQuery.html" target="_self" >EnaioDocumentSearchQuery[]</a></code>
-
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="name"></a>
-                                        <span class="name"><b>name</b><a href="#name"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>name:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>apiVersion:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -246,28 +182,29 @@
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>AppConnector API Version. For example 1.5.89 </p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="objectTypeId"></a>
-                                        <span class="name"><b>objectTypeId</b><a href="#objectTypeId"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="buildRevision"></a>
+                                        <span class="name"><b>buildRevision</b><a href="#buildRevision"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>objectTypeId:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>buildRevision:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -280,28 +217,64 @@
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>AppConnector Build Revision. For example 0d43015 </p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="osid"></a>
-                                        <span class="name"><b>osid</b><a href="#osid"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="capabilities"></a>
+                                        <span class="name"><b>capabilities</b><a href="#capabilities"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>osid:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>capabilities:         <code><a href="../interfaces/EnaioServiceInfoCapabilities.html" target="_self" >EnaioServiceInfoCapabilities</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../interfaces/EnaioServiceInfoCapabilities.html" target="_self" >EnaioServiceInfoCapabilities</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>List of capabilities as defined in <AppConnector>/configuration/osrest.caps.xml </p>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="serverAddress"></a>
+                                        <span class="name"><b>serverAddress</b><a href="#serverAddress"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>serverAddress:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -314,28 +287,29 @@
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>enaio server address. For example 10.0.2.15 (server-dns-name) </p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="query"></a>
-                                        <span class="name"><b>query</b><a href="#query"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="serverVersion"></a>
+                                        <span class="name"><b>serverVersion</b><a href="#serverVersion"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>query:         <code><a href="../interfaces/EnaioDocumentSearchQuery.html" target="_self" >EnaioDocumentSearchQuery</a></code>
+                                        <code>serverVersion:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -343,7 +317,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/EnaioDocumentSearchQuery.html" target="_self" >EnaioDocumentSearchQuery</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -352,19 +326,25 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>enaio server version. For example 9.00 SP1 </p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="result_config"></a>
-                                        <span class="name"><b>result_config</b><a href="#result_config"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="services"></a>
+                                        <span class="name"><b>services</b><a href="#services"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>result_config:         <code><a href="../interfaces/EnaioDocumentSearchRequestResult.html" target="_self" >EnaioDocumentSearchRequestResult</a></code>
+                                        <code>services:         <code><a href="../injectables/EnaioServiceInfoService.html" target="_self" >EnaioServiceInfoServices</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -372,20 +352,91 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/EnaioDocumentSearchRequestResult.html" target="_self" >EnaioDocumentSearchRequestResult</a></code>
+                                            <i>Type : </i>        <code><a href="../injectables/EnaioServiceInfoService.html" target="_self" >EnaioServiceInfoServices</a></code>
 
                                         </td>
                                     </tr>
+
+
+
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>List of common services </p>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="systemRoles"></a>
+                                        <span class="name"><b>systemRoles</b><a href="#systemRoles"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>systemRoles:         <code><a href="../miscellaneous/enumerations.html#EnaioSystemRole" target="_self" >EnaioSystemRole[]</a></code>
+</code>
+                                    </td>
+                                </tr>
+
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Optional</i>
+                                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#EnaioSystemRole" target="_self" >EnaioSystemRole[]</a></code>
+
                                         </td>
                                     </tr>
 
 
 
 
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>System roles </p>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="welcomePage"></a>
+                                        <span class="name"><b>welcomePage</b><a href="#welcomePage"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>welcomePage:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Admin Contact. For example <a href="http://www.ecm.mobi">http://www.ecm.mobi</a> </p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
             </section>
@@ -393,99 +444,62 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { EnaioFieldSchema } from &#x27;./../enums/enaio-field-schema.enum&#x27;;
-import { EnaioChildSchema } from &#x27;./../enums/enaio-client-schema.enum&#x27;;
-import { EnaioSortOrder } from &#x27;./../enums/enaio-sort-order.enum&#x27;;
-export interface EnaioDocumentSearchRequest {
-  cabinet?: string;
-  name?: string;
-  objectTypeId?: string;
-  osid?: string;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { EnaioSystemRole } from &#x27;../enums/enaio-systemrole.enum&#x27;;
 
-  query: EnaioDocumentSearchQuery;
-  conditionGroups?: EnaioDocumentSearchQuery[];
-  additionalQueries?: EnaioDocumentSearchQuery[];
-
-  result_config?: EnaioDocumentSearchRequestResult;
+/** Service Info response */
+export interface EnaioServiceInfo {
+  /** AppConnector API Version. For example 1.5.89 */
+  apiVersion: string;
+  /** AppConnector Build Revision. For example 0d43015 */
+  buildRevision: string;
+  /** enaio server version. For example 9.00 SP1 */
+  serverVersion: string;
+  /** enaio server address. For example 10.0.2.15 (server-dns-name) */
+  serverAddress: string;
+  /** Admin Contact. ToDo Admin mail address ? */
+  adminContact: string;
+  /** Admin Contact. For example http://www.ecm.mobi */
+  welcomePage: string;
+  /** List of common services */
+  services: EnaioServiceInfoServices;
+  /** List of capabilities as defined in &lt;AppConnector&gt;/configuration/osrest.caps.xml */
+  capabilities: EnaioServiceInfoCapabilities;
+  /** System roles */
+  systemRoles: EnaioSystemRole[];
 }
 
-export interface EnaioDocumentSearchQuery {
-  objectTypeId?: string;
-  fields?: EnaioDocumentSearchRequestFields;
-  baseparams?: EnaioDocumentSearchRequestBaseparams;
+/** List of common services */
+export interface EnaioServiceInfoServices {
+  /** Document preview url */
+  documentpreview: string;
+  /** AppConnector url */
+  appconnector: string;
+  /** RenditionCache url */
+  renditioncache: string;
+  /** Fulltext URL */
+  fulltext: string;
+  /** Documentviewer url */
+  documentviewer: string;
+  /** Contentviewer url */
+  contentviewer: string;
 }
 
-export interface EnaioDocumentSearchRequestFields {
-  [key: string]: EnaioDocumentSearchRequestField;
+/** capabilities as defined in &lt;AppConnector&gt;/configuration/osrest.caps.xml */
+export interface EnaioServiceInfoCapabilities {
+  /** version number */
+  version: number;
+  /** List of capabilities as defined in &lt;AppConnector&gt;/configuration/osrest.caps.xml */
+  capabilities: EnaioServiceInfoCapability[];
 }
 
-export interface EnaioDocumentSearchRequestField {
-  value?: string;
-  null?: boolean;
-  internalName?: string;
-  type?: string;
-  columns?: EnaioDocumentSearchRequestColumn[];
-  rows?: [string[]];
-}
-
-export interface EnaioDocumentSearchRequestResult {
-  fieldsschema?: EnaioDocumentSearchRequestSchema[];
-  pagesize?: number;
-  offset?: number;
-  maxhits?: number;
-  deny_empty?: boolean;
-  normalize_values?: boolean;
-  distinct?: boolean;
-  fieldsschema_mode?: EnaioFieldSchema;
-  childschema_mode?: EnaioChildSchema;
-  childfieldsschema_mode?: EnaioFieldSchema;
-  export_depth?: number;
-  systemFields?: number;
-  registerContext?: number;
-  disableSearchGroups?: number;
-  followDocLink?: number;
-  garbageMode?: number;
-  fileProperties?: number;
-  rights?: number;
-}
-
-export interface EnaioDocumentSearchRequestSchema {
-  internalName?: string;
-  displayName?: string;
-  objectTypeId?: string;
-  dbName?: string;
-  sort_order?: EnaioSortOrder;
-  sort_pos?: number;
-}
-
-export interface EnaioDocumentSearchRequestBaseparams {
-  Creator?: EnaioDocumentSearchRequestField;
-  Created?: EnaioDocumentSearchRequestField;
-  Modifier?: EnaioDocumentSearchRequestField;
-  Modified?: EnaioDocumentSearchRequestField;
-  Owner?: EnaioDocumentSearchRequestField;
-  ArchiveState?: EnaioDocumentSearchRequestField;
-  Archivist?: EnaioDocumentSearchRequestField;
-  ArchiveDate?: EnaioDocumentSearchRequestField;
-  Locked?: EnaioDocumentSearchRequestField;
-  HasVariants?: EnaioDocumentSearchRequestField;
-  Version?: EnaioDocumentSearchRequestField;
-  RetentionDate?: EnaioDocumentSearchRequestField;
-  RetentionPlannedDate?: EnaioDocumentSearchRequestField;
-  Links?: EnaioDocumentSearchRequestField;
-  Medium?: EnaioDocumentSearchRequestField;
-  SystemID?: EnaioDocumentSearchRequestField;
-  ForeignID?: EnaioDocumentSearchRequestField;
-  DocumentPageCount?: EnaioDocumentSearchRequestField;
-  Register?: EnaioDocumentSearchRequestField;
-  MultiLocation?: EnaioDocumentSearchRequestField;
-  Signed?: EnaioDocumentSearchRequestField;
-  LoanedOut?: EnaioDocumentSearchRequestField;
-}
-
-export interface EnaioDocumentSearchRequestColumn {
-  internalName: string;
-  type: string;
+/** capability */
+export interface EnaioServiceInfoCapability {
+  /** name */
+  name: string;
+  /** source */
+  source: string;
+  /** defaults */
+  defaults: [{ ua: any; value: string }];
 }
 </code></pre>
     </div>
@@ -514,7 +528,7 @@ export interface EnaioDocumentSearchRequestColumn {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'EnaioDocumentSearchRequest.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'EnaioServiceInfo.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

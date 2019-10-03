@@ -7,7 +7,7 @@ export interface EnaioDocumentSearchRequest {
   objectTypeId?: string;
   osid?: string;
 
-  query?: EnaioDocumentSearchQuery;
+  query: EnaioDocumentSearchQuery;
   conditionGroups?: EnaioDocumentSearchQuery[];
   additionalQueries?: EnaioDocumentSearchQuery[];
 
@@ -15,7 +15,7 @@ export interface EnaioDocumentSearchRequest {
 }
 
 export interface EnaioDocumentSearchQuery {
-  objectTypeId: string;
+  objectTypeId?: string;
   fields?: EnaioDocumentSearchRequestFields;
   baseparams?: EnaioDocumentSearchRequestBaseparams;
 }
