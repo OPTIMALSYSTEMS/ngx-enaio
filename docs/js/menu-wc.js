@@ -158,6 +158,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/EnaioDocumentSearchRequestSchema.html" data-type="entity-link">EnaioDocumentSearchRequestSchema</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/EnaioDocumentStoredQueriesOptions.html" data-type="entity-link">EnaioDocumentStoredQueriesOptions</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/EnaioErrorType.html" data-type="entity-link">EnaioErrorType</a>
                             </li>
                             <li class="link">
@@ -174,6 +177,15 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/EnaioSession.html" data-type="entity-link">EnaioSession</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioStoredQueries.html" data-type="entity-link">EnaioStoredQueries</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioStoredQuery.html" data-type="entity-link">EnaioStoredQuery</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EnaioStoredQueryParam.html" data-type="entity-link">EnaioStoredQueryParam</a>
                             </li>
                         </ul>
                     </li>

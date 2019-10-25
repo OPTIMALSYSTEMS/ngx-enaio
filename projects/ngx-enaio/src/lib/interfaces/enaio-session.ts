@@ -1,7 +1,7 @@
 import { EnaioLocale } from '../enums/enaio-locale.enum';
 
 /**
- * enaio Session informations
+ * enaio Session information
  */
 
 export interface EnaioSession {

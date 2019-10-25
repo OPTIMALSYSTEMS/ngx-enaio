@@ -11,15 +11,22 @@
         "documentpreview",
         "documentviewer",
         "fieldsschema",
+        "foldering",
         "fullname",
         "fulltext",
         "lockinfo",
         "maxhits",
+        "objecttype",
         "objecttypeid",
+        "objecttypes",
         "osid",
         "renditioncache",
         "serviceinfo",
+        "showglobal",
+        "storedqueries",
         "systemrole",
-        "userid"
+        "tabset",
+        "userid",
+        "varname"
     ]
 }

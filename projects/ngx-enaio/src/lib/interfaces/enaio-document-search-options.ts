@@ -57,3 +57,4 @@ export interface EnaioDocumentSearchOptions {
    */
   fieldsschema?: EnaioFieldSchema;
 }
+

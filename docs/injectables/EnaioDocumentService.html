@@ -78,6 +78,14 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#executeStoredQueries">executeStoredQueries</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getStoredQueries">getStoredQueries</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#parents">parents</a>
                             </li>
                             <li>
@@ -111,7 +119,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -160,6 +168,236 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="executeStoredQueries"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            executeStoredQueries
+                        </b>
+                        <a href="#executeStoredQueries"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>executeStoredQueries(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, options?: <a href="../interfaces/EnaioDocumentStoredQueriesOptions.html">EnaioDocumentStoredQueriesOptions</a>, variables: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank">object</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="128"
+                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:128</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>execute a stored query
+<a href="https://bit.ly/2Wda0ZD">Official Documentation</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>of the stored query</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>options</td>
+                                    <td>
+                                                <code><a href="../interfaces/EnaioDocumentStoredQueriesOptions.html" target="_self" >EnaioDocumentStoredQueriesOptions</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>variables</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>{ fields: {} }</code>
+                                    </td>
+
+                                    <td>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/EnaioDocumentObject.html" target="_self" >Observable&lt;EnaioDocumentObject[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>List of enaio objects</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getStoredQueries"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getStoredQueries
+                        </b>
+                        <a href="#getStoredQueries"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getStoredQueries(showglobal, foldering, refresh)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="111"
+                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:111</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method return stored queries
+<a href="https://bit.ly/32MhFR9">Official Documentation</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>showglobal</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                    <td>
+                                        <p>return also stored queries on global desktop</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>foldering</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                    <td>
+                                        <p>return also the desktop folders as tree. Queries and folders can be differentiated by the the attribute isFolder.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>refresh</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                    <td>
+                                        <p>disable osrest internal cache an always request list directly from the enaio server</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/EnaioStoredQueries.html" target="_self" >Observable&lt;EnaioStoredQueries&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>enaio object</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="parents"></a>
                     <span class="name">
                         <b>
@@ -180,8 +418,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="44"
-                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:44</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:46</a></div>
                 </td>
             </tr>
 
@@ -331,8 +569,8 @@ The parameter is optional, but for performance reasons it is recommended to set 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="79"
-                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:79</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="93"
+                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:93</a></div>
                 </td>
             </tr>
 
@@ -428,8 +666,8 @@ The parameter is optional, but for performance reasons it is recommended to set 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="65"
-                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:65</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="79"
+                            class="link-to-prism">projects/ngx-enaio/src/lib/enaio-document.service.ts:79</a></div>
                 </td>
             </tr>
 
@@ -505,9 +743,12 @@ The parameter is optional, but for performance reasons it is recommended to set 
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { EnaioDocumentSearchRequest } from &#x27;./interfaces/enaio-document-search-request&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { EnaioDocumentStoredQueriesOptions } from &#x27;./interfaces/enaio-document-stored-queries-options&#x27;;
+import { EnaioStoredQuery, EnaioStoredQueries } from &#x27;./interfaces/enaio-stored-query&#x27;;
+import { EnaioDocumentSearchRequest } from &#x27;./interfaces/enaio-document-search-request&#x27;;
 import { EnaioDocumentObject } from &#x27;./interfaces/enaio-document-object&#x27;;
-import { EnaioDocumentSearchOptions } from &#x27;./interfaces/enaio-document-search-options&#x27;;
+import {
+  EnaioDocumentSearchOptions} from &#x27;./interfaces/enaio-document-search-options&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
 import { HttpClient, HttpParams } from &#x27;@angular/common/http&#x27;;
 import { Injectable } from &#x27;@angular/core&#x27;;
@@ -540,7 +781,6 @@ export class EnaioDocumentService {
    *
    * @param verbose An extended generic metadata model is output. Equals to search methods (EnaioDocumentObject)
    *
-   *
    * @param objecttypeid ObjectTypeID of the required object.
    * The parameter is optional, but for performance reasons it is recommended to set the parameter if it is known.
    *
@@ -555,9 +795,21 @@ export class EnaioDocumentService {
     objecttypeid?: number,
     metadata?: string
   ): Observable&lt;EnaioDocumentObject | any&gt; {
-    return this.http.get&lt;EnaioDocumentObject | any&gt;(&#x27;/osrest/api/documents/parents/&#x27; + id, {
-      params: ({ objecttypeid, metadata, verbose, tree } as any) as HttpParams
-    });
+    const params: any &#x3D; {};
+    if (tree) {
+      params.tree &#x3D; tree;
+    }
+    if (verbose) {
+      params.verbose &#x3D; verbose;
+    }
+    if (objecttypeid) {
+      params.objecttypeid &#x3D; objecttypeid;
+    }
+    if (metadata) {
+      params.metadata &#x3D; metadata;
+    }
+
+    return this.http.get&lt;EnaioDocumentObject | any&gt;(&#x27;/osrest/api/documents/parents/&#x27; + id, { params });
   }
 
   /**
@@ -588,6 +840,42 @@ export class EnaioDocumentService {
     options: EnaioDocumentSearchOptions
   ): Observable&lt;EnaioDocumentObject[]&gt; {
     return this.http.post&lt;EnaioDocumentObject[]&gt;(&#x27;/osrest/api/documents/search&#x27;, request, {
+      params: (options as any) as HttpParams
+    });
+  }
+
+  /**
+   * Method return stored queries
+   * [Official Documentation]{@link https://bit.ly/32MhFR9}
+   *
+   * @param showglobal return also stored queries on global desktop
+   * @param foldering return also the desktop folders as tree. Queries and folders can be differentiated by the the attribute isFolder.
+   * @param refresh disable osrest internal cache an always request list directly from the enaio server
+   * @returns enaio object
+   */
+  public getStoredQueries(showglobal &#x3D; false, foldering &#x3D; false, refresh &#x3D; false): Observable&lt;EnaioStoredQueries&gt; {
+    const options &#x3D; { showglobal, foldering, refresh };
+
+    return this.http.get&lt;EnaioStoredQueries&gt;(&#x27;/osrest/api/documents/storedqueries&#x27;, {
+      params: (options as any) as HttpParams
+    });
+  }
+
+  /**
+   * execute a stored query
+   * [Official Documentation]{@link https://bit.ly/2Wda0ZD}
+   *
+   * @param id of the stored query
+   * @param execution options
+   * @param query variables
+   * @returns List of enaio objects
+   */
+  public executeStoredQueries(
+    id: number,
+    options?: EnaioDocumentStoredQueriesOptions,
+    variables &#x3D; { fields: {} }
+  ): Observable&lt;EnaioDocumentObject[]&gt; {
+    return this.http.post&lt;EnaioDocumentObject[]&gt;(&#x27;/osrest/api/documents/storedqueries/&#x27; + id, variables, {
       params: (options as any) as HttpParams
     });
   }

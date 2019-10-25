@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.0.7] - 2019-10-25
+
+### Added
+
+- Add Stored Query DocumentService Implementation
+
+### Changes
+
+- Bug fix parents function of DocumentService Implementation
+
+## [0.0.6] - 2019-10-03
+
+### Changes
+
+- Small bug fixes
+
+
 ## [0.0.5] - 2019-10-03
 
 ### Added

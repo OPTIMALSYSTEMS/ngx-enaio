@@ -44,7 +44,7 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>EnaioSession</li>
+  <li>EnaioStoredQuery</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -62,14 +62,14 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/ngx-enaio/src/lib/interfaces/enaio-session.ts</code>
+            <code>projects/ngx-enaio/src/lib/interfaces/enaio-stored-query.ts</code>
         </p>
 
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>enaio Session information</p>
+                <p>stored query or desktop folder</p>
 
             </p>
 
@@ -87,42 +87,35 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#autostar">autostar</a>
+                                        <a href="#id">id</a>
+                                </li>
+                                <li>
+                                        <a href="#isFolder">isFolder</a>
+                                </li>
+                                <li>
+                                        <a href="#isGlobal">isGlobal</a>
+                                </li>
+                                <li>
+                                        <a href="#isIncomplete">isIncomplete</a>
+                                </li>
+                                <li>
+                                        <a href="#name">name</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#email">email</a>
+                                        <a href="#objectTypes">objectTypes</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#fullname">fullname</a>
+                                        <a href="#profile">profile</a>
                                 </li>
                                 <li>
-                                        <a href="#groups">groups</a>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#queryParams">queryParams</a>
                                 </li>
                                 <li>
-                                        <a href="#isWorkflowAbsent">isWorkflowAbsent</a>
-                                </li>
-                                <li>
-                                        <a href="#language">language</a>
-                                </li>
-                                <li>
-                                        <a href="#osGuid">osGuid</a>
-                                </li>
-                                <li>
-                                        <a href="#sessionGuid">sessionGuid</a>
-                                </li>
-                                <li>
-                                        <a href="#userid">userid</a>
-                                </li>
-                                <li>
-                                        <a href="#username">username</a>
-                                </li>
-                                <li>
-                                        <a href="#wfGuid">wfGuid</a>
-                                </li>
-                                <li>
-                                        <a href="#wfOrg">wfOrg</a>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#storedqueries">storedqueries</a>
                                 </li>
                             </ul>
                         </td>
@@ -139,13 +132,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="autostar"></a>
-                                        <span class="name"><b>autostar</b><a href="#autostar"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="id"></a>
+                                        <span class="name"><b>id</b><a href="#id"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>autostar:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>id:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -164,7 +157,9 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>Autostar settings of the user</p>
+                                    <div class="io-description"><p>Unique id of the stored query. This ID can change change on profile distribution and publishing on public desktop
+id = -1 Is a special stored query for objects in the user tray
+id = -2 IS a special stored query for last access documents of the current user</p>
 </div>
                                 </td>
                             </tr>
@@ -174,13 +169,193 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="email"></a>
-                                        <span class="name"><b>email</b><a href="#email"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="isFolder"></a>
+                                        <span class="name"><b>isFolder</b><a href="#isFolder"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>email:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>isFolder:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Defines if the item is a stored query or a folder (only available on foldering = true)</p>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="isGlobal"></a>
+                                        <span class="name"><b>isGlobal</b><a href="#isGlobal"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>isGlobal:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Defines if the stored query is on the user or public desktop</p>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="isIncomplete"></a>
+                                        <span class="name"><b>isIncomplete</b><a href="#isIncomplete"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>isIncomplete:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>TODO Unknown property</p>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="name"></a>
+                                        <span class="name"><b>name</b><a href="#name"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>name:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Non-unique name of the stored query</p>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="objectTypes"></a>
+                                        <span class="name"><b>objectTypes</b><a href="#objectTypes"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>objectTypes:     <code>number[]</code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code>number[]</code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>IDs of the used object types in the stored query. Not available for folders</p>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="profile"></a>
+                                        <span class="name"><b>profile</b><a href="#profile"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>profile:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -204,7 +379,7 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>email address of the user</p>
+                                    <div class="io-description"><p>Associated profile for the stored query. Empty string if no link exists.</p>
 </div>
                                 </td>
                             </tr>
@@ -214,13 +389,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="fullname"></a>
-                                        <span class="name"><b>fullname</b><a href="#fullname"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="queryParams"></a>
+                                        <span class="name"><b>queryParams</b><a href="#queryParams"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>fullname:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>queryParams:     <code>EnaioStoredQueryParam[]</code>
 </code>
                                     </td>
                                 </tr>
@@ -228,7 +403,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <i>Type : </i>    <code>EnaioStoredQueryParam[]</code>
 
                                         </td>
                                     </tr>
@@ -244,7 +419,7 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>Readable username of the user</p>
+                                    <div class="io-description"><p>Query parameters for stored queries with parameters. Attribute does not exists for folders.</p>
 </div>
                                 </td>
                             </tr>
@@ -254,13 +429,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="groups"></a>
-                                        <span class="name"><b>groups</b><a href="#groups"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="storedqueries"></a>
+                                        <span class="name"><b>storedqueries</b><a href="#storedqueries"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>groups:     <code>string[]</code>
+                                        <code>storedqueries:         <code><a href="../interfaces/EnaioStoredQuery.html" target="_self" >EnaioStoredQuery[]</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -268,292 +443,23 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code>string[]</code>
+                                            <i>Type : </i>        <code><a href="../interfaces/EnaioStoredQuery.html" target="_self" >EnaioStoredQuery[]</a></code>
 
                                         </td>
                                     </tr>
-
-
-
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Group memberships of the user</p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="isWorkflowAbsent"></a>
-                                        <span class="name"><b>isWorkflowAbsent</b><a href="#isWorkflowAbsent"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>isWorkflowAbsent:     <code></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-
-
-
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Workflow absent status</p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="language"></a>
-                                        <span class="name"><b>language</b><a href="#language"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>language:         <code><a href="../miscellaneous/enumerations.html#EnaioLocale" target="_self" >EnaioLocale</a></code>
-</code>
-                                    </td>
-                                </tr>
-
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#EnaioLocale" target="_self" >EnaioLocale</a></code>
-
+                                            <i>Optional</i>
                                         </td>
                                     </tr>
 
 
 
 
-
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>User language. <em>Not the selected language of the windows/electron/webclient</em></p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="osGuid"></a>
-                                        <span class="name"><b>osGuid</b><a href="#osGuid"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>osGuid:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Unique user identifier (32 characters long)</p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="sessionGuid"></a>
-                                        <span class="name"><b>sessionGuid</b><a href="#sessionGuid"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>sessionGuid:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Temporary session guid. Not the system internal sessionGuid</p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="userid"></a>
-                                        <span class="name"><b>userid</b><a href="#userid"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>userid:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Numeric User ID</p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="username"></a>
-                                        <span class="name"><b>username</b><a href="#username"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>username:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Username / Login</p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="wfGuid"></a>
-                                        <span class="name"><b>wfGuid</b><a href="#wfGuid"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>wfGuid:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Unique user identifier in the workflow engine (32 characters long)</p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="wfOrg"></a>
-                                        <span class="name"><b>wfOrg</b><a href="#wfOrg"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>wfOrg:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Unique workflow organization identifier (32 characters long)</p>
+                                    <div class="io-description"><p>Stored queries in the folder. Attribute does not exists for stored queries.</p>
 </div>
                                 </td>
                             </tr>
@@ -564,61 +470,100 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { EnaioLocale } from &#x27;../enums/enaio-locale.enum&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export interface EnaioStoredQueries {
+  /**
+   * List of stored queries and folders (if foldering &#x3D; true)
+   */
+  storedqueries: EnaioStoredQuery[];
+}
+/**
+ * stored query or desktop folder
+ */
+export interface EnaioStoredQuery {
+  /**
+   * Unique id of the stored query. This ID can change change on profile distribution and publishing on public desktop
+   * id &#x3D; -1 Is a special stored query for objects in the user tray
+   * id &#x3D; -2 IS a special stored query for last access documents of the current user
+   */
+  id: number;
+  /**
+   * Non-unique name of the stored query
+   */
+  name: string;
+  /**
+   * Defines if the stored query is on the user or public desktop
+   */
+  isGlobal: boolean;
+  /**
+   * Defines if the item is a stored query or a folder (only available on foldering &#x3D; true)
+   */
+  isFolder: boolean;
+  /**
+   * TODO Unknown property
+   */
+  isIncomplete: boolean;
+  /**
+   * Associated profile for the stored query. Empty string if no link exists.
+   */
+  profile?: string;
+  /**
+   * IDs of the used object types in the stored query. Not available for folders
+   */
+  objectTypes?: number[];
+  /**
+   * Query parameters for stored queries with parameters. Attribute does not exists for folders.
+   */
+  queryParams?: EnaioStoredQueryParam[];
+  /**
+   * Stored queries in the folder. Attribute does not exists for stored queries.
+   */
+  storedqueries?: EnaioStoredQuery[];
+}
 
 /**
- * enaio Session information
+ * Stored query parameter
  */
-
-export interface EnaioSession {
+export interface EnaioStoredQueryParam {
   /**
-   * Numeric User ID
+   * Language specific object type name
    */
-  userid: number;
+  object: string;
   /**
-   * Username / Login
+   * object type internal name
    */
-  username: string;
+  internalNameObject: string;
   /**
-   * Unique user identifier (32 characters long)
+   * Language specific field name
    */
-  osGuid: string;
+  field: string;
   /**
-   * Unique user identifier in the workflow engine (32 characters long)
+   * field internal name
    */
-  wfGuid: string;
+  internalName: string;
   /**
-   * Unique workflow organization identifier (32 characters long)
+   * variable name
    */
-  wfOrg: string;
+  varname: string;
   /**
-   * Temporary session guid. Not the system internal sessionGuid
+   * field size
    */
-  sessionGuid: string;
+  size: number;
   /**
-   * User language. *Not the selected language of the windows/electron/webclient*
+   * query parameter position
    */
-  language: EnaioLocale;
+  position: number;
   /**
-   * Autostar settings of the user
+   * data type of the field
    */
-  autostar: number;
+  dataType: string;
   /**
-   * Workflow absent status
+   * List values for dataType &#x3D; list
    */
-  isWorkflowAbsent: false;
+  listData?: string[];
   /**
-   * Readable username of the user
+   * List elements for dataType &#x3D; list with value and description (part behind pipe sign)
    */
-  fullname?: string;
-  /**
-   * email address of the user
-   */
-  email?: string;
-  /**
-   * Group memberships of the user
-   */
-  groups: string[];
+  listDataVD?: {value: string, description: string};
 }
 </code></pre>
     </div>
@@ -647,7 +592,7 @@ export interface EnaioSession {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'EnaioSession.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'EnaioStoredQuery.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

@@ -1,0 +1,40 @@
+<div class="card w-100">
+    <div class="card-header">
+        <form (ngSubmit)="onSubmit()" #form="ngForm">
+            <div class="row">
+                <div class="form-check col-md-4">
+                    <input class="form-check-input" type="checkbox" id="showglobal" [(ngModel)]="showglobal"
+                        name="showglobal">
+                    <label class="form-check-label" for="showglobal">
+                        ShowGlobal
+                    </label>
+                </div>
+                <div class="form-check col-md-4">
+                    <input class="form-check-input" type="checkbox" id="refresh" [(ngModel)]="foldering"
+                        name="foldering">
+                    <label class="form-check-label" for="foldering">
+                        Foldering
+                    </label>
+                </div>
+                <div class="form-check col-md-4">
+                    <input class="form-check-input" type="checkbox" id="refresh" [(ngModel)]="refresh"
+                        name="refresh col-md-6">
+                    <label class="form-check-label" for="refresh">
+                        Refresh
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!form.form.valid || loading">Execute</button>
+        </form>
+    </div>
+    <div class="card-body">
+        <div *ngIf="result && !loading">
+            <div *ngFor="let query of result.storedqueries">
+                <app-stored-query [query]="query"></app-stored-query>
+            </div>
+        </div>
+        <pre class="text-danger" *ngIf="error && !loading">
+            {{error | json}}
+        </pre>
+    </div>
+</div>

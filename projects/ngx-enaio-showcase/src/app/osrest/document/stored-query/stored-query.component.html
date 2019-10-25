@@ -1,0 +1,102 @@
+<h2>{{query.isFolder ? "Folder" : "Query"}} {{query.name}}</h2>
+<ngb-tabset>
+  <ngb-tab title="Preview">
+    <ng-template ngbTabContent>
+      <div class="container-fluid mt-2">
+        <table class="table border">
+          <tr>
+            <th>ID</th>
+            <td>{{query.id}}</td>
+          </tr>
+          <tr>
+            <th>Name</th>
+            <td>{{query.name}}</td>
+          </tr>
+          <tr>
+            <th>IsFolder</th>
+            <td>{{query.isFolder}}</td>
+          </tr>
+          <tr>
+            <th>IsGlobal</th>
+            <td>{{query.isGlobal}}</td>
+          </tr>
+          <tr>
+            <th>IsIncomplete</th>
+            <td>{{query.isIncomplete}}</td>
+          </tr>
+          <tr>
+            <th>Profile</th>
+            <td>{{query.profile}}</td>
+          </tr>
+          <tr *ngIf="query.objectTypes">
+            <th>Object Types IDs</th>
+            <td>{{query.objectTypes.join(", ")}}</td>
+          </tr>
+          <tr *ngIf="query.queryParams">
+            <th>QueryParams</th>
+            <td>
+              <div *ngFor="let param of query.queryParams">
+                <h3>Variable: {{param.varname}}</h3>
+                <table style="margin-bottom: 1em;">
+                  <tr>
+                    <th>Object</th>
+                    <td>{{param.object}}</td>
+                  </tr> 
+                  <tr>
+                    <th>InternalNameObject</th>
+                    <td>{{param.internalNameObject}}</td>
+                  </tr>  
+                  <tr>
+                    <th>Field</th>
+                    <td>{{param.field}}</td>
+                  </tr>  
+                  <tr>
+                    <th>InternalName</th>
+                    <td>{{param.internalName}}</td>
+                  </tr>
+                  <tr>
+                    <th>VarName</th>
+                    <td>{{param.varname}}</td>
+                  </tr>
+                  <tr>
+                    <th>DataType</th>
+                    <td>{{param.dataType}}</td>
+                  </tr>
+                  <tr *ngIf="param.listData">
+                    <th>List</th>
+                    <td>{{param.listData | json}}</td>
+                  </tr>
+                  <tr *ngIf="param.listDataVD">
+                    <th>List</th>
+                    <td>{{param.listDataVD | json}}</td>
+                  </tr>
+                  <tr>
+                    <th>Size</th>
+                    <td>{{param.size}}</td>
+                  </tr> 
+                  <tr>
+                    <th>Position</th>
+                    <td>{{param.position}}</td>
+                  </tr>                   
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr *ngIf="query.storedqueries">
+            <th>StoredQueries</th>
+            <td>
+              <div *ngFor="let query of query.storedqueries">
+                <app-stored-query [query]="query"></app-stored-query>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="JSON">
+    <ng-template ngbTabContent>
+      <pre>{{query | json}}</pre>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>

@@ -1,6 +1,9 @@
+import { EnaioDocumentStoredQueriesOptions } from './interfaces/enaio-document-stored-queries-options';
+import { EnaioStoredQuery, EnaioStoredQueries } from './interfaces/enaio-stored-query';
 import { EnaioDocumentSearchRequest } from './interfaces/enaio-document-search-request';
 import { EnaioDocumentObject } from './interfaces/enaio-document-object';
-import { EnaioDocumentSearchOptions } from './interfaces/enaio-document-search-options';
+import {
+  EnaioDocumentSearchOptions} from './interfaces/enaio-document-search-options';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -47,18 +50,18 @@ export class EnaioDocumentService {
     objecttypeid?: number,
     metadata?: string
   ): Observable<EnaioDocumentObject | any> {
-    const params = {} as HttpParams;
+    const params: any = {};
     if (tree) {
-      params.append('tree', String(tree));
+      params.tree = tree;
     }
     if (verbose) {
-      params.append('verbose', String(verbose));
+      params.verbose = verbose;
     }
     if (objecttypeid) {
-      params.append('objecttypeid', String(objecttypeid));
+      params.objecttypeid = objecttypeid;
     }
     if (metadata) {
-      params.append('metadata', String(metadata));
+      params.metadata = metadata;
     }
 
     return this.http.get<EnaioDocumentObject | any>('/osrest/api/documents/parents/' + id, { params });
@@ -92,6 +95,42 @@ export class EnaioDocumentService {
     options: EnaioDocumentSearchOptions
   ): Observable<EnaioDocumentObject[]> {
     return this.http.post<EnaioDocumentObject[]>('/osrest/api/documents/search', request, {
+      params: (options as any) as HttpParams
+    });
+  }
+
+  /**
+   * Method return stored queries
+   * [Official Documentation]{@link https://bit.ly/32MhFR9}
+   *
+   * @param showglobal return also stored queries on global desktop
+   * @param foldering return also the desktop folders as tree. Queries and folders can be differentiated by the the attribute isFolder.
+   * @param refresh disable osrest internal cache an always request list directly from the enaio server
+   * @returns enaio object
+   */
+  public getStoredQueries(showglobal = false, foldering = false, refresh = false): Observable<EnaioStoredQueries> {
+    const options = { showglobal, foldering, refresh };
+
+    return this.http.get<EnaioStoredQueries>('/osrest/api/documents/storedqueries', {
+      params: (options as any) as HttpParams
+    });
+  }
+
+  /**
+   * execute a stored query
+   * [Official Documentation]{@link https://bit.ly/2Wda0ZD}
+   *
+   * @param id of the stored query
+   * @param execution options
+   * @param query variables
+   * @returns List of enaio objects
+   */
+  public executeStoredQueries(
+    id: number,
+    options?: EnaioDocumentStoredQueriesOptions,
+    variables = { fields: {} }
+  ): Observable<EnaioDocumentObject[]> {
+    return this.http.post<EnaioDocumentObject[]>('/osrest/api/documents/storedqueries/' + id, variables, {
       params: (options as any) as HttpParams
     });
   }

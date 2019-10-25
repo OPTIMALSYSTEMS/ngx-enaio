@@ -15,6 +15,8 @@ import { LoadSettingsComponent } from './osrest/session/load-settings/load-setti
 import { DocumentComponent } from './osrest/document/document.component';
 import { SearchByIdComponent } from './osrest/document/search-by-id/search-by-id.component';
 import { DocumentObjectComponent } from './osrest/document/document-object/document-object.component';
+import { StoredQueriesListComponent } from './osrest/document/stored-queries-list/stored-queries-list.component';
+import { StoredQueryComponent } from './osrest/document/stored-query/stored-query.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { DocumentObjectComponent } from './osrest/document/document-object/docum
     LoadSettingsComponent,
     DocumentComponent,
     SearchByIdComponent,
-    DocumentObjectComponent
+    DocumentObjectComponent,
+    StoredQueriesListComponent,
+    StoredQueryComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, NgbModule, NgxEnaioModule],
   providers: [],

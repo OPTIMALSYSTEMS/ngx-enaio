@@ -35,6 +35,711 @@
 <p><em>An Angular layer for the enaio rest services</em></p>
 <p><strong>Alpha Version</strong></p>
 <p>This version is incomplete and currently not suitable for productive use.</p>
+<h2 id="current-scope-of-implementation">Current Scope of Implementation</h2>
+<h3 id="appconnector-osrest">AppConnector (OSRest)</h3>
+<h4 id="coreservice">CoreService</h4>
+<p><a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1868194">Official Documentation</a></p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="right">Status</th>
+<th align="right">Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">/session</td>
+<td align="right"><strong>implemented</strong></td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/session/login</td>
+<td align="right">open</td>
+<td align="right">low</td>
+</tr>
+<tr>
+<td align="left">/session/logout</td>
+<td align="right">open</td>
+<td align="right">low</td>
+</tr>
+<tr>
+<td align="left">/session/checkPassword</td>
+<td align="right">open</td>
+<td align="right">low</td>
+</tr>
+<tr>
+<td align="left">/session/changePassword</td>
+<td align="right">open</td>
+<td align="right">low</td>
+</tr>
+<tr>
+<td align="left">/session/checklicense/[lizenzmodul]</td>
+<td align="right">open</td>
+<td align="right">low</td>
+</tr>
+<tr>
+<td align="left">/session/runscript</td>
+<td align="right">open</td>
+<td align="right">low</td>
+</tr>
+<tr>
+<td align="left">/session/systemroles</td>
+<td align="right"><strong>implemented</strong></td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/session/userdesktops</td>
+<td align="right">open</td>
+<td align="right">low</td>
+</tr>
+<tr>
+<td align="left">/session/userdesktops/add</td>
+<td align="right">open</td>
+<td align="right">low</td>
+</tr>
+<tr>
+<td align="left">/session/userdesktops/remove</td>
+<td align="right">open</td>
+<td align="right">low</td>
+</tr>
+<tr>
+<td align="left">/session/userdesktops/save</td>
+<td align="right">open</td>
+<td align="right">low</td>
+</tr>
+<tr>
+<td align="left">/session/settings/load</td>
+<td align="right"><strong>implemented</strong></td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/session/settings/custom/load</td>
+<td align="right">open</td>
+<td align="right">low</td>
+</tr>
+<tr>
+<td align="left">/session/settings/custom/save</td>
+<td align="right">open</td>
+<td align="right">low</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sessionservice">SessionService</h4>
+<p><a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867869">Official Documentation</a></p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="right">Status</th>
+<th align="right">Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">/core/emptyJob</td>
+<td align="right">open</td>
+<td align="right">low</td>
+</tr>
+</tbody>
+</table>
+<h4 id="documentfileservice">DocumentFileService</h4>
+<p><a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867853">Official Documentation</a></p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="right">Status</th>
+<th align="right">Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">/documentfiles/[id]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documentfiles/[id]/[page]</td>
+<td align="right">open</td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/documentfiles/[id]/pdf</td>
+<td align="right">open</td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/documentfiles/[id]/zip</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documentfiles/zip</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documentfiles/[id]/osfile</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documentfiles/addtotray</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documentfiles/move/[id]</td>
+<td align="right">open</td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/documentfiles/move</td>
+<td align="right">open</td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/documentfiles/droptargets</td>
+<td align="right">open</td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/documentfiles/droptargets/[targetname]</td>
+<td align="right">open</td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/documentfiles/delete</td>
+<td align="right">open</td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/documentfiles/delete/[id]</td>
+<td align="right">open</td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/documentfiles/update/[id]</td>
+<td align="right">open</td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/documentfiles/processmetadata/[id]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documentfiles/processmetadata/[objectTypeId]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documentfiles/checkout/[id]</td>
+<td align="right">open</td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/documentfiles/checkout/undo/[id]</td>
+<td align="right">open</td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/documentfiles/checkout/</td>
+<td align="right">open</td>
+<td align="right"><strong>high</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="documentservice">DocumentService</h4>
+<p><a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867855">Official Documentation</a></p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="right">Status</th>
+<th align="right">Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Object Definition</strong></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">/documents</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/cabinets</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/cabinets/[Schrank]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left"><strong>StoredQueries</strong></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">/documents/storedqueries</td>
+<td align="right"><strong>implemented</strong></td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/documents/storedqueries/[id]</td>
+<td align="right"><strong>implemented</strong></td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/documents/storedqueries/add</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left"><strong>Search</strong></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">/documents/search</td>
+<td align="right"><strong>implemented</strong></td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/documents/search/[id]</td>
+<td align="right"><strong>implemented</strong></td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/documents/search/ids</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/tray</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/[id]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/parent/[id]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/parents/[id]</td>
+<td align="right"><strong>implemented</strong></td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/documents/objectHierarchy/[id]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/childrenHierarchy/[id]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/explore/[id]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/explore</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/baseparams/[id]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left"><strong>Variants</strong></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">/documents/variants/[id]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/variants/setactive/[id]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/variants/create/[originid]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left"><strong>Object Relations</strong></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">/documents/insertables/[locationId]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/settype/[objectId]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left"><strong>Insert / Update / Archive</strong></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">/documents/insert/[locationId]</td>
+<td align="right">open</td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/documents/update/[id]</td>
+<td align="right">open</td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left">/documents/archive/[id]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/archive</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left"><strong>Fulltext</strong></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">/documents/vtx?query=[Suchbegriff]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/vtx</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/vtx/autocomplete/[term]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/vtx/autocomplete</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left"><strong>History</strong></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">/documents/history/[id]</td>
+<td align="right">open</td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>Notes</strong></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">/documents/notes/[id]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/notes/remove/[id]/[noteId]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/notes/update/[id]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left"><strong>Portfolio</strong></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">/documents/portfolios</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/portfolio/[id]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/portfolio/{id}/add/{docid}</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/portfolio/{id}/remove/{docid}</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left"><strong>Favourites</strong></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">/documents/favourites</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/favourites/count</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/favourites/add</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/favourites/add/[id]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/favourites/delete/[id]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left"><strong>Annotations</strong></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">/documents/annotations/[objectId]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/annotations</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/annotations/delete/[objectId]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/annotations/pdf/[objectId]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left"><strong>Templates</strong></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">/documents/templates</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/documents/templates/[objectTypeId]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/templates/acquisition</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left"><strong>Scripts</strong></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">/documents/scripts</td>
+<td align="right">open</td>
+<td align="right"><strong>high</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>Permissions</strong></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">/documents/getpermissions</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="iconservice">IconService</h4>
+<p><a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867857">Official Documentation</a></p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="right">Status</th>
+<th align="right">Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">/icon/preload</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/icon/ids</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+<tr>
+<td align="left">/icon/[id]</td>
+<td align="right">open</td>
+<td align="right"><em>low</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="notificationservice">NotificationService</h4>
+<p><a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867859">Official Documentation</a></p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="right">Status</th>
+<th align="right">Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">ToDo</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="objdefservice">ObjDefService</h4>
+<p><a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867861">Official Documentation</a></p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="right">Status</th>
+<th align="right">Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">ToDo</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="organizationservice">OrganizationService</h4>
+<p><a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867863">Official Documentation</a></p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="right">Status</th>
+<th align="right">Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">ToDo</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="osfileservice">OSFileService</h4>
+<p><a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867865">Official Documentation</a></p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="right">Status</th>
+<th align="right">Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">ToDo</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="serviceinfoservice">ServiceInfoService</h4>
+<p><a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867867">Official Documentation</a></p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="right">Status</th>
+<th align="right">Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">ToDo</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="workflowservice">WorkflowService</h4>
+<p><a href="https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867871">Official Documentation</a></p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="right">Status</th>
+<th align="right">Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">ToDo</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
 
 
 
