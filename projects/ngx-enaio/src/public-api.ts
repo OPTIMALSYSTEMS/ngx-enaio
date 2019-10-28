@@ -15,6 +15,7 @@ export * from './lib/interfaces/enaio-session';
 export * from './lib/interfaces/enaio-document-object';
 export * from './lib/interfaces/enaio-document-search-options';
 export * from './lib/interfaces/enaio-document-search-request';
+export * from './lib/interfaces/enaio-document-parents-options';
 export * from './lib/interfaces/enaio-service-info';
 export * from './lib/interfaces/enaio-error-type';
 export * from './lib/interfaces/enaio-stored-query';

@@ -1,105 +1,154 @@
+import { Type } from 'class-transformer';
+
 /**
  * Enaio Object
  * Represents a enaio Folder, Register or Document
  */
-export interface EnaioDocumentObject {
+// @dynamic
+export class EnaioDocumentObject {
   /**
    * Unique enaio Object ID
    */
-  osid: number;
+  public osid: number;
   /**
    * Unique enaio Object Type ID
    */
-  objectTypeId: number;
+  public objectTypeId: number;
   /**
    * Object Type: FOLDER, REGISTER, DOCUMENT
    */
-  objectType: string;
+  public objectType: string;
   /**
    * Unique Object Type Internal Name
    */
 
-  internalName: string;
+  public internalName: string;
   /**
    * Localized Object Type Name
    */
-  displayName: string;
+  public displayName: string;
   /**
    * Object Flag
    * Only available for objectType DOCUMENT
    */
-  objectFlagsValue?: number;
+  public objectFlagsValue?: number;
   /**
    * Metadata fields
    */
 
-  ecmSimpleFields: EnaioDocumentObjectField[];
+  public ecmSimpleFields: EnaioDocumentObjectField[];
   /**
    * table fields
    */
 
-  ecmTableFields: EnaioDocumentObjectTable[];
+  public ecmTableFields: EnaioDocumentObjectTable[];
   /**
    * Base Parameter
    *
    */
-  baseParameters: EnaioDocumentObjectTypeValue[];
+  public baseParameters: EnaioDocumentObjectTypeValue[];
   /**
    * Access Rights for object
    */
-  rights: EnaioDocumentObjectRights;
+  public rights: EnaioDocumentObjectRights;
   /**
    * Object Type of the parent object.
    * Possible values: Folder, Register
    */
-  parentCabinetKeyType: string;
+  public parentCabinetKeyType: string;
   /**
    * Object Type internal name of the parent object.
    */
 
-  parentCabinetKey: string;
+  public parentCabinetKey: string;
   /**
    * Child count
    */
 
-  childrenCount?: number;
+  public childrenCount?: number;
   /**
    * Object Children (Registers and Documents)
    */
 
-  children?: EnaioDocumentObject[];
+  @Type(() => EnaioDocumentObject)
+  public children?: EnaioDocumentObject[];
   /**
    * Object Relation Information's
    */
 
-  objectInserts: {};
+  public objectInserts: {};
   /**
    * Full hierarchical tree
    */
 
-  folderRegisterTree: [];
+  public folderRegisterTree: [];
   /**
    * System fields
    */
 
-  systemFields: EnaioDocumentObjectTypeValue[];
+  public systemFields: EnaioDocumentObjectTypeValue[];
   /**
    * File Properties
    */
 
-  fileProperties?: EnaioDocumentObjectTypeValue[];
+  public fileProperties?: EnaioDocumentObjectTypeValue[];
   /**
    * Variant Information of the current object.
    * Only available for Object Type DOCUMENT
    */
 
-  variantInformation?: EnaioDocumentObjectTypeValue[];
+  public variantInformation?: EnaioDocumentObjectTypeValue[];
   /**
    * Full variant tree
    * Only available for Object Type DOCUMENT
    */
 
-  variantTree?: EnaioDocumentObjectVariant;
+  public variantTree?: EnaioDocumentObjectVariant;
+
+  public getTableField(internalName: string): EnaioDocumentObjectTable {
+    for (const table of this.ecmTableFields) {
+      if (table.internalName === internalName) {
+        return table;
+      }
+    }
+    return null;
+  }
+
+  public getField(internalName: string): EnaioDocumentObjectField {
+    for (const field of this.ecmSimpleFields) {
+      if (field.internalName === internalName) {
+        return field;
+      }
+    }
+    return null;
+  }
+
+  public getBaseParam(type: string): string {
+    for (const param of this.baseParameters) {
+      if (param.type === type) {
+        return param.value;
+      }
+    }
+    return null;
+  }
+
+  public getFileProp(type: string): string {
+    for (const prop of this.fileProperties) {
+      if (prop.type === type) {
+        return prop.value;
+      }
+    }
+    return null;
+  }
+
+  public getSystemField(type: string): string {
+    for (const field of this.systemFields) {
+      if (field.type === type) {
+        return field.value;
+      }
+    }
+    return null;
+  }
 }
 
 /**

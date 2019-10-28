@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.0.9] - 2019-10-28
+
+### Added
+
+- Demo GUI for Parents
+
+### Changes
+
+- Refactor EnaioDocumentObject with class-transformer
+- Optimize parents method for DocumentService
+
 ## [0.0.8] - 2019-10-28
 
 ### Changes

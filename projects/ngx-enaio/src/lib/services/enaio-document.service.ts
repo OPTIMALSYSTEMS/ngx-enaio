@@ -1,12 +1,13 @@
+import { EnaioDocumentParentsOptions } from './../interfaces/enaio-document-parents-options';
 import { EnaioDocumentStoredQueriesOptions } from '../interfaces/enaio-document-stored-queries-options';
 import { EnaioStoredQuery, EnaioStoredQueries } from '../interfaces/enaio-stored-query';
 import { EnaioDocumentSearchRequest } from '../interfaces/enaio-document-search-request';
 import { EnaioDocumentObject } from '../interfaces/enaio-document-object';
-import {
-  EnaioDocumentSearchOptions} from '../interfaces/enaio-document-search-options';
-import { Observable } from 'rxjs';
+import { EnaioDocumentSearchOptions } from '../interfaces/enaio-document-search-options';
+import { Observable, Subject } from 'rxjs';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { plainToClass } from 'class-transformer';
 
 @Injectable({
   providedIn: 'root'
@@ -43,28 +44,23 @@ export class EnaioDocumentService {
    *
    * @returns enaio object list
    */
-  public parents(
-    id: number,
-    tree?: boolean,
-    verbose?: boolean,
-    objecttypeid?: number,
-    metadata?: string
-  ): Observable<EnaioDocumentObject | any> {
-    const params: any = {};
-    if (tree) {
-      params.tree = tree;
-    }
-    if (verbose) {
-      params.verbose = verbose;
-    }
-    if (objecttypeid) {
-      params.objecttypeid = objecttypeid;
-    }
-    if (metadata) {
-      params.metadata = metadata;
-    }
+  public parents(id: number, options: EnaioDocumentParentsOptions = {}): Observable<EnaioDocumentObject[]> {
+    const subject = new Subject<EnaioDocumentObject[]>();
+    this.http
+      .get<EnaioDocumentObject[]>('/osrest/api/documents/parents/' + id, { params: (options as any) as HttpParams })
+      .subscribe(
+        result => {
+          const enaioObjects: EnaioDocumentObject[] = plainToClass(EnaioDocumentObject, result);
+          subject.next(enaioObjects);
+          subject.complete();
+        },
+        error => {
+          subject.error(error);
+          subject.complete();
+        }
+      );
 
-    return this.http.get<EnaioDocumentObject | any>('/osrest/api/documents/parents/' + id, { params });
+    return subject;
   }
 
   /**
@@ -77,9 +73,23 @@ export class EnaioDocumentService {
    * @returns enaio object list
    */
   public searchByID(id: number, options: EnaioDocumentSearchOptions): Observable<EnaioDocumentObject> {
-    return this.http.get<EnaioDocumentObject>('/osrest/api/documents/search/' + id, {
-      params: (options as any) as HttpParams
-    });
+    const subject = new Subject<EnaioDocumentObject>();
+    this.http
+      .get<EnaioDocumentObject>('/osrest/api/documents/search/' + id, {
+        params: (options as any) as HttpParams
+      })
+      .subscribe(
+        result => {
+          subject.next(plainToClass(EnaioDocumentObject, result));
+          subject.complete();
+        },
+        error => {
+          subject.error(error);
+          subject.complete();
+        }
+      );
+
+    return subject;
   }
 
   /**
@@ -94,9 +104,22 @@ export class EnaioDocumentService {
     request: EnaioDocumentSearchRequest,
     options: EnaioDocumentSearchOptions
   ): Observable<EnaioDocumentObject[]> {
-    return this.http.post<EnaioDocumentObject[]>('/osrest/api/documents/search', request, {
+    const subject = new Subject<EnaioDocumentObject[]>();
+    this.http.post<EnaioDocumentObject[]>('/osrest/api/documents/search', request, {
       params: (options as any) as HttpParams
-    });
+    })
+      .subscribe(
+        result => {
+          subject.next(plainToClass(EnaioDocumentObject, result));
+          subject.complete();
+        },
+        error => {
+          subject.error(error);
+          subject.complete();
+        }
+      );
+
+    return subject;
   }
 
   /**
@@ -130,8 +153,21 @@ export class EnaioDocumentService {
     options?: EnaioDocumentStoredQueriesOptions,
     variables = { fields: {} }
   ): Observable<EnaioDocumentObject[]> {
-    return this.http.post<EnaioDocumentObject[]>('/osrest/api/documents/storedqueries/' + id, variables, {
+    const subject = new Subject<EnaioDocumentObject[]>();
+    this.http.post<EnaioDocumentObject[]>('/osrest/api/documents/storedqueries/' + id, variables, {
       params: (options as any) as HttpParams
-    });
+    })
+      .subscribe(
+        result => {
+          subject.next(plainToClass(EnaioDocumentObject, result));
+          subject.complete();
+        },
+        error => {
+          subject.error(error);
+          subject.complete();
+        }
+      );
+
+    return subject;
   }
 }

@@ -94,10 +94,11 @@
                     </table>
                 </div>
                 <h2>Base Parameter</h2>
+
                 <table class="table border">
                     <tr *ngFor="let baseParam of obj.baseParameters">
                         <th>{{baseParam.type}}</th>
-                        <td>{{baseParam.value}}</td>
+                        <td>{{obj.getBaseParam(baseParam.type)}}</td>
                     </tr>
                 </table>
                 <h2>System Fields</h2>
@@ -142,6 +143,10 @@
                 </table>
                 <h2>Variant Tree</h2>
                 <pre>{{obj.variantTree | json}}</pre>
+                <h2>Children</h2>
+                <div *ngFor="let child of obj.children">
+                    <app-document-object [obj]="child"></app-document-object>
+                </div>
             </div>
         </ng-template>
     </ngb-tab>

@@ -1,6 +1,6 @@
 {
   "name": "ngx-enaio",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "An Angular layer for the enaio rest services ",
   "keywords": ["enaio", "Optimal Systems", "ECMind", "angular"],
   "homepage": "https://github.com/OPTIMALSYSTEMS/ngx-enaio",
@@ -17,7 +17,9 @@
     "directory": "packages/ngx-enaio"
   },
   "peerDependencies": {
-    "@angular/common": ">=8.0.0",
-    "@angular/core": ">=8.0.0"
+    "@angular/common": ">=8.x.x",
+    "@angular/core": ">=8.x.x",
+    "reflect-metadata": "0.1.13",
+    "class-transformer": "0.2.3"
   }
 }

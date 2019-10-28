@@ -1,3 +1,4 @@
+import { ParentsComponent } from './osrest/document/parents/parents.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -31,7 +32,8 @@ import { StoredQueryComponent } from './osrest/document/stored-query/stored-quer
     SearchByIdComponent,
     DocumentObjectComponent,
     StoredQueriesListComponent,
-    StoredQueryComponent
+    StoredQueryComponent,
+    ParentsComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, NgbModule, NgxEnaioModule],
   providers: [],

@@ -1,5 +1,5 @@
 import { EnaioDocumentObject } from 'ngx-enaio';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectorRef, AfterViewChecked } from '@angular/core';
 
 @Component({
   selector: 'app-document-object',
@@ -8,10 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DocumentObjectComponent implements OnInit {
   @Input() obj: EnaioDocumentObject;
-  
+
   constructor() { }
 
   ngOnInit() {
   }
-
 }
