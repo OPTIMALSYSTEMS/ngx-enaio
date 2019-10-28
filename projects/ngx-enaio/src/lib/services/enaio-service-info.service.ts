@@ -1,9 +1,9 @@
-import { EnaioErrorType } from './interfaces/enaio-error-type';
-import { EnaioCounterType } from './enums/enaio-counter-type.enum';
+import { EnaioErrorType } from '../interfaces/enaio-error-type';
+import { EnaioCounterType } from '../enums/enaio-counter-type.enum';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { EnaioServiceInfo } from './interfaces/enaio-service-info';
+import { EnaioServiceInfo } from '../interfaces/enaio-service-info';
 
 @Injectable({
   providedIn: 'root'

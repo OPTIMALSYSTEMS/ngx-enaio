@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.8] - 2019-10-28
+
+### Changes
+
+- Add missing public api exports for stored query
+- Reorganize folder structure
+- Add missing `name` attribute to EnaioDocumentSearchQuery
+
 ## [0.0.7] - 2019-10-25
 
 ### Added

@@ -6,9 +6,9 @@
 export * from './lib/ngx-enaio.module';
 
 /** Services */
-export * from './lib/enaio-session.service';
-export * from './lib/enaio-document.service';
-export * from './lib/enaio-service-info.service';
+export * from './lib/services/enaio-session.service';
+export * from './lib/services/enaio-document.service';
+export * from './lib/services/enaio-service-info.service';
 
 /** Interfaces */
 export * from './lib/interfaces/enaio-session';
@@ -17,6 +17,8 @@ export * from './lib/interfaces/enaio-document-search-options';
 export * from './lib/interfaces/enaio-document-search-request';
 export * from './lib/interfaces/enaio-service-info';
 export * from './lib/interfaces/enaio-error-type';
+export * from './lib/interfaces/enaio-stored-query';
+export * from './lib/interfaces/enaio-document-stored-queries-options';
 
 /** Enums */
 export * from './lib/enums/enaio-locale.enum';

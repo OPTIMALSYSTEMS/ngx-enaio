@@ -16,6 +16,7 @@ export interface EnaioDocumentSearchRequest {
 
 export interface EnaioDocumentSearchQuery {
   objectTypeId?: string;
+  name?: string;
   fields?: EnaioDocumentSearchRequestFields;
   baseparams?: EnaioDocumentSearchRequestBaseparams;
 }
