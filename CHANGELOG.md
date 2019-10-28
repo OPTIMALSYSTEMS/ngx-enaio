@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.10] - 2019-10-28
+
+### Added
+
+- Add Peer dependency and refection
+
 ## [0.0.9] - 2019-10-28
 
 ### Added
