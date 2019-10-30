@@ -7,7 +7,6 @@ import { EnaioDocumentSearchOptions } from '../interfaces/enaio-document-search-
 import { Observable, Subject } from 'rxjs';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { plainToClass } from 'class-transformer';
 
 @Injectable({
   providedIn: 'root'
@@ -50,7 +49,7 @@ export class EnaioDocumentService {
       .get<EnaioDocumentObject[]>('/osrest/api/documents/parents/' + id, { params: (options as any) as HttpParams })
       .subscribe(
         result => {
-          const enaioObjects: EnaioDocumentObject[] = plainToClass(EnaioDocumentObject, result);
+          const enaioObjects: EnaioDocumentObject[] = EnaioDocumentObject.loadArray(result);
           subject.next(enaioObjects);
           subject.complete();
         },
@@ -80,7 +79,7 @@ export class EnaioDocumentService {
       })
       .subscribe(
         result => {
-          subject.next(plainToClass(EnaioDocumentObject, result));
+          subject.next(EnaioDocumentObject.load(result));
           subject.complete();
         },
         error => {
@@ -110,7 +109,7 @@ export class EnaioDocumentService {
     })
       .subscribe(
         result => {
-          subject.next(plainToClass(EnaioDocumentObject, result));
+          subject.next(EnaioDocumentObject.loadArray(result));
           subject.complete();
         },
         error => {
@@ -159,7 +158,7 @@ export class EnaioDocumentService {
     })
       .subscribe(
         result => {
-          subject.next(plainToClass(EnaioDocumentObject, result));
+          subject.next(EnaioDocumentObject.loadArray(result));
           subject.complete();
         },
         error => {

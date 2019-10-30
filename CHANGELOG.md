@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.11] - 2019-10-30
+
+### Changes
+
+- Remove dependencies from `class-transformer` and `reflect-metadata` and es7 typings
+- Implement manual loading of enaio result list objects via static EnaioDocumentObject.load(plainJson) method
+
 ## [0.0.10] - 2019-10-28
 
 ### Added

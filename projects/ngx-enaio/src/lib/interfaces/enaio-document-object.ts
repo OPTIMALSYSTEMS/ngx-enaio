@@ -1,10 +1,7 @@
-import { Type } from 'class-transformer';
-
 /**
  * Enaio Object
  * Represents a enaio Folder, Register or Document
  */
-// @dynamic
 export class EnaioDocumentObject {
   /**
    * Unique enaio Object ID
@@ -70,7 +67,6 @@ export class EnaioDocumentObject {
    * Object Children (Registers and Documents)
    */
 
-  @Type(() => EnaioDocumentObject)
   public children?: EnaioDocumentObject[];
   /**
    * Object Relation Information's
@@ -105,49 +101,115 @@ export class EnaioDocumentObject {
 
   public variantTree?: EnaioDocumentObjectVariant;
 
-  public getTableField(internalName: string): EnaioDocumentObjectTable {
-    for (const table of this.ecmTableFields) {
-      if (table.internalName === internalName) {
-        return table;
-      }
-    }
-    return null;
-  }
+  /**
+   * Transformed ecmSimpleFields. Key is the internalName
+   */
+  public fields: { [index: string]: EnaioDocumentObjectField } = {};
+  /**
+   * Transformed ecTableFields. Key is the internalName
+   */
+  public table: { [index: string]: EnaioDocumentObjectTable } = {};
+  /**
+   * Transformed baseParameters. Key is the unique type.
+   */
+  public base: {
+      CREATOR?: string,
+      CREATED?: string;
+      CREATION_DATE?: string;
+      MODIFIER?: string;
+      MODIFIED?: string;
+      OWNER?: string;
+      LINKS?: string;
+      SYSTEM_ID?: string;
+      FOREIGN_ID?: string;
+      ARCHIVE_STATE?: string;
+      ARCHIVIST?: string;
+      ARCHIVE_DATE?: string;
+      LOCKED?: string;
+      VERSION?: string;
+      RETENTION_DATE?: string;
+      RETENTION_PLANNED_DATE?: string;
+      DOCUMENTPAGECOUNT?: string;
+  } = {};
 
-  public getField(internalName: string): EnaioDocumentObjectField {
-    for (const field of this.ecmSimpleFields) {
-      if (field.internalName === internalName) {
-        return field;
-      }
-    }
-    return null;
-  }
+  /**
+   * Transformed SystemFields. Key is the unique type.
+   */
+  public system: {
+    OBJECT_COUNT?,
+    OBJECT_FLAGS?,
+    OBJECT_VERID?,
+    OBJECT_MAIN?,
+    OBJECT_LINKS?,
+    OBJECT_LOCKUSER?,
+    OBJECT_DOCPAGECOUNT?
+  } = {};
 
-  public getBaseParam(type: string): string {
-    for (const param of this.baseParameters) {
-      if (param.type === type) {
-        return param.value;
-      }
-    }
-    return null;
-  }
+  /**
+   * Transformed fileParameters. Key is the unique type.
+   */
+  public file: {
+   COUNT?,
+   EXTENSION?,
+   MIMETYPE?,
+   SIZE?,
+   MIMETYPEGROUP?,
+   ICONID?,
+   DOCUMENTPAGECOUNT?
+  } = {};
 
-  public getFileProp(type: string): string {
-    for (const prop of this.fileProperties) {
-      if (prop.type === type) {
-        return prop.value;
-      }
-    }
-    return null;
-  }
+  /**
+   * Load and transform array type, value fields to objects.
+   * @param plain simple json from enaio rest api
+   */
+  public static loadArray(plain: any): EnaioDocumentObject[] {
+    const result: EnaioDocumentObject[] = [];
 
-  public getSystemField(type: string): string {
-    for (const field of this.systemFields) {
-      if (field.type === type) {
-        return field.value;
+    for (const obj of plain) {
+      result.push(EnaioDocumentObject.load(obj));
+    }
+    return result;
+  }
+  /**
+   * Load and transform array of plain enaio result types.
+   * @param plain array of plain simple json from enaio rest api
+   */
+  public static load(plain: any): EnaioDocumentObject {
+    const result = new EnaioDocumentObject();
+
+    for (const prop of Object.getOwnPropertyNames(plain)) {
+      result[prop] = plain[prop];
+    }
+
+    if (plain.children) {
+      result.children = [];
+      for (const child of plain.children) {
+        result.children.push(EnaioDocumentObject.load(child));
       }
     }
-    return null;
+
+    for (const field of result.ecmSimpleFields) {
+      result.fields[field.internalName] = field;
+    }
+
+    for (const tab of result.ecmTableFields) {
+      result.table[tab.internalName] = tab;
+    }
+
+    for (const param of result.baseParameters) {
+      result.base[param.type] = param.value;
+    }
+
+    for (const sys of result.systemFields) {
+      result.system[sys.type] = sys.value;
+    }
+
+    for (const f of result.fileProperties) {
+      result.file[f.type] = f.value;
+    }
+
+
+    return result;
   }
 }
 

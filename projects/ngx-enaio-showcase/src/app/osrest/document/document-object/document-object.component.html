@@ -40,7 +40,7 @@
                         <th>Value</th>
                     </tr>
                     <tr *ngFor="let field of obj.ecmSimpleFields">
-                        <th>{{field.displayName}}</th>
+                        <th>{{obj.fields[field.internalName].displayName}}</th>
                         <td>{{field.internalName}}</td>
                         <td>{{field.dbName}}</td>
                         <td>{{field.type}}</td>
@@ -98,7 +98,7 @@
                 <table class="table border">
                     <tr *ngFor="let baseParam of obj.baseParameters">
                         <th>{{baseParam.type}}</th>
-                        <td>{{obj.getBaseParam(baseParam.type)}}</td>
+                        <td>{{obj.base[baseParam.type]}}</td>
                     </tr>
                 </table>
                 <h2>System Fields</h2>
