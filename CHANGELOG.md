@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.12] - 2019-10-31
+
+### Changes
+
+- Bugfix error for fileProperties in EnaioDocumentObject
+- Complete open method list in README
+
 ## [0.0.11] - 2019-10-30
 
 ### Changes

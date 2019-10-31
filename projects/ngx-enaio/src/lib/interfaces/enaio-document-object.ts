@@ -113,49 +113,49 @@ export class EnaioDocumentObject {
    * Transformed baseParameters. Key is the unique type.
    */
   public base: {
-      CREATOR?: string,
-      CREATED?: string;
-      CREATION_DATE?: string;
-      MODIFIER?: string;
-      MODIFIED?: string;
-      OWNER?: string;
-      LINKS?: string;
-      SYSTEM_ID?: string;
-      FOREIGN_ID?: string;
-      ARCHIVE_STATE?: string;
-      ARCHIVIST?: string;
-      ARCHIVE_DATE?: string;
-      LOCKED?: string;
-      VERSION?: string;
-      RETENTION_DATE?: string;
-      RETENTION_PLANNED_DATE?: string;
-      DOCUMENTPAGECOUNT?: string;
+    CREATOR?: string;
+    CREATED?: string;
+    CREATION_DATE?: string;
+    MODIFIER?: string;
+    MODIFIED?: string;
+    OWNER?: string;
+    LINKS?: string;
+    SYSTEM_ID?: string;
+    FOREIGN_ID?: string;
+    ARCHIVE_STATE?: string;
+    ARCHIVIST?: string;
+    ARCHIVE_DATE?: string;
+    LOCKED?: string;
+    VERSION?: string;
+    RETENTION_DATE?: string;
+    RETENTION_PLANNED_DATE?: string;
+    DOCUMENTPAGECOUNT?: string;
   } = {};
 
   /**
    * Transformed SystemFields. Key is the unique type.
    */
   public system: {
-    OBJECT_COUNT?,
-    OBJECT_FLAGS?,
-    OBJECT_VERID?,
-    OBJECT_MAIN?,
-    OBJECT_LINKS?,
-    OBJECT_LOCKUSER?,
-    OBJECT_DOCPAGECOUNT?
+    OBJECT_COUNT?: string;
+    OBJECT_FLAGS?: string;
+    OBJECT_VERID?: string;
+    OBJECT_MAIN?: string;
+    OBJECT_LINKS?: string;
+    OBJECT_LOCKUSER?: string;
+    OBJECT_DOCPAGECOUNT?: string;
   } = {};
 
   /**
    * Transformed fileParameters. Key is the unique type.
    */
   public file: {
-   COUNT?,
-   EXTENSION?,
-   MIMETYPE?,
-   SIZE?,
-   MIMETYPEGROUP?,
-   ICONID?,
-   DOCUMENTPAGECOUNT?
+    COUNT?: string;
+    EXTENSION?: string;
+    MIMETYPE?: string;
+    SIZE?: string;
+    MIMETYPEGROUP?: string;
+    ICONID?: string;
+    DOCUMENTPAGECOUNT?: string;
   } = {};
 
   /**
@@ -204,10 +204,11 @@ export class EnaioDocumentObject {
       result.system[sys.type] = sys.value;
     }
 
-    for (const f of result.fileProperties) {
-      result.file[f.type] = f.value;
+    if (result.fileProperties) {
+      for (const f of result.fileProperties) {
+        result.file[f.type] = f.value;
+      }
     }
-
 
     return result;
   }
