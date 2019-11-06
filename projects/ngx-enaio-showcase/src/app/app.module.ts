@@ -18,6 +18,7 @@ import { SearchByIdComponent } from './osrest/document/search-by-id/search-by-id
 import { DocumentObjectComponent } from './osrest/document/document-object/document-object.component';
 import { StoredQueriesListComponent } from './osrest/document/stored-queries-list/stored-queries-list.component';
 import { StoredQueryComponent } from './osrest/document/stored-query/stored-query.component';
+import { InsertComponent } from './osrest/document/insert/insert.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { StoredQueryComponent } from './osrest/document/stored-query/stored-quer
     DocumentObjectComponent,
     StoredQueriesListComponent,
     StoredQueryComponent,
-    ParentsComponent
+    ParentsComponent,
+    InsertComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, NgbModule, NgxEnaioModule],
   providers: [],

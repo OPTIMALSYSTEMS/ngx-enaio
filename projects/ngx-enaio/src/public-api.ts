@@ -20,6 +20,8 @@ export * from './lib/interfaces/enaio-service-info';
 export * from './lib/interfaces/enaio-error-type';
 export * from './lib/interfaces/enaio-stored-query';
 export * from './lib/interfaces/enaio-document-stored-queries-options';
+export * from './lib/interfaces/enaio-document-insert-options';
+export * from './lib/interfaces/enaio-document-update-options';
 
 /** Enums */
 export * from './lib/enums/enaio-locale.enum';

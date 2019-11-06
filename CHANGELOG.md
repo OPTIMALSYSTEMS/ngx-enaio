@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.13] - 2019-11-06
+
+### Added
+
+- DocumentService::Insert method
+- DocumentService::Update method
+- 
 ## [0.0.12] - 2019-10-31
 
 ### Changes

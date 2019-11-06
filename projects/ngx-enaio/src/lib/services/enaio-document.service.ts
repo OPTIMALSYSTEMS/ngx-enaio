@@ -1,3 +1,5 @@
+import { EnaioDocumentInsertOptions } from './../interfaces/enaio-document-insert-options';
+import { EnaioDocumentUpdateOptions } from './../interfaces/enaio-document-update-options';
 import { EnaioDocumentParentsOptions } from './../interfaces/enaio-document-parents-options';
 import { EnaioDocumentStoredQueriesOptions } from '../interfaces/enaio-document-stored-queries-options';
 import { EnaioStoredQuery, EnaioStoredQueries } from '../interfaces/enaio-stored-query';
@@ -45,19 +47,102 @@ export class EnaioDocumentService {
    */
   public parents(id: number, options: EnaioDocumentParentsOptions = {}): Observable<EnaioDocumentObject[]> {
     const subject = new Subject<EnaioDocumentObject[]>();
-    this.http
-      .get<EnaioDocumentObject[]>('/osrest/api/documents/parents/' + id, { params: (options as any) as HttpParams })
-      .subscribe(
-        result => {
-          const enaioObjects: EnaioDocumentObject[] = EnaioDocumentObject.loadArray(result);
-          subject.next(enaioObjects);
-          subject.complete();
-        },
-        error => {
-          subject.error(error);
-          subject.complete();
-        }
-      );
+    this.http.get<EnaioDocumentObject[]>('/osrest/api/documents/parents/' + id, { params: (options as any) as HttpParams }).subscribe(
+      result => {
+        const enaioObjects: EnaioDocumentObject[] = EnaioDocumentObject.loadArray(result);
+        subject.next(enaioObjects);
+        subject.complete();
+      },
+      error => {
+        subject.error(error);
+        subject.complete();
+      }
+    );
+
+    return subject;
+  }
+  /**
+   * The method creates an object in a folder or register with the given location ID.
+   * When creating folders or documents in the repository, the parameter for the location
+   * ID can be omitted or a zero sent. The JSON schema is based on the schema returned by the insertInfo parameter.
+   *
+   *
+   * @param metadata metadata
+   *
+   * @param locationId Optional location id for registers and objects
+   *
+   * @param options Options
+   *
+   * @param file File
+   *
+   * @param filename filename
+   *
+   * @returns id of the new object
+   */
+  public insert(
+    metadata: any,
+    locationId: number = 0,
+    options: EnaioDocumentInsertOptions = {},
+    file?: Blob,
+    filename?: string
+  ): Observable<number> {
+
+    const subject = new Subject<number>();
+    const formData = new FormData();
+    formData.append('data', metadata);
+    if (file) {
+      formData.append('file', file, filename);
+    }
+
+    this.http.post<number>('/osrest/api/documents/insert/' + locationId, formData, { params: (options as any) as HttpParams }).subscribe(
+      result => {
+        subject.next(result);
+        subject.complete();
+      },
+      error => {
+        subject.error(error);
+        subject.complete();
+      }
+    );
+
+    return subject;
+  }
+  /**
+   * The method changes the object with the given ID. Use is similar to the documents/insert method,
+   * where the objectTypeId can be optionally specified to speed up the call.
+   * In addition, only explicitly specified fields can be changed in enaio®.
+   * The call must have the content type multipart/form-data.
+   *
+   * @param id object id
+   *
+   * @param metadata Metadata
+   *
+   * @param options Options
+   *
+   * @param file File
+   *
+   * @param filename filename
+   *
+   * @returns void
+   */
+  public update(id: number, metadata: any, options: EnaioDocumentUpdateOptions = {}, file?: Blob, filename?: string): Observable<void> {
+    const subject = new Subject<void>();
+    const formData = new FormData();
+    formData.append('data', metadata);
+    if (file) {
+      formData.append('file', file, filename);
+    }
+
+    this.http.post<void>('/osrest/api/documents/update/' + id, formData, { params: (options as any) as HttpParams }).subscribe(
+      result => {
+        subject.next(result);
+        subject.complete();
+      },
+      error => {
+        subject.error(error);
+        subject.complete();
+      }
+    );
 
     return subject;
   }
@@ -99,14 +184,12 @@ export class EnaioDocumentService {
    * @param options search options
    * @returns enaio object
    */
-  public search(
-    request: EnaioDocumentSearchRequest,
-    options: EnaioDocumentSearchOptions
-  ): Observable<EnaioDocumentObject[]> {
+  public search(request: EnaioDocumentSearchRequest, options: EnaioDocumentSearchOptions): Observable<EnaioDocumentObject[]> {
     const subject = new Subject<EnaioDocumentObject[]>();
-    this.http.post<EnaioDocumentObject[]>('/osrest/api/documents/search', request, {
-      params: (options as any) as HttpParams
-    })
+    this.http
+      .post<EnaioDocumentObject[]>('/osrest/api/documents/search', request, {
+        params: (options as any) as HttpParams
+      })
       .subscribe(
         result => {
           subject.next(EnaioDocumentObject.loadArray(result));
@@ -153,9 +236,10 @@ export class EnaioDocumentService {
     variables = { fields: {} }
   ): Observable<EnaioDocumentObject[]> {
     const subject = new Subject<EnaioDocumentObject[]>();
-    this.http.post<EnaioDocumentObject[]>('/osrest/api/documents/storedqueries/' + id, variables, {
-      params: (options as any) as HttpParams
-    })
+    this.http
+      .post<EnaioDocumentObject[]>('/osrest/api/documents/storedqueries/' + id, variables, {
+        params: (options as any) as HttpParams
+      })
       .subscribe(
         result => {
           subject.next(EnaioDocumentObject.loadArray(result));

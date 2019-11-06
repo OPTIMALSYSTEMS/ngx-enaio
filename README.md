@@ -97,8 +97,8 @@ This version is incomplete and currently not suitable for productive use.
 | /documents/insertables/[locationId] | open | *low* |
 | /documents/settype/[objectId] | open | *low* |
 | __Insert / Update / Archive__ | | |
-| /documents/insert/[locationId] | open | **high** |
-| /documents/update/[id] | open | **high** |
+| /documents/insert/[locationId] | __implemented__ | **high** |
+| /documents/update/[id] | __implemented__ | **high** |
 | /documents/archive/[id] | open | *low* |
 | /documents/archive | open | *low* |
 | __Fulltext__ | | |
