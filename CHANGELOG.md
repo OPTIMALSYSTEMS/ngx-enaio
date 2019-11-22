@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.0.15] - 2019-11-22
+
+### Added
+
+- Add Language Helper 
+  
+### Changes
+
+- Optimize Language method
+
 ## [0.0.14] - 2019-11-22
 
 ### Added

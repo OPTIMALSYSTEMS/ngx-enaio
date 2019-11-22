@@ -5,6 +5,10 @@
 /** Modules */
 export * from './lib/ngx-enaio.module';
 
+/** Helpers */
+export * from './lib/helper/enaio-lang-helper';
+
+
 /** Services */
 export * from './lib/services/enaio-session.service';
 export * from './lib/services/enaio-document.service';

@@ -2,9 +2,11 @@
 
 _An Angular layer for the enaio rest services_
 
-**Alpha Version**
+**Beta Version**
 
-This version is incomplete and currently not suitable for productive use.
+This abstraction layer for the enaio rest service is currently incomplete.
+If you find any bugs or like to contribute extensions, please contact me via email (ulrich.wohlfeil@ecmind.ch).
+
 
 ## Current Scope of Implementation
 
@@ -97,8 +99,8 @@ This version is incomplete and currently not suitable for productive use.
 | /documents/insertables/[locationId] | open | *low* |
 | /documents/settype/[objectId] | open | *low* |
 | __Insert / Update / Archive__ | | |
-| /documents/insert/[locationId] | open | **high** |
-| /documents/update/[id] | open | **high** |
+| /documents/insert/[locationId] | __implemented__ | **high** |
+| /documents/update/[id] | __implemented__ | **high** |
 | /documents/archive/[id] | open | *low* |
 | /documents/archive | open | *low* |
 | __Fulltext__ | | |
@@ -151,39 +153,120 @@ This version is incomplete and currently not suitable for productive use.
 
 | Method           | Status  | Priority |
 |:-------------| -----:| -----:|
-ToDo
+| /notifications | open | *low* |
+| /notifications/revisits | open | *low* |
+| /notifications/subscriptions | open | *low* |
+| /notifications/revisits/remove/{id}/{eventDate} | open | *low* |
+| /notifications/revisits/remove | open | *low* |
+| /notifications/revisits/markread/{id}/{eventDate} | open | *low* |
+| /notifications/revisits/markread | open | *low* |
+| /notifications/revisits/process/{id}/{eventDate} | open | *low* |
+| /notifications/revisits/process | open | *low* |
+| /notifications/subscriptions/remove/{id}/{eventDate} | open | *low* |
+| /notifications/subscriptions/remove | open | *low* |
+| /notifications/subscriptions/markread/{id}/{eventDate} | open | *low* |
+| /notifications/subscriptions/markread | open | *low* |
+| /notifications/subscriptions/process/{id}/{eventDate} | open | *low* |
+| /notifications/subscriptions/process | open | *low* |
+| /notifications/subscriptionQueries | open | *low* |
+| /notifications/subscriptionObjects | open | *low* |
+| /notifications/subscriptionObjects/{id} | open | *low* |
+| /notifications/subscriptionObjects | open | *low* |
+| /notifications/aboGroup/{id} | open | *low* |
+| /notifications/subscriptionMultiObjects | open | *low* |
+| /notifications/subscriptionObjects/delete/{id} | open | *low* |
+| /notifications/subscriptionObjects/delete | open | *low* |
+| /notifications/revisitObjects | open | *low* |
+| /notifications/revisitObjects/{id} | open | *low* |
+| /notifications/revisitObjects | open | *low* |
+| /notifications/revisitMultiObjects | open | *low* |
+| /notifications/revisitObjects/delete/{id}?userId=X&dueDate=Y | open | *low* |
+| /notifications/revisitObjects/delete | open | *low* |
+| /notifications/workflows | open | *low* |
+| /notifications/count | open | *low* |
+
+
+
 
 #### ObjDefService
 [Official Documentation](https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867861)
 
 | Method           | Status  | Priority |
 |:-------------| -----:| -----:|
-ToDo
+| /objdef/global | open | *low* |
+| /objdef/full | open | *low* |
+| /objdef/languages | __implemented__ | *low* |
+| /objdef/search/[id] | open | *low* |
+| /objdef/search | open | *low* |
 
 #### OrganizationService
 [Official Documentation](https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867863)
 
 | Method           | Status  | Priority |
 |:-------------| -----:| -----:|
-ToDo
+| /organization/users | open | *low* |
+| /organization/groups | open | *low* |
+| /organization/sendmail | open | *low* |
+| /organization/avatar/{username} | open | *low* |
+| /organization/avatar/{username}/{size} | open | *low* |
+| /organization/user/updateCreate | open | *low* |
+| /organization/user/delete/{id} | open | *low* |
+| /organization/securitysystem | open | *low* |
 
 #### OSFileService
 [Official Documentation](https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867865)
 
 | Method           | Status  | Priority |
 |:-------------| -----:| -----:|
-ToDo
+| /anon/osfile/[id] | open | *low* |
 
 #### ServiceInfoService
 [Official Documentation](https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867867)
 
 | Method           | Status  | Priority |
 |:-------------| -----:| -----:|
-ToDo
+| /serviceinfo | open | *low* |
+| /serviceinfo/counter/{guid} | open | *low* |
+| /serviceinfo/ping | open | *low* |
+| /serviceinfo/mimetypes | open | *low* |
+| /serviceinfo/errorTypes/ | open | *low* |
+| /serviceinfo/errorTypes/{errorCode} | open | *low* |
+| /serviceinfo/registry | open | *low* |
+| /serviceinfo/etc | open | *low* |
+| /serviceinfo/systemConfigValue | open | *low* |
 
 #### WorkflowService
 [Official Documentation](https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867871)
 
 | Method           | Status  | Priority |
 |:-------------| -----:| -----:|
-ToDo
+| /workflows | open | *low* |
+| /workflows/start | open | *low* |
+| /workflows/startWithData | open | *low* |
+| /workflows/running | open | *low* |
+| /workflows/running/full/[id] | open | *low* |
+| /workflows/running/[id] | open | *low* |
+| /workflows/running/processes | open | *low* |
+| /workflows/running/processes/{processId}/{activityId} | open | *low* |
+| /workflows/running/performers | open | *low* |
+| /workflows/personalize | open | *low* |
+| /workflows/depersonalize | open | *low* |
+| /workflows/read | open | *low* |
+| /workflows/unread | open | *low* |
+| /workflows/assignperformers | open | *low* |
+| /workflows/forward | open | *low* |
+| /workflows/cancel | open | *low* |
+| /workflows/processes/[Id] | open | *low* |
+| /workflows/abort | open | *low* |
+| /workflows/absence/[true - false] | open | *low* |
+| /workflows/substitutes | open | *low* |
+| /workflows/substitutes | open | *low* |
+| /workflows/organisation | open | *low* |
+| /workflows/organisationObjects | open | *low* |
+| /workflows/organisationObjects | open | *low* |
+| /workflows/clientScripts/[workflowId]/[activityId] | open | *low* |
+| /workflows/adhoc/info | open | *low* |
+| /workflows/adhoc/templates | open | *low* |
+| /workflows/adhoc/templates/save | open | *low* |
+| /workflows/adhoc/templates/delete/{id} | open | *low* |
+| /workflows/adhoc/templates/move/{id}?publish=(true|false) | open | *low* |

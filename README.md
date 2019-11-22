@@ -2,9 +2,11 @@
 
 _An Angular layer for the enaio rest services_
 
-**Alpha Version**
+**Beta Version**
 
-This version is incomplete and currently not suitable for productive use.
+This abstraction layer for the enaio rest service is currently incomplete.
+If you find any bugs or like to contribute extensions, please contact me via email (ulrich.wohlfeil@ecmind.ch).
+
 
 ## Current Scope of Implementation
 
