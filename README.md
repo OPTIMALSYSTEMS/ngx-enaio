@@ -193,7 +193,7 @@ This version is incomplete and currently not suitable for productive use.
 |:-------------| -----:| -----:|
 | /objdef/global | open | *low* |
 | /objdef/full | open | *low* |
-| /objdef/languages | open | *low* |
+| /objdef/languages | __implemented__ | *low* |
 | /objdef/search/[id] | open | *low* |
 | /objdef/search | open | *low* |
 
