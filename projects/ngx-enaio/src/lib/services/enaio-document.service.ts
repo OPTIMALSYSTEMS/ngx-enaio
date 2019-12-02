@@ -1,3 +1,4 @@
+import { EnaioDocumentUpdateData } from './../interfaces/enaio-document-update-data';
 import { EnaioDocumentInsertOptions } from './../interfaces/enaio-document-insert-options';
 import { EnaioDocumentUpdateOptions } from './../interfaces/enaio-document-update-options';
 import { EnaioDocumentParentsOptions } from './../interfaces/enaio-document-parents-options';
@@ -125,10 +126,16 @@ export class EnaioDocumentService {
    *
    * @returns void
    */
-  public update(id: number, metadata: any, options: EnaioDocumentUpdateOptions = {}, file?: Blob, filename?: string): Observable<void> {
+  public update(
+    id: number,
+    metadata: EnaioDocumentUpdateData,
+    options: EnaioDocumentUpdateOptions = {},
+    file?: Blob,
+    filename?: string
+  ): Observable<void> {
     const subject = new Subject<void>();
     const formData = new FormData();
-    formData.append('data', metadata);
+    formData.append('data', JSON.stringify(metadata));
     if (file) {
       formData.append('file', file, filename);
     }

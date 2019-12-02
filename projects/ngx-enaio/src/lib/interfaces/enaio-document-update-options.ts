@@ -8,4 +8,5 @@ export interface EnaioDocumentUpdateOptions {
   archivable?: boolean;
   replacefiles?: boolean;
   objecttypeid?: number;
+  noexistencecheck?:	boolean;
 }

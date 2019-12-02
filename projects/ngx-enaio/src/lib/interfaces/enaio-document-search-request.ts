@@ -53,6 +53,15 @@ export interface EnaioDocumentSearchRequestResult {
   garbageMode?: number;
   fileProperties?: number;
   rights?: number;
+  parents?: EnaioDocumentSearchRequestParent[];
+}
+
+
+export interface EnaioDocumentSearchRequestParent {
+  internalName?: string;
+  displayName?: string;
+  objectTypeId?: string;
+  fieldsschema?: EnaioDocumentSearchRequestSchema[];
 }
 
 export interface EnaioDocumentSearchRequestSchema {

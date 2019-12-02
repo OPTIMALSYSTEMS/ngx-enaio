@@ -1,3 +1,4 @@
+import { EnaioDocumentUpdateData } from './lib/interfaces/enaio-document-update-data';
 /*
  * Public API Surface of ngx-enaio
  */
@@ -26,6 +27,7 @@ export * from './lib/interfaces/enaio-error-type';
 export * from './lib/interfaces/enaio-stored-query';
 export * from './lib/interfaces/enaio-document-stored-queries-options';
 export * from './lib/interfaces/enaio-document-insert-options';
+export * from './lib/interfaces/enaio-document-update-data';
 export * from './lib/interfaces/enaio-document-update-options';
 export * from './lib/interfaces/enaio-languages';
 
