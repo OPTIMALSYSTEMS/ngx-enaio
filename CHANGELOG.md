@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.16] - 2020-08-21
+
+### Changes
+
+- Add optional pathPrefix for osRest 
+
 ## [0.0.15] - 2019-11-22
 
 ### Added

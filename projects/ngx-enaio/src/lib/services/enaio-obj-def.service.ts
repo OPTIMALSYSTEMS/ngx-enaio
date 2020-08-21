@@ -18,11 +18,13 @@ export class EnaioObjDefService {
    * This method returns the languages defined in the object definition as JSON. Depending on the size,
    * the call can take some time and the result can be quite extensive. The structure is equivalent to XML, only transformed as JSON.
    *
+   * @param path prefix to os rest. Default /
+   *
    * @returns Return all available languages with name, lang_id and status
    *
    * [/osrest/api/objdef/languages]{@link https://bit.ly/37xsucC}
    */
-  public languages(): Observable<EnaioLanguages> {
-    return this.http.get<EnaioLanguages>('/osrest/api/objdef/languages');
+  public languages(pathPrefix = '/'): Observable<EnaioLanguages> {
+    return this.http.get<EnaioLanguages>(pathPrefix + 'osrest/api/objdef/languages');
   }
 }

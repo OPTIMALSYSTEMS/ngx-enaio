@@ -21,12 +21,13 @@ export class EnaioSessionService {
    * Method return the current session information as defined
    * [Official Documentation]{@link https://bit.ly/2obOCai}
    *
-   *
    * @param boolean refresh Ignores the cached data and retrieves the requested data again
+   * @param path prefix to os rest. Default /
+   *
    * @returns Returns session information's
    */
-  public session(refresh = false): Observable<EnaioSession> {
-    return this.http.get<EnaioSession>('/osrest/api/session', {
+  public session(refresh = false, pathPrefix = '/'): Observable<EnaioSession> {
+    return this.http.get<EnaioSession>(pathPrefix + 'osrest/api/session', {
       params: { refresh: refresh ? 'true' : 'false' }
     });
   }
@@ -34,18 +35,22 @@ export class EnaioSessionService {
   /**
    * Return all system roles of the user
    *
+   * @param path prefix to os rest. Default /
+   *
    * @returns Returns system roles as string[]
    */
-  public systemroles(): Observable<EnaioSystemRole[]> {
-    return this.http.get<EnaioSystemRole[]>('/osrest/api/session/systemroles');
+  public systemroles(pathPrefix = '/'): Observable<EnaioSystemRole[]> {
+    return this.http.get<EnaioSystemRole[]>(pathPrefix + 'osrest/api/session/systemroles');
   }
 
   /**
    * Load Client Settings (as.ini format)
    *
+   * @param path prefix to os rest. Default /
+   *
    * @returns Returns client settings as json
    */
-  public loadSettings(): Observable<any> {
-    return this.http.get<string[]>('/osrest/api/session/settings/load');
+  public loadSettings(pathPrefix = '/'): Observable<any> {
+    return this.http.get<string[]>(pathPrefix + 'osrest/api/session/settings/load');
   }
 }

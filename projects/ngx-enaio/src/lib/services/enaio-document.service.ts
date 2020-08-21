@@ -21,7 +21,7 @@ export class EnaioDocumentService {
   /**
    * Constructor
    */
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   /**
    * The method returns a sorted, linear list of parent objects for an object with the given ID.
@@ -32,33 +32,26 @@ export class EnaioDocumentService {
    *
    * @param id unique enaio id
    *
-   * @param tree If true, the location hierarchy of all locations of an object is displayed as a tree.
-   * This parameter should always be specified and "true" set,
-   * otherwise there may be problems with objects with several locations.
-   * The "simple" linear output is still used for compatibility reasons.
+   * @param options parent options
    *
-   * @param verbose An extended generic metadata model is output. Equals to search methods (EnaioDocumentObject)
-   *
-   * @param objecttypeid ObjectTypeID of the required object.
-   * The parameter is optional, but for performance reasons it is recommended to set the parameter if it is known.
-   *
-   * @param metadata File name of an alternative metadata mapping
+   * @param path prefix to os rest. Default /
    *
    * @returns enaio object list
    */
-  public parents(id: number, options: EnaioDocumentParentsOptions = {}): Observable<EnaioDocumentObject[]> {
+  public parents(id: number, options: EnaioDocumentParentsOptions = {}, pathPrefix = '/'): Observable<EnaioDocumentObject[]> {
     const subject = new Subject<EnaioDocumentObject[]>();
-    this.http.get<EnaioDocumentObject[]>('/osrest/api/documents/parents/' + id, { params: (options as any) as HttpParams }).subscribe(
-      result => {
-        const enaioObjects: EnaioDocumentObject[] = EnaioDocumentObject.loadArray(result);
-        subject.next(enaioObjects);
-        subject.complete();
-      },
-      error => {
-        subject.error(error);
-        subject.complete();
-      }
-    );
+    this.http.get<EnaioDocumentObject[]>(pathPrefix + 'osrest/api/documents/parents/' + id,
+      { params: (options as any) as HttpParams }).subscribe(
+        result => {
+          const enaioObjects: EnaioDocumentObject[] = EnaioDocumentObject.loadArray(result);
+          subject.next(enaioObjects);
+          subject.complete();
+        },
+        error => {
+          subject.error(error);
+          subject.complete();
+        }
+      );
 
     return subject;
   }
@@ -78,6 +71,8 @@ export class EnaioDocumentService {
    *
    * @param filename filename
    *
+   * @param path prefix to os rest. Default /
+   *
    * @returns id of the new object
    */
   public insert(
@@ -85,7 +80,8 @@ export class EnaioDocumentService {
     locationId: number = 0,
     options: EnaioDocumentInsertOptions = {},
     file?: Blob,
-    filename?: string
+    filename?: string,
+    pathPrefix = '/'
   ): Observable<number> {
 
     const subject = new Subject<number>();
@@ -95,7 +91,8 @@ export class EnaioDocumentService {
       formData.append('file', file, filename);
     }
 
-    this.http.post<number>('/osrest/api/documents/insert/' + locationId, formData, { params: (options as any) as HttpParams }).subscribe(
+    this.http.post<number>(pathPrefix + 'osrest/api/documents/insert/' + locationId, formData,
+    { params: (options as any) as HttpParams }).subscribe(
       result => {
         subject.next(result);
         subject.complete();
@@ -124,6 +121,8 @@ export class EnaioDocumentService {
    *
    * @param filename filename
    *
+   * @param path prefix to os rest. Default /
+   *
    * @returns void
    */
   public update(
@@ -131,8 +130,9 @@ export class EnaioDocumentService {
     metadata: EnaioDocumentUpdateData,
     options: EnaioDocumentUpdateOptions = {},
     file?: Blob,
-    filename?: string
-  ): Observable<void> {
+    filename?: string,
+    pathPrefix = '/'
+    ): Observable<void> {
     const subject = new Subject<void>();
     const formData = new FormData();
     formData.append('data', JSON.stringify(metadata));
@@ -140,7 +140,7 @@ export class EnaioDocumentService {
       formData.append('file', file, filename);
     }
 
-    this.http.post<void>('/osrest/api/documents/update/' + id, formData, { params: (options as any) as HttpParams }).subscribe(
+    this.http.post<void>(pathPrefix + 'osrest/api/documents/update/' + id, formData, { params: (options as any) as HttpParams }).subscribe(
       result => {
         subject.next(result);
         subject.complete();
@@ -161,12 +161,13 @@ export class EnaioDocumentService {
    *
    * @param number id unique enaio id
    * @param options search options
+   * @param path prefix to os rest. Default /
    * @returns enaio object list
    */
-  public searchByID(id: number, options: EnaioDocumentSearchOptions): Observable<EnaioDocumentObject> {
+  public searchByID(id: number, options: EnaioDocumentSearchOptions, pathPrefix = '/'): Observable<EnaioDocumentObject> {
     const subject = new Subject<EnaioDocumentObject>();
     this.http
-      .get<EnaioDocumentObject>('/osrest/api/documents/search/' + id, {
+      .get<EnaioDocumentObject>(pathPrefix + 'osrest/api/documents/search/' + id, {
         params: (options as any) as HttpParams
       })
       .subscribe(
@@ -189,12 +190,16 @@ export class EnaioDocumentService {
    *
    * @param request search request object
    * @param options search options
+   * @param path prefix to os rest. Default /
    * @returns enaio object
    */
-  public search(request: EnaioDocumentSearchRequest, options: EnaioDocumentSearchOptions): Observable<EnaioDocumentObject[]> {
+  public search(
+    request: EnaioDocumentSearchRequest,
+    options: EnaioDocumentSearchOptions,
+    pathPrefix = '/'): Observable<EnaioDocumentObject[]> {
     const subject = new Subject<EnaioDocumentObject[]>();
     this.http
-      .post<EnaioDocumentObject[]>('/osrest/api/documents/search', request, {
+      .post<EnaioDocumentObject[]>(pathPrefix + 'osrest/api/documents/search', request, {
         params: (options as any) as HttpParams
       })
       .subscribe(
@@ -218,12 +223,13 @@ export class EnaioDocumentService {
    * @param showglobal return also stored queries on global desktop
    * @param foldering return also the desktop folders as tree. Queries and folders can be differentiated by the the attribute isFolder.
    * @param refresh disable osrest internal cache an always request list directly from the enaio server
+   * @param path prefix to os rest. Default /
    * @returns enaio object
    */
-  public getStoredQueries(showglobal = false, foldering = false, refresh = false): Observable<EnaioStoredQueries> {
+  public getStoredQueries(showglobal = false, foldering = false, refresh = false, pathPrefix = '/'): Observable<EnaioStoredQueries> {
     const options = { showglobal, foldering, refresh };
 
-    return this.http.get<EnaioStoredQueries>('/osrest/api/documents/storedqueries', {
+    return this.http.get<EnaioStoredQueries>(pathPrefix + 'osrest/api/documents/storedqueries', {
       params: (options as any) as HttpParams
     });
   }
@@ -235,16 +241,18 @@ export class EnaioDocumentService {
    * @param id of the stored query
    * @param execution options
    * @param query variables
+   * @param path prefix to os rest. Default /
    * @returns List of enaio objects
    */
   public executeStoredQueries(
     id: number,
     options?: EnaioDocumentStoredQueriesOptions,
-    variables = { fields: {} }
+    variables = { fields: {} },
+    pathPrefix = '/'
   ): Observable<EnaioDocumentObject[]> {
     const subject = new Subject<EnaioDocumentObject[]>();
     this.http
-      .post<EnaioDocumentObject[]>('/osrest/api/documents/storedqueries/' + id, variables, {
+      .post<EnaioDocumentObject[]>(pathPrefix + 'osrest/api/documents/storedqueries/' + id, variables, {
         params: (options as any) as HttpParams
       })
       .subscribe(

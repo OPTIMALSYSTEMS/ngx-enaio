@@ -1,6 +1,6 @@
 {
   "name": "ngx-enaio",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "An Angular layer for the enaio rest services ",
   "keywords": ["enaio", "Optimal Systems", "ECMind", "angular"],
   "homepage": "https://github.com/OPTIMALSYSTEMS/ngx-enaio",
