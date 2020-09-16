@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.17] - 2020-09-09
+
+### Changes
+
+- Fix DocumentService parents method
+
+# Changelog
+
 ## [0.0.16] - 2020-08-21
 
 ### Changes

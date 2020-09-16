@@ -40,10 +40,10 @@ export class EnaioDocumentService {
    */
   public parents(id: number, options: EnaioDocumentParentsOptions = {}, pathPrefix = '/'): Observable<EnaioDocumentObject[]> {
     const subject = new Subject<EnaioDocumentObject[]>();
-    this.http.get<EnaioDocumentObject[]>(pathPrefix + 'osrest/api/documents/parents/' + id,
+    this.http.get<any>(pathPrefix + 'osrest/api/documents/parents/' + id,
       { params: (options as any) as HttpParams }).subscribe(
         result => {
-          const enaioObjects: EnaioDocumentObject[] = EnaioDocumentObject.loadArray(result);
+          const enaioObjects: EnaioDocumentObject[] = EnaioDocumentObject.loadArray(result.documents);
           subject.next(enaioObjects);
           subject.complete();
         },
