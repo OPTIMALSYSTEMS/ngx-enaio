@@ -1,0 +1,117 @@
+<div class="card w-100">
+  <div class="card-header">
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="locationid">Skip Count</label>
+          <input
+            type="number"
+            class="form-control"
+            id="skipCount"
+            placeholder="Skip Count"
+            [(ngModel)]="query.skipCount"
+            name="skipCount"
+          />
+        </div>
+        <div class="form-group col-md-4">
+          <label for="maxItems">Max Items</label>
+          <input
+            type="number"
+            class="form-control"
+            id="maxItems"
+            placeholder="maxItems"
+            [(ngModel)]="query.maxItems"
+            name="maxItems"
+          />
+        </div>
+        <div class="form-group col-md-4">
+          <label for="handleDeletedDocuments">Handle Deleted Documents</label>
+          <select class="form-control" id="handleDeletedDocuments" name="handleDeletedDocuments" [(ngModel)]="query.handleDeletedDocuments">
+              <option value="DELETED_DOCUMENTS_EXCLUDE">DELETED_DOCUMENTS_EXCLUDE</option>
+              <option value="DELETED_DOCUMENTS_ONLY">DELETED_DOCUMENTS_ONLY</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check col-md-6">
+            <input class="form-check-input" type="checkbox" id="includePermissions" [(ngModel)]="query.includePermissions"
+                name="includePermissions">
+            <label class="form-check-label" for="includePermissions">
+              Include Permissions
+            </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="statement">statement</label>
+        <textarea
+          class="form-control"
+          id="query"
+          rows="7"
+          [(ngModel)]="query.statement"
+          name="statement"
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="!form.form.valid || loading"
+      >
+        Execute
+      </button>
+    </form>
+  </div>
+  <div *ngIf="result && !loading" class="card-body">
+    <table class="table border">
+      <tr>
+        <th>Number of Items</th>
+        <td>{{ result.numItems }}</td>
+      </tr>
+      <tr>
+        <th>Total Number of Items</th>
+        <td>{{ result.totalNumItems }}</td>
+      </tr>
+      <tr>
+        <th>Has more Items</th>
+        <td>{{ result.hasMoreItems }}</td>
+      </tr>
+    </table>
+    <div *ngFor="let item of result.objects">
+      <table class="table border">
+        <tr>
+          <th>Property</th>
+          <th>Value</th>
+        </tr>
+        <tr *ngFor="let property of item.properties | keyvalue">
+          <td>{{ property.key }}</td>
+          <td>{{ property.value | json }}</td>
+        </tr>
+        <tr>
+          <th>Permission</th>
+          <th>Targets</th>
+        </tr>
+        <tr *ngFor="let permission of item.permissions | keyvalue">
+          <td>{{ permission.key }}</td>
+          <td>{{ permission.value | json }}</td>
+        </tr>
+        <tr>
+          <th>ContentStream CID</th>
+          <th>Value</th>
+        </tr>
+        <tr *ngFor="let contentStream of item.contentStreams">
+          <td>{{ contentStream.cid }}</td>
+          <td>
+            length: {{ contentStream.length }}, mimetype:
+            {{ contentStream.mimeType }}, filename: {{ contentStream.fileName }}
+          </td>
+        </tr>
+      </table>
+      <hr />
+    </div>
+    <pre>{{ result | json }}</pre>
+  </div>
+  <div *ngIf="error && !loading" class="card-body">
+    <pre class="text-danger" *ngIf="error && !loading">
+      {{ error | json }}
+    </pre>
+  </div>
+</div>

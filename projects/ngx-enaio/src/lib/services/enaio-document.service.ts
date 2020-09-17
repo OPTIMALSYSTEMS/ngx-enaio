@@ -1,7 +1,7 @@
-import { EnaioDocumentUpdateData } from './../interfaces/enaio-document-update-data';
 import { EnaioDocumentInsertOptions } from './../interfaces/enaio-document-insert-options';
 import { EnaioDocumentUpdateOptions } from './../interfaces/enaio-document-update-options';
 import { EnaioDocumentParentsOptions } from './../interfaces/enaio-document-parents-options';
+import { EnaioDocumentUpdateData } from './../interfaces/enaio-document-update-data';
 import { EnaioDocumentStoredQueriesOptions } from '../interfaces/enaio-document-stored-queries-options';
 import { EnaioStoredQuery, EnaioStoredQueries } from '../interfaces/enaio-stored-query';
 import { EnaioDocumentSearchRequest } from '../interfaces/enaio-document-search-request';
@@ -10,6 +10,7 @@ import { EnaioDocumentSearchOptions } from '../interfaces/enaio-document-search-
 import { Observable, Subject } from 'rxjs';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
 
 @Injectable({
   providedIn: 'root'
@@ -43,7 +44,7 @@ export class EnaioDocumentService {
     this.http.get<any>(pathPrefix + 'osrest/api/documents/parents/' + id,
       { params: (options as any) as HttpParams }).subscribe(
         result => {
-          const enaioObjects: EnaioDocumentObject[] = EnaioDocumentObject.loadArray(result.documents);
+          const enaioObjects: EnaioDocumentObject[] = EnaioDocumentObject.loadArray(result);
           subject.next(enaioObjects);
           subject.complete();
         },

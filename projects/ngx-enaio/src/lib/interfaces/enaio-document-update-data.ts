@@ -1,5 +1,3 @@
-import { EnaioFieldSchema } from "../enums/enaio-field-schema.enum";
-import { EnaioLocale } from "../enums/enaio-locale.enum";
 
 /**
  * Update Data

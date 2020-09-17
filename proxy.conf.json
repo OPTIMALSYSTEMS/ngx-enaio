@@ -3,5 +3,10 @@
     "target": "http://enaio-devel-6.ecmind",
     "secure": false,
     "trace": true
+  },
+  "/dms": {
+    "target": "http://enaio-devel-6.ecmind",
+    "secure": false,
+    "trace": true
   }
 }

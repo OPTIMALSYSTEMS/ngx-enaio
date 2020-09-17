@@ -19,6 +19,8 @@ import { DocumentObjectComponent } from './osrest/document/document-object/docum
 import { StoredQueriesListComponent } from './osrest/document/stored-queries-list/stored-queries-list.component';
 import { StoredQueryComponent } from './osrest/document/stored-query/stored-query.component';
 import { InsertComponent } from './osrest/document/insert/insert.component';
+import { DmsComponent } from './dms/dms.component';
+import { DmsSearchComponent } from './dms/dms-search/dms-search.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { InsertComponent } from './osrest/document/insert/insert.component';
     StoredQueriesListComponent,
     StoredQueryComponent,
     ParentsComponent,
-    InsertComponent
+    InsertComponent,
+    DmsComponent,
+    DmsSearchComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, NgbModule, NgxEnaioModule],
   providers: [],

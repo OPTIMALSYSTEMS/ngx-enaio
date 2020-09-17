@@ -10,6 +10,28 @@ If you find any bugs or like to contribute extensions, please contact me via ema
 
 ## Current Scope of Implementation
 
+### DMS
+#### DMSService
+[Official Documentation](https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867944)
+
+| Method           | Status  | Priority |
+|:-------------| -----:| -----:|
+| /info | open | low  |
+| /info/native | open | low  |
+| /schema | open | **high**  |
+| /schema/native | open | **high**  |
+| /schema/objecttype/{localName} | open | **high**  |
+| /objects | open | **high**  |
+| /objects/{objectId} | open | **high**  |
+| /objects/{objectId}/native/variants | open | **high**  |
+| /objects/{objectId}/native/variants/{activateId} | open | **high**  |
+| /objects/{objectId}/contents | open | **high**  |
+| /objects/{objectId}/contents/files | open | **high**  |
+| /objects/{objectId}/contents/native/zip | open | **high**  |
+| /objects/{objectId}/history | open | **high**  |
+| /objects/search | __implemented__ | **high** |
+| /objects/search/native | open | **high** |
+
 ### AppConnector (OSRest)
 #### CoreService
 [Official Documentation](https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1868194)
