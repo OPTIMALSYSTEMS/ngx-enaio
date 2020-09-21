@@ -79,7 +79,7 @@ If you find any bugs or like to contribute extensions, please contact me via ema
 | /documentfiles/droptargets | open | **high** |
 | /documentfiles/droptargets/[targetname] | open | **high** |
 | /documentfiles/delete | open | **high** |
-| /documentfiles/delete/[id] | open | **high** |
+| /documentfiles/delete/[id] | __implemented__ | **high** |
 | /documentfiles/update/[id] | open | **high** |
 | /documentfiles/processmetadata/[id] | open | *low* |
 | /documentfiles/processmetadata/[objectTypeId] | open | *low* |

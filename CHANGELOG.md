@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.0.19] - 2020-09-21
+
+### Changes
+
+- Add first version of DocumentFileService
+
+
+## [0.0.18] - 2020-09-17
+
+### Changes
+
+- Add first version of DMSService
+- Fix DocumentService parents method
+
 ## [0.0.17] - 2020-09-09
 
 ### Changes

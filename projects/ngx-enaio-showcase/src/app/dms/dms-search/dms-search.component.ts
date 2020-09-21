@@ -30,7 +30,7 @@ export class DmsSearchComponent implements OnInit {
     this.error = null;
     this.result = null;
     this.loading = true;
-    this.dmsService.search(this.query).subscribe(
+    this.dmsService.objectSearch(this.query).subscribe(
       result => {
         this.loading = false;
         this.result = result;

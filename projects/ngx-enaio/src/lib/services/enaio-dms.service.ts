@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { EnaioDmsQuery } from '../interfaces/enaio-dms-query';
 import { EnaioDmsResult } from '../interfaces/enaio-dms-result';
+import { EnaioDmsDeleteOptions } from '../interfaces/enaio-dms-delete-options';
+import { EnaioDmsObject } from '../interfaces/enaio-dms-object';
 
 @Injectable({
   providedIn: 'root'
@@ -25,9 +27,12 @@ export class EnaioDmsService {
    *
    * @returns Returns dms search result
    */
-  public search(query: EnaioDmsQuery, pathPrefix = '/'): Observable<EnaioDmsResult> {
+  public objectSearch(query: EnaioDmsQuery, pathPrefix = '/'): Observable<EnaioDmsResult> {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     return this.http.post<EnaioDmsResult>(pathPrefix + 'dms/objects/search', JSON.stringify({ query }), { headers });
   }
 
+  public objectDelete(objectId: number, options?: EnaioDmsDeleteOptions, pathPrefix = '/'): Observable<void> {
+    return this.http.delete<void>(pathPrefix + 'dms/objects/' + objectId + '/delete', { params: (options as any) as HttpParams });
+  }
 }

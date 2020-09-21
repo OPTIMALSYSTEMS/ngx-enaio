@@ -20,6 +20,7 @@ export * from './lib/interfaces/enaio-stored-query';
 export * from './lib/interfaces/enaio-dms-query';
 export * from './lib/interfaces/enaio-dms-result';
 export * from './lib/interfaces/enaio-dms-object';
+export * from './lib/interfaces/enaio-dms-delete-options';
 export * from './lib/interfaces/enaio-document-insert-options';
 export * from './lib/interfaces/enaio-document-object';
 export * from './lib/interfaces/enaio-document-parents-options';
@@ -34,6 +35,7 @@ export * from './lib/interfaces/enaio-service-info';
 /** Services */
 export * from './lib/services/enaio-dms.service';
 export * from './lib/services/enaio-document.service';
+export * from './lib/services/enaio-document-file.service';
 export * from './lib/services/enaio-obj-def.service';
 export * from './lib/services/enaio-service-info.service';
 export * from './lib/services/enaio-session.service';
