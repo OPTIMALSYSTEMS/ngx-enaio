@@ -38,7 +38,7 @@ export class EnaioDocumentFileService {
    *
    * @returns string
    */
-  public parents(id: number, recursive = false, pathPrefix = '/'): Observable<any> {
+  public delete(id: number, recursive = false, pathPrefix = '/'): Observable<any> {
     const subject = new Subject<void>();
     const params = new HttpParams();
     params.append('recursive', recursive + '');

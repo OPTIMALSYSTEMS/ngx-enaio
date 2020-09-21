@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.20] - 2020-09-21
+
+### Changes
+
+- DocumentFileService bugfix delete method
+
+
 ## [0.0.19] - 2020-09-21
 
 ### Changes
