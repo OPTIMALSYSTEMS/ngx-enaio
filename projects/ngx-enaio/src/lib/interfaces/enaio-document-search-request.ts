@@ -10,8 +10,6 @@ export interface EnaioDocumentSearchRequest {
   query: EnaioDocumentSearchQuery;
   conditionGroups?: EnaioDocumentSearchQuery[];
   additionalQueries?: EnaioDocumentSearchQuery[];
-
-  result_config?: EnaioDocumentSearchRequestResult;
 }
 
 export interface EnaioDocumentSearchQuery {
@@ -19,6 +17,8 @@ export interface EnaioDocumentSearchQuery {
   name?: string;
   fields?: EnaioDocumentSearchRequestFields;
   baseparams?: EnaioDocumentSearchRequestBaseparams;
+  result_config?: EnaioDocumentSearchRequestResult;
+  children?: EnaioDocumentSearchRequestChildren;
 }
 
 export interface EnaioDocumentSearchRequestFields {
@@ -101,4 +101,10 @@ export interface EnaioDocumentSearchRequestBaseparams {
 export interface EnaioDocumentSearchRequestColumn {
   internalName: string;
   type: string;
+}
+
+export interface EnaioDocumentSearchRequestChildren {
+  objectTypeId?: string;
+  name?: string;
+  fields?: EnaioDocumentSearchRequestFields;
 }

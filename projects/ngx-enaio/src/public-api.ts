@@ -31,11 +31,15 @@ export * from './lib/interfaces/enaio-document-update-options';
 export * from './lib/interfaces/enaio-error-type';
 export * from './lib/interfaces/enaio-languages';
 export * from './lib/interfaces/enaio-service-info';
+export * from './lib/interfaces/enaio-user-info';
+export * from './lib/interfaces/enaio-group-info';
+export * from './lib/interfaces/enaio-sendmail';
 
 /** Services */
 export * from './lib/services/enaio-dms.service';
 export * from './lib/services/enaio-document.service';
 export * from './lib/services/enaio-document-file.service';
+export * from './lib/services/enaio-organization.service';
 export * from './lib/services/enaio-obj-def.service';
 export * from './lib/services/enaio-service-info.service';
 export * from './lib/services/enaio-session.service';

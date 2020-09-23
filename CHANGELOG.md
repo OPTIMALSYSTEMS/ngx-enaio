@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.0.21] - 2020-09-23
+
+### Changes
+
+- New OrganizationService with method users, groups and sendmail
+- Bugfix for DocumentService::search method
+
+# Changelog
+
 ## [0.0.20] - 2020-09-21
 
 ### Changes

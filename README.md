@@ -226,9 +226,9 @@ If you find any bugs or like to contribute extensions, please contact me via ema
 
 | Method           | Status  | Priority |
 |:-------------| -----:| -----:|
-| /organization/users | open | *low* |
-| /organization/groups | open | *low* |
-| /organization/sendmail | open | *low* |
+| /organization/users | __implemented__ | *low* |
+| /organization/groups | __implemented__ | *low* |
+| /organization/sendmail | __implemented__ | *low* |
 | /organization/avatar/{username} | open | *low* |
 | /organization/avatar/{username}/{size} | open | *low* |
 | /organization/user/updateCreate | open | *low* |

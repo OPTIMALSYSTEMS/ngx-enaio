@@ -1,6 +1,6 @@
 {
   "name": "ngx-enaio",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "An Angular layer for the enaio rest services ",
   "author": "https://github.com/OPTIMALSYSTEMS/ngx-enaio/graphs/contributors",
   "scripts": {
