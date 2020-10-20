@@ -35,6 +35,12 @@ If you find any bugs or like to contribute extensions, please contact me via ema
 ### AppConnector (OSRest)
 #### CoreService
 [Official Documentation](https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1868194)
+| Method           | Status  | Priority |
+|:-------------| -----:| -----:|
+| /core/emptyJob | __implemented__ | low |
+
+#### SessionService
+[Official Documentation](https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867869)
 
 | Method           | Status  | Priority |
 |:-------------| -----:| -----:|
@@ -53,14 +59,6 @@ If you find any bugs or like to contribute extensions, please contact me via ema
 | /session/settings/load | __implemented__ | **high** |
 | /session/settings/custom/load | open | low |
 | /session/settings/custom/save | open | low |
-
-#### SessionService
-[Official Documentation](https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867869)
-
-| Method           | Status  | Priority |
-|:-------------| -----:| -----:|
-| /core/emptyJob | open | low |
-
 
 #### DocumentFileService
 [Official Documentation](https://help.optimal-systems.com/enaio_develop/pages/viewpage.action?pageId=1867853)

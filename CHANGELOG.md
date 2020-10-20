@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.22] - 2020-10-20
+
+### Changes
+
+- Add Core Service
+
 ## [0.0.21] - 2020-09-23
 
 ### Changes

@@ -34,18 +34,14 @@ export * from './lib/interfaces/enaio-service-info';
 export * from './lib/interfaces/enaio-user-info';
 export * from './lib/interfaces/enaio-group-info';
 export * from './lib/interfaces/enaio-sendmail';
+export * from './lib/interfaces/enaio-empty-job-parameter';
 
 /** Services */
 export * from './lib/services/enaio-dms.service';
+export * from './lib/services/enaio-core.service';
 export * from './lib/services/enaio-document.service';
 export * from './lib/services/enaio-document-file.service';
 export * from './lib/services/enaio-organization.service';
 export * from './lib/services/enaio-obj-def.service';
 export * from './lib/services/enaio-service-info.service';
 export * from './lib/services/enaio-session.service';
-
-
-
-
-
-
