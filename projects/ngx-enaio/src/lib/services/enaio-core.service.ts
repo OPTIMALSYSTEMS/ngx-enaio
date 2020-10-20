@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { EnaioEmptyJobParameter } from '../interfaces/enaio-empty-job-parameter';
@@ -36,9 +36,10 @@ export class EnaioCoreService {
     parameters: { [key: string]: EnaioEmptyJobParameter | boolean | string | number },
     pathPrefix = '/'): Observable<{ [key: string]: EnaioEmptyJobParameter | boolean | string | number }> {
 
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
     return this.http.post<{ [key: string]: EnaioEmptyJobParameter | boolean | string | number }>(
       pathPrefix + 'osrest/api/core/emptyJob',
-      JSON.stringify(parameters)
+      JSON.stringify(parameters), {headers}
     );
   }
 }

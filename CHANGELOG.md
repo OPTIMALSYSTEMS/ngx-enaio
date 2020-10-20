@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.23] - 2020-10-20
+
+### Changes
+
+- Set explizit request content type for emptyJob
+
 ## [0.0.22] - 2020-10-20
 
 ### Changes
